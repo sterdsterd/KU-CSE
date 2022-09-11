@@ -1,0 +1,118 @@
+% !TeX program = xelatex
+\input{header}
+
+\begin{document}
+
+\title{Linear Algebra (0031)\newline\space Lecture Notes}
+\author{Yulwon Rhee (202211342)}
+\institute{Department of Computer Science and Engineering, Konkuk University}
+
+\maketitle
+
+\section{Week 1}
+
+\section{Week 2}
+\subsection{Multiplication with Vectors}
+General rule for $m\times n$ matrix $A$ and $n$-dimensional column vector $\mathbf{x}$,
+$$A\mathbf{x} = \begin{bmatrix}
+    a_{11}&a_{12}&\cdots&a_{1n}\\
+    a_{21}&a_{22}&\cdots&a_{2n}\\
+    \vdots&\vdots&\ddots&\vdots\\
+    a_{m1}&a_{m2}&\cdots&a_{mn}
+\end{bmatrix}\begin{bmatrix}
+    x_1\\x_2\\\vdots\\x_n
+\end{bmatrix}=\begin{bmatrix}
+    \sum^n_{j=1} a_{1j}x_j\\
+    \sum^n_{j=1} a_{2j}x_j\\
+    \vdots\\
+    \sum^n_{j=1} a_{mj}x_j\\
+\end{bmatrix}$$
+Note: $A$ can be multiplied on the right by vector $\mathbf{x}$ only when the number of columns in $A$ is equal to the dimension of $\mathbf{x}$.
+
+\subsection{Multiplication as Linear Combination}
+Multiplication can be expressed as linear combination. For $m\times n$ matrix $A$ and $n$-dimensional column vector $\mathbf{x}$,
+$$A\mathbf{x}=\begin{bmatrix}
+    \mathbf{a}_1 & \mathbf{a}_2 & \cdots & \mathbf{a}_n
+\end{bmatrix} \begin{bmatrix}
+    x_1\\x_2\\\vdots\\x_n
+\end{bmatrix}=x_1\mathbf{a}_1+x_2\mathbf{a}_2+\cdots+x_n\mathbf{a}_n$$
+Note: This is very important view of multiplication whice will be useful throughout this course.
+
+\subsection{Matrix Multiplication}
+Generalisation for $m\times n$ matrix $A$ and $n\times p$ matrix $B$
+\begin{align*}
+    AB&=\begin{bmatrix}
+        a_{11}&a_{12}&\cdots&a_{1n}\\
+        a_{21}&a_{22}&\cdots&a_{2n}\\
+        \vdots&\vdots&\ddots&\vdots\\
+        a_{m1}&a_{m2}&\cdots&a_{mn}
+    \end{bmatrix}\begin{bmatrix}
+        b_{11}&b_{12}&\cdots&b_{1p}\\
+        b_{21}&b_{22}&\cdots&b_{2p}\\
+        \vdots&\vdots&\ddots&\vdots\\
+        b_{n1}&b_{n2}&\cdots&b_{np}
+    \end{bmatrix}\\
+    &=\begin{bmatrix}
+        \sum^n_{k=1}a_{1k}b_{k1}&\sum^n_{k=1}a_{1k}b_{k2}&\cdots&\sum^n_{k=1}a_{1k}b_{kp}\\
+        \sum^n_{k=1}a_{2k}b_{k1}&\sum^n_{k=1}a_{2k}b_{k2}&\cdots&\sum^n_{k=1}a_{2k}b_{kp}\\
+        \vdots&\vdots&\ddots&\vdots\\
+        \sum^n_{k=1}a_{mk}b_{k1}&\sum^n_{k=1}a_{mk}b_{k2}&\cdots&\sum^n_{k=1}a_{mk}b_{kp}
+    \end{bmatrix} \in \mathbb{R}^{m\times p}
+\end{align*}
+
+Alternative representaion:
+\begin{align*}
+    AB&=\begin{bmatrix}
+        \underline{\mathbf{a}}_1\\\underline{\mathbf{a}}_2\\\vdots\\\underline{\mathbf{a}}_m
+    \end{bmatrix}\begin{bmatrix}
+        \mathbf{b}_1&\mathbf{b}_2&\cdots&\mathbf{b}_p
+    \end{bmatrix}=\begin{bmatrix}
+        \underline{\mathbf{a}}_1\mathbf{b}_1&\underline{\mathbf{a}}_1\mathbf{b}_2&\cdots&\underline{\mathbf{a}}_1\mathbf{b}_p\\
+        \underline{\mathbf{a}}_1\mathbf{b}_2&\underline{\mathbf{a}}_2\mathbf{b}_2&\cdots&\underline{\mathbf{a}}_2\mathbf{b}_p\\
+        \vdots&\vdots&\ddots&\vdots\\
+        \underline{\mathbf{a}}_m\mathbf{b}_1&\underline{\mathbf{a}}_m\mathbf{b}_2&\cdots&\underline{\mathbf{a}}_m\mathbf{b}_p
+    \end{bmatrix}\\
+    &=A\begin{bmatrix}
+        \mathbf{b}_1&\mathbf{b}_2&\cdots&\mathbf{b}_p
+    \end{bmatrix}=\begin{bmatrix}
+        A\mathbf{b}_1&A\mathbf{b}_2&\cdots&A\mathbf{b}_p
+    \end{bmatrix}
+\end{align*}
+
+- $\left( m \times n \right)\left( n \times p \right) = \left( m \times p \right)$
+
+- $AA = A^2, AAA=A^3, \cdots$ (Only if $A$ is square matrix)\\
+Note: Consider $m\times n$ matrix $A$ and $l\times p$ matrix $B$. $A$ can be multiplied on the right by $B$ only if $n=l$.
+
+\subsubsection{Properties of Addition and Multiplication}
+Commutativity, Associativity, Distributivity.
+\begin{table}[]
+    \begin{tabular}{l|l}
+    Addition          & Multiplication                                                          \\ \hline
+    $A+B=B+A$         & $AB \neq BA$                                                            \\
+    $(A+B)+C=A+(B+C)$ & $(AB)C=A(BC)$                                                           \\
+    $c(A+B)=cA+cB$    & \begin{tabular}[c]{@{}l@{}}$C(A+B)=CA+CB$\\ $(A+B)C=AC+BC$\end{tabular} \\
+    \end{tabular}
+\end{table}
+
+\subsection{Transposes}
+The transpose of $A$, denoted by $A^T$, is a matrix such that $\begin{bmatrix}
+    A^T
+\end{bmatrix}_{ij} = A_{ji}$.\\
+Properties
+
+- $(A+B)^T=A^T+B^T$
+
+- $(AB)^T = B^TA^T$\\
+Inner product of vectors $\mathbf{v}\in\mathbb{R}^n$ and $\mathbf{w}\in\mathbb{R}^n$
+$$\mathbf{v}\cdot\mathbf{w} = \mathbf{v}^T\mathbf{w}\in\mathbb{R}$$\\
+Outer product of vectors $\mathbf{v}\in\mathbb{R}^n$ and $\mathbf{w}\in\mathbb{R}^n$
+$$\mathbf{v}\otimes\mathbf{w}=\mathbf{v}\mathbf{w}^T\in\mathbb{R}^{m\times n}$$
+$$\begin{bmatrix}
+    \mathbf{vw}^T
+\end{bmatrix}_{ij}=v_iw_j$$
+generalised to Kronecker product.
+
+\subsection{Some Special Matrices}
+$$\Re$$
+\end{document}
