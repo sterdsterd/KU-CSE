@@ -211,7 +211,7 @@ $\therefore(A\mathbf{x})^T = \begin{bmatrix}
 \end{bmatrix}$.\\
 
 $$\therefore (A\mathbf{x})^T = \mathbf{x}^T A^T$$\\
-\newpage
+
 (c) Consider an $n\times p$ matrix $B$.
 Let $B=\begin{bmatrix}
     \mathbf{b}_1 & \mathbf{b}_2 & \cdots & \mathbf{b}_p
@@ -221,33 +221,37 @@ We know $AB=􏰀\begin{bmatrix}
 \end{bmatrix}$.
 Take the transpose of $AB$ and show that $(AB)^T = B^T A^T$.
 \paragraph{Solution.}
-\begin{align*}
-    (AB)^T &= \begin{bmatrix}
-        (A\mathbf{b}_1)^T\\
-        (A\mathbf{b}_2)^T\\
-        \vdots\\
-        (A\mathbf{b}_p)^T\\
-    \end{bmatrix}\\
-    &= \begin{bmatrix}
-        \mathbf{b}_1^TA^T\\
-        \mathbf{b}_2^TA^T\\
-        \vdots\\
-        \mathbf{b}_p^TA^T\\
-    \end{bmatrix} (\because (A\mathbf{x})^T = \mathbf{x}^T A^T)\\
-\end{align*}
-$$B^T = \begin{bmatrix}
-    \mathbf{b}_1^T\\
-    \mathbf{b}_2^T\\
-    \vdots\\
-    \mathbf{b}_p^T\\
-\end{bmatrix}$$
-$$B^TA^T = \begin{bmatrix}
-    \mathbf{b}_1^TA^T\\
-    \mathbf{b}_2^TA^T\\
-    \vdots\\
-    \mathbf{b}_p^TA^T\\
-\end{bmatrix}$$
-$$\therefore (AB)^T = B^TA^T$$
+% \begin{align*}
+%     (AB)^T &= \begin{bmatrix}
+%         (A\mathbf{b}_1)^T\\
+%         (A\mathbf{b}_2)^T\\
+%         \vdots\\
+%         (A\mathbf{b}_p)^T\\
+%     \end{bmatrix}\\
+%     &= \begin{bmatrix}
+%         \mathbf{b}_1^TA^T\\
+%         \mathbf{b}_2^TA^T\\
+%         \vdots\\
+%         \mathbf{b}_p^TA^T\\
+%     \end{bmatrix} (\because (A\mathbf{x})^T = \mathbf{x}^T A^T)\\
+% \end{align*}
+% $$B^T = \begin{bmatrix}
+%     \mathbf{b}_1^T\\
+%     \mathbf{b}_2^T\\
+%     \vdots\\
+%     \mathbf{b}_p^T\\
+% \end{bmatrix}$$
+% $$B^TA^T = \begin{bmatrix}
+%     \mathbf{b}_1^TA^T\\
+%     \mathbf{b}_2^TA^T\\
+%     \vdots\\
+%     \mathbf{b}_p^TA^T\\
+% \end{bmatrix}$$
+% $$\therefore (AB)^T = B^TA^T$$
+$$(AB)^T_{ij}=(AB)_{ji}=\sum^n_{k=1}A_{jk}B_{ki}$$
+$$(B^TA^T)_{ij} = \sum^n_{k=1}B^T_{ik}A^T_{kj}=\sum^n_{k=1}B_{ki}A_{jk}=\sum^n_{k=1}A_{jk}B_{ki}$$\\
+So, since $(AB)^T_{ij}=(B^TA^T)_{ij}$ for all $i = 1, 2, \cdots, p$ and $j = 1, 2, \cdots, m$ we have
+$(AB)^T=B^TA^T$.
 \newpage
 \subsubsection{4.}
 (a) Express the vector $\mathbf{x}$ as a function of $r$ and $\alpha$.
