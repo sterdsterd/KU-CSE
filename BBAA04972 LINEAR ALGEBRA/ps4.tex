@@ -1,0 +1,330 @@
+% !TeX program = xelatex
+\input{header}
+
+\begin{document}
+
+\title{Linear Algebra (0031)\newline\space Problem Set 4 Solutions}
+\author{Yulwon Rhee (202211342)}
+\institute{Department of Computer Science and Engineering, Konkuk University}
+
+\maketitle
+\subsubsection{1.}
+(a) Compute the ranks of $A,\ B$.
+\paragraph*{Solution.}
+$$A=\begin{bmatrix}
+    1&1&6\\
+    1&-1&2\\
+    2&-1&6\\
+    1&2&8
+\end{bmatrix}\Rightarrow\begin{bmatrix}
+    1&0&4\\
+    0&1&2\\
+    0&0&0\\
+    0&0&0
+\end{bmatrix}$$
+$$\therefore r(A) = 2$$\\
+$$B=\begin{bmatrix}
+    1&2&3\\
+    1&2&3\\
+    1&2&3\\
+    1&2&3
+\end{bmatrix}\Rightarrow\begin{bmatrix}
+    1&2&3\\
+    0&0&0\\
+    0&0&0\\
+    0&0&0
+\end{bmatrix}$$
+$$\therefore r(B) = 1$$\\
+
+(b) Find the bases of $C(A),\ N(A^T),\ C(A^T),\ N(A)$.
+\paragraph*{Solution.}
+$$A=\begin{bmatrix}
+    1&1&6\\
+    1&-1&2\\
+    2&-1&6\\
+    1&2&8
+\end{bmatrix}\Rightarrow\begin{bmatrix}
+    1&0&4\\
+    0&1&2\\
+    0&0&0\\
+    0&0&0
+\end{bmatrix}$$
+$$\therefore C(A)=\left\{\begin{bmatrix}
+    1\\1\\2\\1
+\end{bmatrix}, \begin{bmatrix}
+    1\\-1\\-1\\2
+\end{bmatrix}\right\}$$
+We can get the basis by just using the pivot columns from the original matrix.\\
+
+$$A^T=\begin{bmatrix}
+    1&1&2&1\\1&-1&-1&2\\6&2&6&8
+\end{bmatrix}\Rightarrow\begin{bmatrix}
+    1&0&\frac{1}{2}&\frac{3}{2}\\
+    0&1&\frac{3}{2}&-\frac{1}{2}\\
+    0&0&0&0
+\end{bmatrix}$$
+$$\begin{bmatrix}
+1&0&\frac{1}{2}&\frac{3}{2}\\
+0&1&\frac{3}{2}&-\frac{1}{2}\\
+0&0&0&0
+\end{bmatrix}\begin{bmatrix}
+    x_1\\x_2\\x_3\\x_4
+\end{bmatrix}=\begin{bmatrix}
+    0\\0\\0
+\end{bmatrix}$$
+Let $x_1=-\frac{3}{2}x_4-\frac{1}{2}x_3, x_2=\frac{1}{2}x_4-\frac{3}{2}x_3$.
+$$\mathbf{x}=\begin{bmatrix}
+    -\frac{3}{2}x_4-\frac{1}{2}x_3\\
+    \frac{1}{2}x_4-\frac{3}{2}x_3\\
+    x_3\\
+    x_4
+\end{bmatrix}=\begin{bmatrix}
+    -\frac{1}{2}\\
+    -\frac{3}{2}\\
+    1\\
+    0
+\end{bmatrix}x_3+\begin{bmatrix}
+    -\frac{3}{2}\\
+    \frac{1}{2}\\
+    0\\
+    1
+\end{bmatrix}x_4$$
+$$\therefore N(A^T)=\left\{\begin{bmatrix}
+    -\frac{1}{2}\\
+    -\frac{3}{2}\\
+    1\\
+    0
+\end{bmatrix},\begin{bmatrix}
+    -\frac{3}{2}\\
+    \frac{1}{2}\\
+    0\\
+    1
+\end{bmatrix}\right\}$$\\
+
+$$A^T=\begin{bmatrix}
+    1&1&2&1\\1&-1&-1&2\\6&2&6&8
+\end{bmatrix}\Rightarrow\begin{bmatrix}
+    1&0&\frac{1}{2}&\frac{3}{2}\\
+    0&1&\frac{3}{2}&-\frac{1}{2}\\
+    0&0&0&0
+\end{bmatrix}$$
+$$\therefore C(A^T) = \left\{\begin{bmatrix}
+    1\\1\\6
+\end{bmatrix},\begin{bmatrix}
+    1\\-1\\2
+\end{bmatrix}\right\}$$\\
+
+$$A=\begin{bmatrix}
+    1&1&6\\
+    1&-1&2\\
+    2&-1&6\\
+    1&2&8
+\end{bmatrix}\Rightarrow\begin{bmatrix}
+    1&0&4\\
+    0&1&2\\
+    0&0&0\\
+    0&0&0
+\end{bmatrix}$$
+$$\begin{bmatrix}
+    1&0&4\\
+    0&1&2\\
+    0&0&0\\
+    0&0&0
+\end{bmatrix}\begin{bmatrix}
+    x_1\\x_2\\x_3
+\end{bmatrix}=\begin{bmatrix}
+    0\\0\\0\\0
+\end{bmatrix}$$
+$$\mathbf{x}=\begin{bmatrix}
+    -4x_3\\
+    -2x_3\\
+    x_3
+\end{bmatrix}=\begin{bmatrix}
+    -4\\-2\\1
+\end{bmatrix}x_3$$
+$$\therefore N(A)=\left\{\begin{bmatrix}
+    -4\\-2\\1
+\end{bmatrix}\right\}$$\\
+
+(c) Find the dimensions of $C(A),\ N(A^T),\ C(A^T),\ N(A)$.
+\begin{gather*}
+    dim(C(A)) = 2\\dim(N(A^T))=2\\dim(C(A^T))=2\\dim(N(A)) = 1
+\end{gather*}\\
+
+(d) What is the rank of $\begin{bmatrix}
+    A\\A
+\end{bmatrix}$? Compare with the rank of A.
+Prove or disprove if your result is true in general.
+
+$$\begin{bmatrix}
+    A\\A
+\end{bmatrix}=\begin{bmatrix}
+    1&1&6\\
+    1&-1&2\\
+    2&-1&6\\
+    1&2&8\\
+    1&1&6\\
+    1&-1&2\\
+    2&-1&6\\
+    1&2&8
+\end{bmatrix}\Rightarrow\begin{bmatrix}
+    1&0&4\\
+    0&1&2\\
+    0&0&0\\
+    0&0&0\\
+    0&0&0\\
+    0&0&0\\
+    0&0&0\\
+    0&0&0
+\end{bmatrix}$$
+$$\therefore r\left(\begin{bmatrix}
+    A\\A
+\end{bmatrix}\right) = 2 = r(A)$$
+Since value of the rank is equals to the number of pivots, It will be true for any matrix A.\\
+
+(e) What is the rank of $\begin{bmatrix}
+    B\\A^TB
+\end{bmatrix}$? Compare with the rank of B.
+Prove or disprove if your result is true in general.
+
+\begin{align*}
+    A^TB&=\begin{bmatrix}
+        1&1&2&1\\
+        1&-1&-1&2\\
+        6&2&6&8
+    \end{bmatrix}\begin{bmatrix}
+        1&2&3\\
+        1&2&3\\
+        1&2&3\\
+        1&2&3
+    \end{bmatrix}\\
+    &=\begin{bmatrix}
+        5&10&15\\
+        3&6&9\\
+        22&44&66
+    \end{bmatrix}
+\end{align*}
+$$\begin{bmatrix}
+    B\\
+    A^TB
+\end{bmatrix}=\begin{bmatrix}
+    1&2&3\\
+    1&2&3\\
+    1&2&3\\
+    1&2&3\\
+    5&10&15\\
+    3&6&9\\
+    22&44&66
+\end{bmatrix}\Rightarrow\begin{bmatrix}
+    1&2&3\\
+    0&0&0\\
+    0&0&0\\
+    0&0&0\\
+    0&0&0\\
+    0&0&0\\
+    0&0&0
+\end{bmatrix}$$
+$$\therefore r\left(\begin{bmatrix}
+    B\\A^TB
+\end{bmatrix}\right)=1=r(B)$$
+ASDFASDFASDFASDF\\
+
+(f) What is the rank of $\begin{bmatrix}
+    A & B
+\end{bmatrix}$?
+$$\begin{bmatrix}
+    A&B
+\end{bmatrix}=\begin{bmatrix}
+    1&1&6&1&2&3\\
+    1&-1&2&1&2&3\\
+    2&-1&6&1&2&3\\
+    1&2&8&1&2&3
+\end{bmatrix}\Rightarrow\begin{bmatrix}
+    1&0&4&0&0&0\\
+    0&1&2&0&0&0\\
+    0&0&0&1&2&3\\
+    0&0&0&0&0&0
+\end{bmatrix}$$
+$$r\left(\begin{bmatrix}
+    A&B
+\end{bmatrix}\right)=3$$\\
+
+(g) Let $C=\begin{bmatrix}
+    1&5&3\\
+    1&1&3\\1&4&3\\1&7&3
+\end{bmatrix}$. What is the rank of $\begin{bmatrix}
+    A&C
+\end{bmatrix}$? Compare the results in parts (f) and (g), and explain why.
+$$\begin{bmatrix}
+    A&C
+\end{bmatrix}=\begin{bmatrix}
+    1&1&6&1&5&3\\
+    1&-1&2&1&1&3\\
+    2&-1&6&1&4&3\\
+    1&2&8&1&7&3
+\end{bmatrix}\Rightarrow\begin{bmatrix}
+    1&0&4&0&3&0\\
+    0&1&2&0&2&0\\
+    0&0&0&1&0&3\\
+    0&0&0&0&0&0
+\end{bmatrix}$$
+$$\therefore r\left(\begin{bmatrix}
+    A&C
+\end{bmatrix}\right)=3$$\\
+
+(h) Compute the rank of $A+B$. Is it greater than $r(A) + r(B)$?
+$$A+B=\begin{bmatrix}
+    2&3&9\\2&1&5\\3&1&9\\2&4&11
+\end{bmatrix}\Rightarrow\begin{bmatrix}
+    1&0&0\\
+    0&1&0\\
+    0&0&1\\
+    0&0&0
+\end{bmatrix}$$
+$$\therefore r(A+B) = 3$$
+$$\therefore r(A+B) = r(A)+r(B)$$\\
+
+(i) Compute the rank of $A+C$. Is it greater than $r(A) + r(C)$?
+$$A+C=\begin{bmatrix}
+    2&6&9\\2&0&5\\3&3&9\\2&9&11
+\end{bmatrix}\Rightarrow\begin{bmatrix}
+    1&0&0\\
+    0&1&0\\
+    0&0&1\\
+    0&0&0
+\end{bmatrix}$$
+$$\therefore r(A+C) = 3$$
+$$\therefore r(A+C) < r(A)+r(C) (\because r(C) = 2)$$\\
+
+\subsubsection*{2.}
+(a) Find the bases of $S_1$ and $S_2$.
+$$S_1=\left\{\begin{bmatrix}
+    a\\2\\1\\1
+\end{bmatrix}, \begin{bmatrix}
+    2\\b\\2\\3
+\end{bmatrix}\right\}$$
+$$S_2=\left\{\begin{bmatrix}
+    1\\1\\c\\1
+\end{bmatrix},\begin{bmatrix}
+    1\\-1\\1\\d
+\end{bmatrix}\right\}$$\\
+
+(b) Determine the values of $a, b, c, d$ so that $S_1$ and $S_2$ are orthogonal complement of each other.
+$$\begin{bmatrix}
+        a&2&1&1\\
+        2&b&2&3
+    \end{bmatrix}\begin{bmatrix}
+        1&1\\
+        1&-1\\
+        c&1\\
+        1&d
+    \end{bmatrix}=\begin{bmatrix}
+        a+c+3&a+d-1\\
+        b+2c+5&-b+3d+4
+    \end{bmatrix}=\begin{bmatrix}
+        0&0\\
+        0&0
+    \end{bmatrix}
+$$
+$$\therefore a=\frac{6}{5},\quad b=\frac{17}{5},\quad c=-\frac{21}{5},\quad d=-\frac{1}{5}$$
+\end{document}

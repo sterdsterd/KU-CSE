@@ -1,0 +1,512 @@
+% !TeX program = xelatex
+\input{header}
+
+\begin{document}
+
+\title{Linear Algebra (0031)\newline\space Problem Set 2 Solutions}
+\author{Yulwon Rhee (202211342)}
+\institute{Department of Computer Science and Engineering, Konkuk University}
+
+\maketitle
+\subsubsection{1.}
+(a) Find the $3 \times 3$ elimination matrix $E_{21}$ that subtracts $2$ times row $1$ from row $2$.
+\paragraph*{Solution.}
+$$E_{21} = \begin{bmatrix}
+    1&0&0\\
+    -2&1&0\\
+    0&0&1
+\end{bmatrix}$$\\
+
+(b) Find the $3 \times 3$ elimination matrix $E_{31}$ that subtracts $-3$ times row $1$ from row $3$.
+\paragraph*{Solution.}
+$$E_{31} = \begin{bmatrix}
+    1&0&0\\
+    0&1&0\\
+    -3&0&1
+\end{bmatrix}$$\\
+
+(c) Calculate $E_1=E_{31}E_{21}$. What does $E_1$ do in terms of elimination?
+Based on your interpretation of what $E_1$ does, calculate the inverse of $E_1$.
+\paragraph*{Solution.}
+\begin{align*}
+    E_1 &= E_{31}E_{21}\\
+    &=\begin{bmatrix}
+        1&0&0\\
+        0&1&0\\
+        -3&0&1
+    \end{bmatrix} \begin{bmatrix}
+        1&0&0\\
+        -2&1&0\\
+        0&0&1
+    \end{bmatrix}\\
+    &=\begin{bmatrix}
+        1&0&0\\
+        -2&1&0\\
+        -3&0&1
+    \end{bmatrix}
+\end{align*}
+My interpretation of $E_1$ is to subtract $2$ times row $1$ from row $2$ and subtract $-3$ times row $1$ from row $3$.
+So, inverse of $E_1$ should add $2$ times row $1$ from row $2$ and add $-3$ times row $1$ from row $3$.
+\begin{align*}
+    \therefore E_1^{-1} &= \begin{bmatrix}
+        1&0&0\\
+        2&1&0\\
+        3&0&1
+    \end{bmatrix}
+\end{align*}
+\newpage
+(d) Find the $3\times 3$ elimination matrix $E_{32}$ that subtracts $5$ times row $2$ from row $3$.
+\paragraph*{Solution.}
+$$E_{32} = \begin{bmatrix}
+    1&0&0\\0&1&0\\0&-5&1
+\end{bmatrix}$$\\
+
+(e) Calculate the inverse of $E_{32}$.
+\paragraph*{Solution.}
+As the $E_{32}$ subtracts $5$ times row $2$ from row $3$, inverse of $E_{32}$ should add $5$ times row $2$ from row $3$.
+$$\therefore E_{32}^{-1}=\begin{bmatrix}
+    1&0&0\\0&1&0\\0&5&1
+\end{bmatrix}$$\\
+
+(f) Calculate $E=E_{32}E_{31}E_{21}$ and interpret what $E$ does in terms of elimination.
+\paragraph*{Solution.}
+\begin{align*}
+    E&=E_{32}E_{31}E_{21}\\
+    &=E_{32}E_1 (\because \text{(c) and Associative Property})\\
+    &=\begin{bmatrix}
+        1&0&0\\0&1&0\\0&-5&1
+    \end{bmatrix}\begin{bmatrix}
+        1&0&0\\-2&1&0\\-3&0&1
+    \end{bmatrix}\\
+    &=\begin{bmatrix}
+        1&0&0\\-2&1&0\\7&-5&1
+    \end{bmatrix}
+\end{align*}
+My interpretation of $E$ is to subtract $2$ times row $1$ from row $2$, add $7$ times row $1$ from row $3$ and subtract $5$ times row $2$ from row $3$.\\
+
+\newpage
+(g) In order to calculate the inverse of $E$, use the following two methods:\\
+\begin{itemize}
+    \item Use the properties of inverse matrix as $E^{-1}=(E_{32}E_{31}E_{21})^{-1}=E_{21}^{-1}E_{31}^{-1}E_{32}^{-1}$\\
+    \paragraph*{Solution.}
+    \begin{align*}
+        E^{-1} &= (E_{32}E_{31}E_{21})^{-1}\\
+        &= E_{21}^{-1}E_{31}^{-1}E_{32}^{-1}\\
+        &= \begin{bmatrix}
+            1&0&0\\2&1&0\\0&0&1
+        \end{bmatrix} \begin{bmatrix}
+            1&0&0\\0&1&0\\3&0&1
+        \end{bmatrix}\begin{bmatrix}
+            1&0&0\\0&1&0\\0&5&1
+        \end{bmatrix}\\
+        &= \begin{bmatrix}
+            1&0&0\\2&1&0\\3&0&1
+        \end{bmatrix} \begin{bmatrix}
+            1&0&0\\0&1&0\\0&5&1
+        \end{bmatrix}\\
+        &= \begin{bmatrix}
+            1&0&0\\
+            2&1&0\\
+            3&5&1
+        \end{bmatrix}
+    \end{align*}
+    \item Use the interpretation of what $E$ does, and derive the inverse that reverts what $E$ does.\\
+    \paragraph*{Solution.}
+    As the interpretation of matrix $E$,
+    $$\therefore E^{-1} = \begin{bmatrix}
+            1&0&0\\
+            2&1&0\\
+            3&5&1
+        \end{bmatrix}$$
+\end{itemize}
+
+Do the results in i and ii coincide? Yes.
+\newpage
+\subsubsection{2.}
+\paragraph*{Solution.}
+\begin{align*}
+    LU&=A\\
+    &=\begin{bmatrix}
+        1&0&0\\
+        2&1&0\\
+        -2&3&1
+    \end{bmatrix}\begin{bmatrix}
+        1&1&1\\0&1&1\\0&0&1
+    \end{bmatrix}\\
+    &=\begin{bmatrix}
+        1&1&1\\2&3&3\\-2&1&2
+    \end{bmatrix}
+\end{align*}
+\begin{align*}
+    &\left[\begin{array}{ccc|c}
+        1&1&1&1\\
+        2&3&3&2\\
+        -2&1&2&3
+    \end{array}\right]
+    \\&=\left[\begin{array}{ccc|c}
+        1&1&1&1\\
+        0&1&1&0\\
+        -2&1&2&3
+    \end{array}\right]
+    \\&=\left[\begin{array}{ccc|c}
+        1&1&1&1\\
+        0&1&1&0\\
+        0&3&4&5
+    \end{array}\right]
+    \\&=\left[\begin{array}{ccc|c}
+        1&1&1&1\\
+        0&1&1&0\\
+        0&0&1&5
+    \end{array}\right]
+\end{align*}
+$$\therefore\mathbf{x}=\begin{bmatrix}
+    1\\-5\\5
+\end{bmatrix}$$
+\newpage
+\subsubsection{3.}
+\paragraph*{Solution.}
+Let $A = \begin{bmatrix}
+    1&\alpha\\\alpha & \beta
+\end{bmatrix} (\because \text{(a)})$.
+
+$$\begin{bmatrix}
+    1&\alpha\\\alpha & \beta
+\end{bmatrix} \Rightarrow \begin{bmatrix}
+    1&\alpha\\0&\beta-\alpha^2
+\end{bmatrix}$$
+$$\therefore\beta-\alpha^2=\frac{5}{2} (\because \text{(a)})$$
+$$\therefore 1+2\alpha+\beta=15 (\because \text{(b)})$$
+$$\begin{cases}
+    \beta-\alpha^2=\frac{5}{2}\\
+    2\alpha+\beta=14
+\end{cases}$$
+$$\therefore \alpha = -1-\frac{5}{\sqrt{2}}, \beta = 16 + 5\sqrt{2} \text{  or  } \alpha = \frac{5}{\sqrt{2}}-1, \beta = 16 - 5\sqrt{2}$$
+$$\therefore A = \begin{bmatrix}
+    1&-1-\frac{5}{\sqrt{2}}\\-1-\frac{5}{\sqrt{2}}&16 + 5\sqrt{2}
+\end{bmatrix} \text{  or  } \begin{bmatrix}
+    1&\frac{5}{\sqrt{2}}-1\\\frac{5}{\sqrt{2}}-1&16 - 5\sqrt{2}
+\end{bmatrix}$$
+\newpage
+\subsubsection{4.}
+(a) Apply Gaussian elimination to solve $A\mathbf{x} = \mathbf{b}$.
+\paragraph*{Solution.}
+\begin{align*}
+    &\left[\begin{array}{ccc|c}
+        1&1&1&9\\
+        3&4&4&32\\
+        6&8&9&67
+    \end{array}\right]\\
+    &=\left[\begin{array}{ccc|c}
+        1&1&1&9\\
+        0&1&1&5\\
+        6&8&9&67
+    \end{array}\right]\\
+    &=\left[\begin{array}{ccc|c}
+        1&1&1&9\\
+        0&1&1&5\\
+        0&2&3&13
+    \end{array}\right]\\
+    &=\left[\begin{array}{ccc|c}
+        1&1&1&9\\
+        0&1&1&5\\
+        0&0&1&3
+    \end{array}\right]
+\end{align*}
+$$\therefore\mathbf{x}=\begin{bmatrix}
+    4\\2\\3
+\end{bmatrix}$$\\
+
+(b) Let $P=\begin{bmatrix}
+    0&0&1\\1&0&0\\0&1&0
+\end{bmatrix}$, $B=PA$ and $\mathbf{c}=P\mathbf{b}$. Find a solution to $B\mathbf{x}=\mathbf{c}$ "without" solving the equation directly.\\
+First, $P$ shifts row $1$ to row $2$, row $2$ to row $3$ and row $3$ to row $1$.
+$$\therefore B = \begin{bmatrix}
+    6&8&9\\
+    1&1&1\\
+    3&4&4
+\end{bmatrix}$$
+and,
+$$\therefore \mathbf{c} = \begin{bmatrix}
+    67\\9\\32
+\end{bmatrix}$$
+Therefore, $B\mathbf{x}=\mathbf{c}$ is same with row exchanged $A\mathbf{x} = \mathbf{b}$.
+As row exchange does not change the value of $\mathbf{x}$,
+$$\therefore \mathbf{x} = \begin{bmatrix}
+    4\\2\\3
+\end{bmatrix}$$
+\newpage
+\subsubsection{5.}
+(a) $\begin{bmatrix}
+    2&2\\14&17
+\end{bmatrix}$
+\paragraph*{Solution.}
+Subtract 7 times row $1$ from row $2$.
+$$\therefore U = \begin{bmatrix}
+    2&2\\0&3
+\end{bmatrix}$$
+$$\therefore L = \begin{bmatrix}
+    1&0\\7&1
+\end{bmatrix}$$
+And the pivots are $2$ and $3$.\\
+\begin{align*}
+    &\left[\begin{array}{cc|cc}
+        2&2&1&0\\14&17&0&1
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{cc|cc}
+        1&1&\frac{1}{2}&0\\14&17&0&1
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{cc|cc}
+        1&1&\frac{1}{2}&0\\
+        0&3&-7&1
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{cc|cc}
+        1&1&\frac{1}{2}&0\\
+        0&1&-\frac{7}{3}&\frac{1}{3}
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{cc|cc}
+        1&0&\frac{17}{6}&-\frac{1}{3}\\
+        0&1&-\frac{7}{3}&\frac{1}{3}
+    \end{array}\right]
+\end{align*}
+Therefore, inverse matrix is $\begin{bmatrix}
+    \frac{17}{6}&-\frac{1}{3}\\
+    -\frac{7}{3}&\frac{1}{3}
+\end{bmatrix}$\\
+\newpage
+(b) $\begin{bmatrix}
+    2&-1&1\\4&1&1\\2&5&3
+\end{bmatrix}$
+\paragraph*{Solution.}
+Let $L = \begin{bmatrix}
+    1&0&0\\0&1&0\\0&0&1
+\end{bmatrix}$.
+Subtract $2$ times row $1$ from row $2$.
+$$\begin{bmatrix}
+    2&-1&1\\0&3&-1\\2&5&3
+\end{bmatrix}$$
+$$l_{21} = 2$$
+Subtract row $1$ from row $3$.
+$$\begin{bmatrix}
+    2&-1&1\\0&3&-1\\0&6&2
+\end{bmatrix}$$
+$$l_{31} = 1$$
+Subtract $2$ times row $2$ from row $3$.
+$$\begin{bmatrix}
+    2&-1&1\\0&3&-1\\0&0&4
+\end{bmatrix}$$
+$$l_{32} = 2$$
+$$\therefore L = \begin{bmatrix}
+    1&0&0\\2&1&0\\1&2&1
+\end{bmatrix}, U = \begin{bmatrix}
+    2&-1&1\\0&3&-1\\0&0&4
+\end{bmatrix}$$
+And the pivots are $2, 3$ and $4$.
+\begin{align*}
+    &\left[\begin{array}{ccc|ccc}
+        2&-1&1&1&0&0\\4&1&1&0&1&0\\2&5&3&0&0&1
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{ccc|ccc}
+        1&-\frac{1}{2}&\frac{1}{2}&\frac{1}{2}&0&0\\
+        4&1&1&0&1&0\\
+        2&5&3&0&0&1
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{ccc|ccc}
+        1&-\frac{1}{2}&\frac{1}{2}&\frac{1}{2}&0&0\\
+        0&3&-1&-2&1&0\\
+        0&6&2&-1&0&1
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{ccc|ccc}
+        1&-\frac{1}{2}&\frac{1}{2}&\frac{1}{2}&0&0\\
+        0&1&-\frac{1}{3}&-\frac{2}{3}&\frac{1}{3}&0\\
+        0&6&2&-1&0&1
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{ccc|ccc}
+        1&0&\frac{1}{3}&\frac{1}{6}&\frac{1}{6}&0\\
+        0&1&-\frac{1}{3}&-\frac{2}{3}&\frac{1}{3}&0\\
+        0&0&4&3&-2&1
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{ccc|ccc}
+        1&0&\frac{1}{3}&\frac{1}{6}&\frac{1}{6}&0\\
+        0&1&-\frac{1}{3}&-\frac{2}{3}&\frac{1}{3}&0\\
+        0&0&1&\frac{3}{4}&-\frac{1}{2}&\frac{1}{4}
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{ccc|ccc}
+        1&0&0&-\frac{1}{12}&\frac{1}{3}&-\frac{1}{12}\\
+        0&1&0&-\frac{5}{12}&\frac{1}{6}&\frac{1}{12}\\
+        0&0&1&\frac{3}{4}&-\frac{1}{2}&\frac{1}{4}
+    \end{array}\right]\\
+\end{align*}
+Therefore, inverse matrix is $\begin{bmatrix}
+    -\frac{1}{12}&\frac{1}{3}&-\frac{1}{12}\\
+    -\frac{5}{12}&\frac{1}{6}&\frac{1}{12}\\
+    \frac{3}{4}&-\frac{1}{2}&\frac{1}{4}
+\end{bmatrix}$
+\newpage
+\subsubsection{6.}
+(a) Is it possible for $A$ to have only one pivot? If so, find the values of $a, b, c, d$ so that $A$ has only one pivot
+\paragraph*{Solution.}
+\begin{align*}
+    \begin{bmatrix}
+        1&1&1\\a&1&1\\2&b&2\\d&1&c
+    \end{bmatrix} \Rightarrow \begin{bmatrix}
+        1&1&1\\0&1-a&1-a\\0&b-2&0\\0&1-d&c-d
+    \end{bmatrix}
+\end{align*}
+To $A$ have only one pivot, $a = 1, b = 2, c= 1, d = 1$.\\
+
+(b) Given $d = 2$, let $k$ be the minimum possible number of pivots $A$ can have. Find the condition for $A$ to have exactly $k$ pivots.
+\paragraph*{Solution.}
+\begin{align*}
+    \begin{bmatrix}
+        1&1&1\\a&1&1\\2&b&2\\2&1&c
+    \end{bmatrix} \Rightarrow \begin{bmatrix}
+        1&1&1\\0&1-a&1-a\\0&b-2&0\\0&-1&c-2
+    \end{bmatrix} \Rightarrow \begin{bmatrix}
+        1&1&1\\0&-1&c-2\\0&1-a&1-a\\0&b-2&0
+    \end{bmatrix}
+\end{align*}
+If $a = 1, b = 2$, the minimum $k = 2$.\\
+
+(c) Given $d = 2$, find the condition (if exists) for $A$ to have exactly $k + 1$ pivots.
+\paragraph*{Solution.}
+\begin{align*}
+    \begin{bmatrix}
+        1&1&1\\a&1&1\\2&b&2\\2&1&c
+    \end{bmatrix} \Rightarrow \begin{bmatrix}
+        1&1&1\\0&-1&c-2\\0&1-a&1-a\\0&b-2&0
+    \end{bmatrix} \Rightarrow \begin{bmatrix}
+        1&1&1\\0&-1&c-2\\0&0&1-a+(1-a)(c-2)\\0&b-2&0
+    \end{bmatrix}
+\end{align*}
+If $a \neq 1, b = 2$, the value of $k$ will be $3$.
+
+(d) Given $d = 2$, find the condition (if exists) for $A$ to have exactly $k + 2$ pivots.
+\paragraph*{Solution.}
+It does not exists.\\
+
+(e) Given $d = 2$, find the condition (if exists) for $A$ to have exactly $k + 3$ pivots.
+\paragraph*{Solution.}
+It does not exists.
+\newpage
+\subsubsection{7.}
+(a)
+\paragraph*{Solution.}
+\begin{align*}
+    \left[\begin{array}{cccc|cccc}
+        1&0&0&0&1&0&0&0\\
+        2&1&0&0&0&1&0&0\\
+        1&0&1&0&0&0&1&0\\
+        2&0&0&1&0&0&0&1
+    \end{array}\right]\Rightarrow\left[\begin{array}{cccc|cccc}
+        1&0&0&0&1&0&0&0\\
+        0&1&0&0&-2&1&0&0\\
+        0&0&1&0&-1&0&1&0\\
+        0&0&0&1&-2&0&0&1
+    \end{array}\right]
+\end{align*}
+The inverse of the matrix is $\begin{bmatrix}
+    1&0&0&0\\-2&1&0&0\\-1&0&1&0\\-2&0&0&1
+\end{bmatrix}$\\
+
+(b)
+\paragraph*{Solution.}
+\begin{align*}
+    &\left[\begin{array}{ccc|ccc}
+        \sin\theta&-\cos\theta&0&1&0&0\\
+        \cos\theta&\sin\theta&0&0&1&0\\
+        0&0&1&0&0&1
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{ccc|ccc}
+        \sin\theta&-\cos\theta&0&1&0&0\\
+        0&\frac{1}{\sin\theta}&0&-\frac{\cos\theta}{\sin\theta}&1&0\\
+        0&0&1&0&0&1
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{ccc|ccc}
+        \sin\theta&0&0&1-\cos^2\theta&\sin\theta\cos\theta&0\\
+        0&\frac{1}{\sin\theta}&0&-\frac{\cos\theta}{\sin\theta}&1&0\\
+        0&0&1&0&0&1
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{ccc|ccc}
+        1&0&0&\sin\theta&\cos\theta&0\\
+        0&1&0&-\cos\theta&\sin\theta&0\\
+        0&0&1&0&0&1
+    \end{array}\right]
+\end{align*}
+The inverse of the matrix is $\begin{bmatrix}
+    \sin\theta&\cos\theta&0\\
+    -\cos\theta&\sin\theta&0\\
+    0&0&1
+\end{bmatrix}$\\
+(c)
+\paragraph*{Solution.}
+\begin{align*}
+    &\left[\begin{array}{ccc|ccc}
+        0&1&0&1&0&0\\0&0&1&0&1&0\\1&0&0&0&0&1
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{ccc|ccc}
+        1&0&0&0&0&1\\0&1&0&1&0&0\\0&0&1&0&1&0
+    \end{array}\right]
+\end{align*}
+The inverse of the matrix is $\begin{bmatrix}
+    0&0&1\\1&0&0\\0&1&0
+\end{bmatrix}$\\
+
+(d)
+\paragraph*{Solution.}
+\begin{align*}
+    &\left[\begin{array}{ccc|ccc}
+        a&0&0&1&0&0\\
+        0&b&0&0&1&0\\
+        0&0&c&0&0&1
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{ccc|ccc}
+        1&0&0&\frac{1}{a}&0&0\\
+        0&1&0&0&\frac{1}{b}&0\\
+        0&0&1&0&0&\frac{1}{c}
+    \end{array}\right]
+\end{align*}
+The inverse of the matrix is $\begin{bmatrix}
+    \frac{1}{a}&0&0\\
+    0&\frac{1}{b}&0\\
+    0&0&\frac{1}{c}
+\end{bmatrix}$\\
+
+(e)
+\paragraph*{Solution.}
+\begin{align*}
+    &\left[\begin{array}{ccc|ccc}
+        1&0&0&1&0&0\\
+        2&1&0&0&1&0\\
+        3&2&1&0&0&1
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{ccc|ccc}
+        1&0&0&1&0&0\\
+        0&1&0&-2&1&0\\
+        3&2&1&0&0&1
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{ccc|ccc}
+        1&0&0&1&0&0\\
+        0&1&0&-2&1&0\\
+        0&2&1&-3&0&1
+    \end{array}\right]\\
+    &\Rightarrow\left[\begin{array}{ccc|ccc}
+        1&0&0&1&0&0\\
+        0&1&0&-2&1&0\\
+        0&0&1&-3&-2&1
+    \end{array}\right]
+\end{align*}
+The inverse of the matrix is $\begin{bmatrix}
+    1&0&0\\-2&1&0\\-3&-2&1
+\end{bmatrix}$
+\newpage
+\subsubsection{8.}
+\paragraph*{Solution.}
+If $P^{-1}$ equals to $P^T$, $PP^T=I$ will hold $(\because PP^{-1}=I)$.
+\begin{align*}
+    (PP^T)_{ij} &= \sum^n_{k=1}P_{ik}P^T_{kj}\\
+    &= \sum^n_{k=1}P_{ik}P_{jk} = \begin{cases} 1 & (i = j) \\ 0 & (i \neq j) \end{cases}
+\end{align*}
+and the formula above is exactly same with the definition of identity matrix.
+$$\therefore PP^T = I$$
+$$\therefore P^{-1} = P^T$$
+\end{document}
