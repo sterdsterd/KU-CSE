@@ -1,4 +1,4 @@
-package ywrhee.midtest.ex;
+package ywrhee.midtest.year2021;
 
 public class YwrheeTalentDonation extends YwrheeVolunteer {
     private String talentName;

@@ -1,70 +1,68 @@
-package ywrhee.midtest;
-
-import java.util.Iterator;
+package ywrhee.midtest.year2022;
 
 public class YwrheeTestMain {
-	public static void main(String[] args) {
-		System.out.println("1) 202211342 ÀÌÀ²¿ø");
-		
-		System.out.println("2) Contents °´Ã¼ »ý¼º ¹× Ãâ·ÂÇÏ±â");
-		YwrheeContents c1 = new YwrheeContents("¿µÈ­1", 1000);
-		System.out.println(c1);
-		
-		System.out.println("3) Drama °´Ã¼ »ý¼º ¹× Ãâ·ÂÇÏ±â");
-		YwrheeContents c2 = new YwrheeDrama("µå¶ó¸¶1-1", 2000, 0.25);
-		System.out.println(c2);
-		
-		System.out.println("4) Movie °´Ã¼ »ý¼º ¹× Ãâ·ÂÇÏ±â");
-		YwrheeContents c3 = new YwrheeMovie("¿µÈ­2", 2000, 19);
-		System.out.println(c3);
-		
-		System.out.println("5) TV °´Ã¼ »ý¼ºÇÏ±â");
-		//YwrheeTV tempTVTv = new YwrheeTV(5);
-		YwrheeTV ywrheeTV = YwrheeTV.getInstance(5);
-		
-		System.out.println("6) ÄÁÅÙÃ÷ Ãß°¡ÇÏ±â");
-		ywrheeTV.addContent(new YwrheeDrama("µå¶ó¸¶1-1", 2000, 0.3));
-		ywrheeTV.addContent(new YwrheeDrama("µå¶ó¸¶1-2", 2000, 0.0));
-		ywrheeTV.addContent(new YwrheeDrama("µå¶ó¸¶1-2", 2000, 0.25));
-		ywrheeTV.addContent(new YwrheeMovie("¿µÈ­2", 2000, 19));
-		ywrheeTV.addContent(new YwrheeMovie("¿µÈ­3", 1000, 10));
-		ywrheeTV.addContent(new YwrheeDrama("µå¶ó¸¶2-1", 1000, 0.1));
-		ywrheeTV.addContent(new YwrheeMovie("¿µÈ­4", 1000, 15));
-		
-		System.out.println("7) ÄÁÅÙÃ÷ Å¸ÀÌÆ²·Î °Ë»öÇÏ±â");
-		YwrheeContents content1 = ywrheeTV.searchContents("µå¶ó¸¶1-1");
-		YwrheeContents content2 = ywrheeTV.searchContents("¿µÈ­2");
-		YwrheeContents content3 = ywrheeTV.searchContents("¿µÈ­3");
-		YwrheeContents content4 = ywrheeTV.searchContents("µå¶ó¸¶1-2");
-		YwrheeContents content5 = ywrheeTV.searchContents("µå¶ó¸¶2-1");
-		
-		System.out.println("8) Client °´Ã¼ »ý¼º ¹× Ãâ·ÂÇÏ±â");
-		YwrheeClient gdhong = new YwrheeClient("È«±æµ¿", 10, 3);
-		System.out.println(gdhong);
-		YwrheeClient gdkim = new YwrheeClient("±è±æµ¿", 25, 4);
-		YwrheeClient gdlee = new YwrheeClient("ÀÌ±æµ¿", 42, 3);
-		
-		System.out.println("9) ÄÁÅÙÃ÷ ´Ù¿î·ÎµåÇÏ±â");
-		gdhong.downloadContents(content1);
-		gdhong.downloadContents(content2);
-		gdhong.downloadContents(content3);
-		gdhong.downloadContents(content3);
-		gdhong.downloadContents(content4);
-		gdhong.downloadContents(content5);
-		System.out.println("--------------------");
-		gdkim.downloadContents(content3);
-		gdlee.downloadContents(content4);
-		
-		System.out.println("10) ´Ù¿î·ÎµåÀÌÈÄ Client °´Ã¼ Ãâ·ÂÇÏ±â");
-		System.out.println(gdhong);
-		
-		System.out.println("11) Client¿¡°Ô ´Ù¿î·Îµå È¸¼ö°¡ ³ôÀº ÄÁÅÙÃ÷ 3°³ ÃßÃµÇÏ±â");
-		YwrheeContents[] rmdContents = ywrheeTV.recommandContents(gdhong);
-		if (rmdContents != null) {
-			for (int i = 0; i < rmdContents.length; i++) {
-				System.out.println(rmdContents[i]);
-			}
-			
-		}
-	}
+    public static void main(String[] args) {
+        System.out.println("1) 202211342 ì´ìœ¨ì›");
+
+        System.out.println("2) Contents ê°ì²´ ìƒì„± ë° ì¶œë ¥í•˜ê¸°");
+        YwrheeContents c1 = new YwrheeContents("ì˜í™”1", 1000);
+        System.out.println(c1);
+
+        System.out.println("3) Drama ê°ì²´ ìƒì„± ë° ì¶œë ¥í•˜ê¸°");
+        YwrheeContents c2 = new YwrheeDrama("ë“œë¼ë§ˆ1-1", 2000, 0.25);
+        System.out.println(c2);
+
+        System.out.println("4) Movie ê°ì²´ ìƒì„± ë° ì¶œë ¥í•˜ê¸°");
+        YwrheeContents c3 = new YwrheeMovie("ì˜í™”2", 2000, 19);
+        System.out.println(c3);
+
+        System.out.println("5) TV ê°ì²´ ìƒì„±í•˜ê¸°");
+        //YwrheeTV tempTVTv = new YwrheeTV(5);
+        YwrheeTV ywrheeTV = YwrheeTV.getInstance(5);
+
+        System.out.println("6) ì»¨í…ì¸  ì¶”ê°€í•˜ê¸°");
+        ywrheeTV.addContent(new YwrheeDrama("ë“œë¼ë§ˆ1-1", 2000, 0.3));
+        ywrheeTV.addContent(new YwrheeDrama("ë“œë¼ë§ˆ1-2", 2000, 0.0));
+        ywrheeTV.addContent(new YwrheeDrama("ë“œë¼ë§ˆ1-2", 2000, 0.25));
+        ywrheeTV.addContent(new YwrheeMovie("ì˜í™”2", 2000, 19));
+        ywrheeTV.addContent(new YwrheeMovie("ì˜í™”3", 1000, 10));
+        ywrheeTV.addContent(new YwrheeDrama("ë“œë¼ë§ˆ2-1", 1000, 0.1));
+        ywrheeTV.addContent(new YwrheeMovie("ì˜í™”4", 1000, 15));
+
+        System.out.println("7) ì»¨í…ì¸  íƒ€ì´í‹€ë¡œ ê²€ìƒ‰í•˜ê¸°");
+        YwrheeContents content1 = ywrheeTV.searchContents("ë“œë¼ë§ˆ1-1");
+        YwrheeContents content2 = ywrheeTV.searchContents("ì˜í™”2");
+        YwrheeContents content3 = ywrheeTV.searchContents("ì˜í™”3");
+        YwrheeContents content4 = ywrheeTV.searchContents("ë“œë¼ë§ˆ1-2");
+        YwrheeContents content5 = ywrheeTV.searchContents("ë“œë¼ë§ˆ2-1");
+
+        System.out.println("8) Client ê°ì²´ ìƒì„± ë° ì¶œë ¥í•˜ê¸°");
+        YwrheeClient gdhong = new YwrheeClient("í™ê¸¸ë™", 10, 3);
+        System.out.println(gdhong);
+        YwrheeClient gdkim = new YwrheeClient("ê¹€ê¸¸ë™", 25, 4);
+        YwrheeClient gdlee = new YwrheeClient("ì´ê¸¸ë™", 42, 3);
+
+        System.out.println("9) ì»¨í…ì¸  ë‹¤ìš´ë¡œë“œí•˜ê¸°");
+        gdhong.downloadContents(content1);
+        gdhong.downloadContents(content2);
+        gdhong.downloadContents(content3);
+        gdhong.downloadContents(content3);
+        gdhong.downloadContents(content4);
+        gdhong.downloadContents(content5);
+        System.out.println("--------------------");
+        gdkim.downloadContents(content3);
+        gdlee.downloadContents(content4);
+
+        System.out.println("10) ë‹¤ìš´ë¡œë“œì´í›„ Client ê°ì²´ ì¶œë ¥í•˜ê¸°");
+        System.out.println(gdhong);
+
+        System.out.println("11) Clientì—ê²Œ ë‹¤ìš´ë¡œë“œ íšŒìˆ˜ê°€ ë†’ì€ ì»¨í…ì¸  3ê°œ ì¶”ì²œí•˜ê¸°");
+        YwrheeContents[] rmdContents = ywrheeTV.recommandContents(gdhong);
+        if (rmdContents != null) {
+            for (int i = 0; i < rmdContents.length; i++) {
+                System.out.println(rmdContents[i]);
+            }
+
+        }
+    }
 }

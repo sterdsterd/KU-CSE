@@ -13,7 +13,7 @@
 논리 : 사고의 규칙\\
 명제 논리(Propositional Logic): T/F 판별 가능한 문장 or 수식\\
 술어 논리(Predicate Logic): 변수 포함 명제\\
-단순 명제(simple Proposition): 하나의 문장 or 수식으로 구성된 명제\\
+단순 명제(Simple Proposition): 하나의 문장 or 수식으로 구성된 명제\\
 합성 명제(Composition Proposition): 단순 명제들이 논리 연산자로 연결\\\\
 항진 명제(Tautology): 항상 T인 합성 명제\\
 모순 명제(Contradiction): 항상 F인 합성 명제\\
@@ -129,15 +129,15 @@ $p\leftrightarrow q$가 항진 명제 $\to$ $p, q$는 논리적 동치, $p \equi
     \begin{tabular}{c|c}
         법칙 이름&동치 관계\\
         \Xhline{3\arrayrulewidth}
-        결합 법칙&\begin{tabular}{@{}c@{}}$(p\lor q)\lor r \Leftrightarrow p \lor (q \lor r)$\\$(p\land q)\land r \Leftrightarrow p \land (q \land r)$\end{tabular}\\
+        결합 법칙&\begin{tabular}{@{}c@{}}$(p\lor q)\lor r \equiv p \lor (q \lor r)$\\$(p\land q)\land r \equiv p \land (q \land r)$\end{tabular}\\
         \hline
-        홀수 법칙&\begin{tabular}{@{}c@{}}$p\lor(p\land q) \Leftrightarrow p$\\$p\land(p\lor q) \Leftrightarrow p$\end{tabular}\\
+        홀수 법칙&\begin{tabular}{@{}c@{}}$p\lor(p\land q) \equiv p$\\$p\land(p\lor q) \equiv p$\end{tabular}\\
         \hline
         드 모르간 법칙&\begin{tabular}{@{}c@{}}$\sim(p\lor q)\equiv(\sim p)\land(\sim q)$\\$\sim(p\land q)\equiv(\sim p)\lor(\sim q)$\end{tabular}\\
         \hline
-        조건 법칙& $p\to q\Leftrightarrow\sim p\lor q$\\
+        조건 법칙& $p\to q\equiv\sim p\lor q$\\
         \hline
-        대우 법칙& $p\to q\Leftrightarrow\sim q\to\sim p$
+        대우 법칙& $p\to q\equiv\sim q\to\sim p$
     \end{tabular}
 \end{table}
 \newpage
@@ -166,7 +166,7 @@ $A(u)$ : User $u$ is active.
 
 $S(n, x)$ : Network link $n$ is in status $x$.
 
-$\exists u\ A(u) \to \exists n\ S(n, available)$\\\\
+$\exists u\ A(u) \to \exists n\ S(n, \text{available})$\\\\
 2. Everyone has exactly one best friend.
 \begin{itemize}[label=$\to$]
     \item For every person $x$, person $x$ has exactly one best friend.
@@ -180,9 +180,10 @@ $\exists u\ A(u) \to \exists n\ S(n, available)$\\\\
 $B(x, y)$: $y$ is the best friend of $x$.
 
 $\forall x \exists y (B(x, y))$, $y$의 조건: $\forall z((z\neq y) \to \sim B(x, z))$\\\\
+$L(x, y)$: $x$ loves $y$.\\
 3. There is somebody whom everybody loves.
 
-$\exists y\forall x L(x, y)$ ($\exists y$와 $\forall x$ 순서 유의!)\\\\
+$\exists y\forall x\ L(x, y)$ ($\exists y$와 $\forall x$ 순서 유의!)\\
 4. Nobody loves everybody
 
 $\sim \exists x \forall y\ L(x, y) \equiv \forall x \exists y\ \sim L(x, y)$
@@ -233,25 +234,6 @@ $q$: 결론(Conclusion)\\
 존재 예시화(Existential Instantiation): $\exists x P(x) \to P(c)$ for some $c$ ($c$가 적어도 하나 존재)\\
 존재 일반화(Existential Generalisation): $P(c)$ for some $c \to \exists x P(x)$
 
-\subsection{예제 풀이}
-1. There is someone in this class who has been to France
-
-Everyine who goes to France visits the Louvre.
-
-Therefore, someone in this class has visited the Louvre.
-\subsubsection{Solution.}$$$$
-$x$: 사람\\
-$C(x): x$ is in this class.\\
-$F(x): x$ has been to France.\\
-$L(x): x$ visits to Louvre.\\\\
-$\exists x(C(x) \land F(x)),\ \forall x(F(x) \to L(x))\vdash\exists x(C(x)\land L(x))$\\\\
-Some $c$, $C(c)\land F(c)$: T (존재 예시화)\\
-$\forall x \to c \in x$, $F(c) \to L(c)$: T (전칭 예시화)\\
-$C(c) \land F(c) \vdash C(c), F(c)$\\
-$F(c),\ F(c)\to L(c) \vdash L(c)$\\
-$C(c),\ L(c)\to C(c) \land L(c)$\\
-$C(c)\land L(c) \to \exists x (C(x) \land L(x))$ (존재 일반화)
-
 \subsection{정리의 증명}
 정의: 논의 대상 보편화 위해 사용 용어 or 기호 의미를 확실히 규명한 문장 or 식
 
@@ -272,6 +254,89 @@ $p\to q$ 증명: $p, q$ 모두 T or $p$ 무조건 거짓\\
 연역법(Deduction): 사실(Fact), 공리(Axiom)에 입각해 추론(Inference)을 통해 새로운 사실 도출\\
 귀납법(Induction): 관찰, 실험에 기반한 가설을 귀납 추론을 통해 일반적인 규칙으로 입증
 
+\subsection{예제 풀이}
+1. There is someone in this class who has been to France
+
+Everyone who goes to France visits the Louvre.
+
+Therefore, someone in this class has visited the Louvre.
+\subsubsection{Solution.}\hphantom{}
+
+$x$: 사람
+
+$C(x): x$ is in this class.
+
+$F(x): x$ has been to France.
+
+$L(x): x$ visits to Louvre.\\
+
+$\exists x(C(x) \land F(x)),\ \forall x(F(x) \to L(x))\vdash\exists x(C(x)\land L(x))$\\
+
+Some $c$, $C(c)\land F(c)$: T (존재 예시화)
+
+$\forall x \to c \in x$, $F(c) \to L(c)$: T (전칭 예시화)
+
+$C(c) \land F(c) \vdash C(c), F(c)$
+
+$F(c),\ F(c)\to L(c) \vdash L(c)$
+
+$C(c),\ L(c)\to C(c) \land L(c)$
+
+$C(c)\land L(c) \to \exists x (C(x) \land L(x))$ (존재 일반화)\\\\\\
+2. Everyone in New Jersey lives within 50 miles of the ocean.
+
+Someone in New Jersey has never seen the ocean.
+
+Therefore, someone who lives within 50 miles of the ocean has never seen the ocean.
+\subsubsection{Solution.}\hphantom{}
+
+$x$: 사람
+
+$N(x)$: $x$ is in New Jersey.
+
+$O(x)$: $x$ lives within 50 miles of the ocean.
+
+$S(x)$: $x$ has seen the ocean.\\
+
+$\forall x(N(x)\to O(x)),\ \exists x(N(x) \land \sim S(x)) \vdash \exists x (O(x) \land \sim S(x))$\\
+
+$\exists x (N(x) \land  \sim S(x))$, Some $c \in x \vdash N(c) \land \sim S(c)$
+
+$\forall x(N(x)\to O(x))$, Some $c \in x \vdash N(c) \to O(c)$
+
+$N(c) \land \sim S(c) \vdash N(c),\ \sim S(c)$
+
+$N(c),\ N(c) \to O(c) \vdash O(c)$
+
+$O(c),\ \sim S(c) \vdash O(c) \land \sim S(c)$
+
+$O(c) \land \sim S(c) \to \exists x(O(x) \land \sim S(x))$\\\\
+3. Every student has an Internet account.
+
+Homer does not have and Internet account.
+
+Maggie has an Internet account.
+\subsubsection{Solution.}\hphantom{}\\
+
+$x$: 사람
+
+$S(x)$: $x$ is a student.
+
+$I(x)$: $x$ has an Internet account.\\
+
+$\forall x (S(x) \to I(x)),\ \sim I(\text{Homer}),\ I(\text{Maggie}) \vdash ?$\\
+
+$\forall x (S(x) \to I(x)),\ \text{Homer} \in x \vdash S(\text{Homer}) \to I(\text{Homer})$
+
+$\forall x (S(x) \to I(x)),\ \text{Maggie} \in x \vdash S(\text{Maggie}) \to I(\text{Maggie})$
+
+$S(\text{Homer}) \to I(\text{Homer}) \equiv \sim I(\text{Homer}) \to \sim S(\text{Homer})$
+
+$\sim I(\text{Homer}),\ \sim I(\text{Homer}) \to \sim S(\text{Homer}) \vdash \sim S(\text{Homer})$\\
+
+$\therefore \forall x (S(x) \to I(x)),\ \sim I(\text{Homer}),\ I(\text{Maggie}) \vdash \sim S(\text{Homer})$
+
+\newpage
 \section{Week 4}
 \subsection{직접 증명법(Direct Proof)}
 $p \to q$가 T 증명
@@ -281,7 +346,6 @@ $p \to q$가 T 증명
 \begin{flushleft}
     $\begin{aligned}
         \sim (p \land (\sim q)) &\equiv \sim p \lor \sim(\sim q)\\
-        &\equiv \sim p \lor \sim q\\
         &\equiv \sim p \lor q\\
         &\equiv p \to q
     \end{aligned}$

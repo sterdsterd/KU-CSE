@@ -1,4 +1,4 @@
-package greenjoa.example3;
+package ywrhee.week10;
 
 public class Word {
 	String eng;

@@ -1,4 +1,4 @@
-package ywrhee.midtest.ex;
+package ywrhee.midtest.year2021;
 
 import java.util.Scanner;
 

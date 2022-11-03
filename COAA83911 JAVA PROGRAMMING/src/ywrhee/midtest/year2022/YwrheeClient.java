@@ -1,71 +1,71 @@
-package ywrhee.midtest;
+package ywrhee.midtest.year2022;
 
 public class YwrheeClient {
-	
-	private String name;
-	private int age;
-	private int downloadableNum;
-	
-	private YwrheeContents[] downloadedContents;
-	private int count = 0;
-	
-	public YwrheeClient(String name, int age, int downloadableNum) {
-		this.name = name;
-		this.age = age;
-		this.downloadableNum = downloadableNum;
-		downloadedContents = new YwrheeContents[this.downloadableNum];
-	}
-	
-	public void downloadContents(YwrheeContents content) {
-		if (content instanceof YwrheeMovie
-				&& ((YwrheeMovie) content).getAgeRestrict() > age) {
-			System.out.println("³ªÀÌÁ¦ÇÑÀ¸·Î ´Ù¿î·ÎµåµÇÁö ¾Ê¾Ò½À´Ï´Ù.");
-			return;
-		}
-		
-		
-		for (int i = 0; i < count; i++) {
-			if (downloadedContents[i] == content) {
-				System.out.println("ÀÌ¹Ì ´Ù¿î·Îµå ¿Ï·áµÈ ÀÛÇ°ÀÔ´Ï´Ù.");
-				return;
-			}
-		}
-		
-		if (count >= downloadableNum) {
-			System.out.println("´õÀÌ»ó ´Ù¿î·ÎµåÇÏ½Ç ¼ö ¾ø½À´Ï´Ù.");
-			return;
-		}
-		
-		content.addDownloads();
-		downloadedContents[count++] = content;
-		System.out.println("´Ù¿î·Îµå ¿Ï·áÇÏ¾ú½À´Ï´Ù.");
-	}
-	
-	@Override
-	public String toString() {
-		String str = "ÀÌ¸§ : " + name + "\n";
-		str += "³ªÀÌ : " + age + "\n";
-		str += "--------------------\n";
-		if (count == 0) {
-			str += "¾ÆÁ÷ ´Ù¿î·ÎµåµÈ ÄÁÅÙÃ÷°¡ ¾ø½À´Ï´Ù.";
-		} else {
-			for (YwrheeContents content : downloadedContents) {
-				str += content;
-			}
-		}
-		
-		return str;
-	}
-	
-	public YwrheeContents[] getDownloadedContents() {
-		return downloadedContents;
-	}
-	
-	public int getCount() {
-		return count;
-	}
-	
-	public int getAge() {
-		return age;
-	}
+
+    private String name;
+    private int age;
+    private int downloadableNum;
+
+    private YwrheeContents[] downloadedContents;
+    private int count = 0;
+
+    public YwrheeClient(String name, int age, int downloadableNum) {
+        this.name = name;
+        this.age = age;
+        this.downloadableNum = downloadableNum;
+        downloadedContents = new YwrheeContents[this.downloadableNum];
+    }
+
+    public void downloadContents(YwrheeContents content) {
+        if (content instanceof YwrheeMovie
+                && ((YwrheeMovie) content).getAgeRestrict() > age) {
+            System.out.println("ë‚˜ì´ì œí•œìœ¼ë¡œ ë‹¤ìš´ë¡œë“œë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
+            return;
+        }
+
+
+        for (int i = 0; i < count; i++) {
+            if (downloadedContents[i] == content) {
+                System.out.println("ì´ë¯¸ ë‹¤ìš´ë¡œë“œ ì™„ë£Œëœ ì‘í’ˆì…ë‹ˆë‹¤.");
+                return;
+            }
+        }
+
+        if (count >= downloadableNum) {
+            System.out.println("ë”ì´ìƒ ë‹¤ìš´ë¡œë“œí•˜ì‹¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
+            return;
+        }
+
+        content.addDownloads();
+        downloadedContents[count++] = content;
+        System.out.println("ë‹¤ìš´ë¡œë“œ ì™„ë£Œí•˜ì—ˆìŠµë‹ˆë‹¤.");
+    }
+
+    @Override
+    public String toString() {
+        String str = "ì´ë¦„ : " + name + "\n";
+        str += "ë‚˜ì´ : " + age + "\n";
+        str += "--------------------\n";
+        if (count == 0) {
+            str += "ì•„ì§ ë‹¤ìš´ë¡œë“œëœ ì»¨í…ì¸ ê°€ ì—†ìŠµë‹ˆë‹¤.";
+        } else {
+            for (YwrheeContents content : downloadedContents) {
+                str += content;
+            }
+        }
+
+        return str;
+    }
+
+    public YwrheeContents[] getDownloadedContents() {
+        return downloadedContents;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public int getAge() {
+        return age;
+    }
 }
