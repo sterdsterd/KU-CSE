@@ -2,38 +2,41 @@ package ywrhee.week10;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class VocManager {
+//	private final int CAPACITY = 100;
 	private String userName;
-	private Word[] voc = new Word[100];
-	private int number = 0;
+	private ArrayList<Word> voc = new ArrayList<>();
+//	private int number = 0;
 
 	static Scanner scan = new Scanner(System.in);
 	
-	VocManager(String userName){
+	VocManager(String userName) {
 		this.userName = userName;
 	}
 	
 	void addWord(Word word) {
-		if(number < voc.length)
-			voc[number++] = word;
-		else
-			System.out.println("단어장에 더이상의 단어를 등록할 수 없습니다.");		
+//		if(number < CAPACITY) {
+			voc.add(word);
+//			number++;
+//		} else System.out.println("단어장에 더이상의 단어를 등록할 수 없습니다.");
 	}
 	
 	void makeVoc(String fileName) {
-		
 		try(Scanner scan = new Scanner(new File(fileName))){
 			while(scan.hasNextLine()) {
 				String str = scan.nextLine();
-				String[] temp = str.split("\t");
-				this.addWord(new Word(temp[0].trim(), temp[1].trim()));
+				ArrayList<String> temp = new ArrayList<>(Arrays.asList(str.split("\t")));
+				this.addWord(new Word(temp.get(0).trim(), temp.get(1).trim()));
 			}
 			System.out.println(userName+"의 단어장이 생성되었습니다.");
 			this.menu();
 			
-		}catch(FileNotFoundException e) {
+		} catch(FileNotFoundException e) {
 			System.out.println(userName+"의 단어장이 생성되지 않았습니다. \n파일명을 확인하세요.");
 		}
 		
@@ -65,17 +68,15 @@ public class VocManager {
 	}
 	
 	public void searchVoc2() {
-		// TODO Auto-generated method stub	
 		System.out.println("------ 단어 검색 ------");
 		System.out.print("검색할 부분 단어를 입력하세요 (영단어) : ");
-		String sWord = scan.nextLine();
-		sWord = sWord.trim();
+		String sWord = scan.nextLine().trim();
 		for(Word word : voc) {
 			if(word!=null) {
 				if(word.eng.contains(sWord)) {
 					System.out.println(word);					
 				}
-			}else {
+			} else {
 				//System.out.println("단어장에 등록되어 있지 않습니다.");
 				break;
 			}
@@ -84,15 +85,14 @@ public class VocManager {
 	
 
 	public void searchVoc() {
-		// TODO Auto-generated method stub	
 		System.out.println("------ 단어 검색 ------");
 		System.out.print("검색할 단어를 입력하세요 (영단어) : ");
 		String sWord = scan.nextLine();
 		sWord = sWord.trim();
 		for(Word word : voc) {
-			if(word!=null) {
+			if(word != null) {
 				if(word.eng.equals(sWord)) {
-					System.out.println("단어의 뜻 : "+word.kor);
+					System.out.println("단어의 뜻 : " + word.kor);
 					break;
 				}
 			}else {

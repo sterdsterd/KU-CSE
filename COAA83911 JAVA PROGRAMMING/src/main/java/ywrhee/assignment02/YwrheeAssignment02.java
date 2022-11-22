@@ -1,4 +1,4 @@
-package ywrhee.assignment01;
+package ywrhee.assignment02;
 
 import java.util.Scanner;
 
