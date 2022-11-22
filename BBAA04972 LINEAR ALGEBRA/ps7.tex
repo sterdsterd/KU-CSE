@@ -1,0 +1,66 @@
+% !TeX program = xelatex
+\input{header}
+
+\begin{document}
+
+\title{Linear Algebra (0031)\newline\space Problem Set 7 Solutions}
+\author{Yulwon Rhee (202211342)}
+\institute{Department of Computer Science and Engineering, Konkuk University}
+
+\maketitle
+\subsubsection{1.} Consider the Matrix $A = \begin{bmatrix}
+    1&0&1\\
+    -1&2&1\\
+    -2&0&4
+\end{bmatrix}$
+
+(a) Calculate the eigenvalues and eigenvectors of $A$.
+\paragraph*{Solution.}
+$$\mathrm{det}(A-\lambda I) = 0$$
+\begin{align*}
+    \mathrm{det}(A-\lambda I) &= \begin{vmatrix}
+        1-\lambda&0&1\\
+        -1&2-\lambda&1\\
+        -2&0&4-\lambda
+    \end{vmatrix}\\
+    &= -\lambda^3 + 7\lambda^2-16\lambda+12\\
+    &= -(\lambda - 3)(\lambda^2 -4\lambda + 4)\\
+    &= -(\lambda - 3)(\lambda - 2)^2\\
+    &= 0
+\end{align*}
+$$\therefore \lambda_1 = 3,\ \lambda_2 = 2$$
+
+(b) If $A$ has three linearly independent eigenvectors, find the diagonalization of $A$
+
+(c) What are the eigenvalues and eigenvectors of $A^{-1}$ (if $A^{-1}$ exists).
+
+(d) Let $B = A + 3I$, where $I$ is the identity matrix. Find the eigenvalues of $B$.
+
+\subsubsection{2.} Consider a square matrix $A$. Suppose that $A$ has full column rank. Can $A$ have eigenvalue $0$? Justify your answer.
+
+\subsubsection{3.} The characteristic polynomial equation (CPE) of $A$ is written as $|A - \lambda I| = 0$. Likewise, the characteristic polynomial equation of $AT$ is $|AT - \lambda I| = 0$. Solving CPE gives eigenvalues.
+
+(a) Show that $A$ and $A^T$ have the same eigenvalues (Hint. Take a look at the CPEs of $A$ and $A^T$, and use the fact that transposing a matrix does not change the determinant)
+
+\subsubsection{4.} Consider a matrix $A = \begin{bmatrix}2&a\\1&0\end{bmatrix}$. Find a condition for $A$ to be diagonalisable.
+(Hint. $A$ needs to have two linearly independent eigenvectors. Eigenvectors associated to distinct eigenvalues are linearly independent)
+
+\subsubsection{5.} Check if the following matrices are positive definite:
+
+(a) $\begin{bmatrix}
+    2&2&0\\
+    2&5&3\\
+    0&3&8
+\end{bmatrix}$
+
+(b) $\begin{bmatrix}
+    1&2\\3&4
+\end{bmatrix}$
+
+\subsubsection{6.} Show that $R^TR$ is positive semidefinite for any matrix $R$.
+
+\subsubsection{7.} Show that $R^TR$ is positive definite if and only if $R$ has full column rank.
+
+\subsubsection{8.} Prove that if $B = M^{-1}AM$, then $A$ and $B$ have the same eigenvalues. (Hint: multiply an eigenvector of $B$ on the right, and then multiply $M$ on the left)
+
+\end{document}

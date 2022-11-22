@@ -26,7 +26,11 @@
 \usepackage{minted}
 \usepackage{inconsolata}
 \usepackage{makecell}
-\usetikzlibrary{calc, angles, quotes}
+\usepackage{slashed}
+\usepackage{nicematrix}
+\usetikzlibrary{calc, angles, quotes, graphs, positioning, arrows}
+
+\setcounter{tocdepth}{2}
 
 \colorlet{shadecolor}{gray!30}
 
@@ -54,7 +58,7 @@
 \setlength{\parindent}{1em}
 \setlength{\parskip}{0pt}
 \linespread{1.2}
-\renewcommand{\arraystretch}{1.5}%
+%\renewcommand{\arraystretch}{1.5}
 \setlength{\tabcolsep}{0.5em}%
 \newenvironment{Figure}
   {\par\medskip\noindent\minipage{\linewidth}}
@@ -67,3 +71,10 @@
 \unskip\kern\p@\textsuperscript{\NAT@@open#1\if*#3*\else,\NAT@spacechar#3\fi\NAT@@close}%
    \else #1\fi\endgroup}
 \makeatother
+
+\let\oldtabular\tabular% Store a copy of \tabular
+\let\endoldtabular\endtabular% Store a copy of \endtabular
+\renewenvironment{tabular}[2][\arraystretch]
+  {\edef\arraystretch{#1}% Update \arraystretch
+   \oldtabular{#2}}% \begin{tabular}[<stretch>]{<col spec>}
+  {\endoldtabular}% \end{tabular}

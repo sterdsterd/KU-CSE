@@ -1,7 +1,5 @@
 package ywrhee.week11;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Student implements Comparable<Student> {
     String sname;
     String sid;
