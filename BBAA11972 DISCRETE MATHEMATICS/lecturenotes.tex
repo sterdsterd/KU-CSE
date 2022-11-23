@@ -170,7 +170,7 @@ $\exists u\ A(u) \to \exists n\ S(n, \text{available})$\\\\
 2. Everyone has exactly one best friend.
 \begin{itemize}[label=$\to$]
     \item For every person $x$, person $x$ has exactly one best friend.
-    \item 'Exactly one' means that
+    \item `Exactly one' means that
     \begin{itemize}
         \item[1.] There is a person $y$ who is the best friend of $x$.
         \item[2.] For every person $z$, if person $z$ is not $y$, then $z$ is not the best friend of $x$.
@@ -399,7 +399,7 @@ Cardinality: 원소 개수\\
 곱집합(Cartesian Product): $a\in A,\ b \in B,\ (a, b)$인 모든 순서쌍의 집합
 
 e.g) $A={1, 2, 3},\ B={a, b, c}$라 할 때, $A\times B = {(1, a), (1, b), (1, c), (2, a), (2, b), (2, c), (3, a), (3, b), (3, c)}$\\
-드 모르간 법칙: $\overline{(A\cup B)} = \overline{A} \cap \overline{B}$, $\overline{(A \cap B)} = \overline{A} \cap \overline{B}$
+드 모르간 법칙: $\overline{(A\cup B)} = \overline{A} \cap \overline{B}$, $\overline{(A \cap B)} = \overline{A} \cup \overline{B}$
 
 \subsection{집합의 분할}
 분할(Partition): $\exists S \neq \varnothing (\pi = \left\{A_1, A_2, \cdots, A_i, \cdots, A_k\right\})$
@@ -482,7 +482,7 @@ $\mathrm{det}(B) = \begin{vmatrix}
 \subsection{관계}
 \begin{itemize}
     \item 서로 다른 두 집합에 속하는 원소들 간의 순서(Order)를 표현
-    \item 순서쌍 집합에 속하면서 순서쌍을 이루는 원소들은 '관계'가 있다
+    \item 순서쌍 집합에 속하면서 순서쌍을 이루는 원소들은 `관계'가 있다
     \item 순서쌍 집합은 곱집합의 부분집합
 \end{itemize}
 
@@ -816,5 +816,272 @@ $$V=\{1, 2, 3, 4\},\ E=\{(1, 2), (2, 3), (2, 4)\}$$\\
 \end{itemize}\phantom{}\\
 Ore's Theorem: $n \geq 3$일 때, $n$개의 Node를 갖는 단순 연결 그래프 $G$에서 인접하지 않은 임의의 정점 $u, v$에 대해 $d(u) + d(v) \geq n$이면 $G$는 해밀턴 그래프이다.\\\\
 Dirac's Theorem: $n \geq 3$일 때, $n$개의 Node를 갖는 단순 연결 그래프 $G$에서 임의의 정점 $v$에 대해 $2d(v) \geq n$이면 $G$는 해밀턴 그래프이다.
+\newpage
+\subsection{특수 형태의 그래프}
+가중 그래프(Weight Graph): $G$의 각 Edge에 $0$보다 큰 수가 할당되었을 때, 이 값을 가중값(Weight)이라고 하며, 이를 가중 그래프라고 한다.
+\begin{center}
+    \begin{tikzpicture}
+        \node[circle,draw,minimum size=0.9cm,inner sep=0pt](1){$1$};
+        \node[circle,draw,minimum size=0.9cm,inner sep=0pt](2)[below left = 1.2cm and 1.8cm of 1]{$2$};
+        \node[circle,draw,minimum size=0.9cm,inner sep=0pt](3)[below right = 2cm and .55cm of 2]{$3$};
+        \node[circle,draw,minimum size=0.9cm,inner sep=0pt](5)[below right = 1.2cm and 1.8cm of 1]{$5$};
+        \node[circle,draw,minimum size=0.9cm,inner sep=0pt](4)[below left = 2cm and .55cm of 5]{$4$};
 
+        \path[->, draw, thick]
+        (1) edge node[above left] {$10$} (2)
+        (1) edge node[above right] {$100$} (5)
+        (1) edge node[left] {$30$} (4)
+        (2) edge node[left] {$50$} (3)
+        (3) edge node[above left = -0.6cm and 0.8cm] {$10$} (5)
+        (4) edge node[below] {$20$} (3)
+        (4) edge node[right] {$60$} (5);
+    \end{tikzpicture}
+\end{center}\phantom{}\\\\
+동형 그래프(Isomorphic Graph): $G_1=(V_1, E_1)$과 $G_2=(V_2, E_2)$가 주어졌을 때, 전단사 함수 $f:V_1\to V_2$가 존재하여 $\{u, v\} \in E_1 \Leftrightarrow \{f(u), f(v)\} \in E_2$이면 $f$를 동형(Isomorphism)이라고 하고, $G_1$과 $G_2$를 동형 그래프라 한다.
+\begin{center}
+    \begin{tikzpicture}
+        \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](1){};
+        \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](2)[right = 2cm of 1]{};
+        \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](3)[below = 2cm of 1]{};
+        \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](4)[below = 2cm of 2]{};
+        
+        \path[draw, thick]
+        (1) edge node {} (2)
+        (1) edge node {} (3)
+        (1) edge node {} (4)
+        (2) edge node {} (3)
+        (2) edge node {} (4)
+        (3) edge node {} (4);
+
+        \begin{scope}[xshift=4cm]
+            \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](1){};
+            \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](2)[below right = 1cm and 1cm of 1]{};
+            \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](3)[below = 2cm of 1]{};
+            \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](4)[right = 2cm of 3]{};
+            
+            \path[draw, thick]
+            (1) edge node {} (2)
+            (1) edge node {} (3)
+            (1) edge[bend left=60] node {} (4)
+            (2) edge node {} (3)
+            (2) edge node {} (4)
+            (3) edge node {} (4);
+        \end{scope}
+    \end{tikzpicture}
+\end{center}\phantom{}\\\\
+
+\subsection{오일러의 정리}
+연결된 평면 그래프 $G$에서 Vertex의 수를 $v$, Edge의 수를 $e$, 면(Space)의 수를 $s$라고 할 때, $v - e + s = 2$
+\newpage
+\subsection{평면 그래프}
+평면 그래프(Planar Graph): $G = (V, E)$를 평면에 그릴 때, 교차하지 않는 그래프\\
+면 $f$의 차수 $d(f)$: 평면 그래프의 면 $f$의 경계를 이루는 변의 수\\
+e.g.)\\
+\begin{center}
+    \begin{tikzpicture}
+        \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](1){};
+        \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](2)[below right = 2cm of 1]{};
+        \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](3)[below left = 2cm of 1]{};
+        \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](4)[below left = 2cm of 2]{};
+        
+        \path[draw, thick]
+        (1) edge node[above right] {$R_3$} (2)
+        (1) edge node {} (3)
+        (1) edge node[left = .2cm] {$R_1$} (4)
+        (1) edge node[right = .2cm] {$R_2$} (4)
+        (2) edge node {} (4)
+        (3) edge node {} (4);
+    \end{tikzpicture}\\
+    $d(R_1) = 3,\ d(R_2) = 3,\ d(R_3) = 4$\\
+    $d(R_1)+d(R_2)+d(R_3)=2e$\\\phantom{}\\\phantom{}\\
+    \begin{tikzpicture}
+        \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](1){};
+        \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](2)[below right = 2cm of 1]{};
+        \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](3)[below left = 2cm of 1]{};
+        \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](4)[below left = 2cm of 2]{};
+        \node[circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt](5)[right = 2cm of 2]{};
+        
+        \path[draw, thick]
+        (1) edge node {} (2)
+        (1) edge node {} (3)
+        (2) edge node {} (4)
+        (3) edge node {} (4)
+        (2) edge node[above] {$R_2$} (5);
+
+        \path[draw=white] (1) edge node {$R_1$} (4);
+    \end{tikzpicture}\\
+    $d(R_1) = 4,\ d(R_2) = 6$\\
+    $d(R_1)+d(R_2)=2e$
+\end{center}\phantom{}\\\\
+평면 그래프의 면의 차수의 총 합은 변의 수의 두 배이다.
+$$2e = \sum_f d(f)$$\\
+연결된 평면 단순 그래프의 Vertex의 수를 $v$, Edge의 수를 $e$라 할 때, $v \geq 3$이면 $e \leq 3(v-2)$\\
+모든 면의 차수는 3이상이므로, $2e = \sum_f d(f) \geq 3f,\ 2 = v - e + f \leq c - e + \frac{2}{3}e \leq v - \frac{1}{3}e$
+\newpage
+\section{Week 12}
+\subsection{특수 형태의 그래프}
+완전 그래프(Complete Graph): 모든 $n$개의 Vertex들의 쌍 사이에 Edge가 존재하는 $G = K_n$
+
+e.g.)
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \graph[circular placement, radius=1.8cm,
+                empty nodes, nodes={circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt}] {
+                \foreach \x in {a} {
+                    \foreach \y in {\x} {
+                    \x -- \y;
+                    };
+                };
+            };
+        \end{tikzpicture}
+        \caption{$K_1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \graph[circular placement, radius=1.5cm, group polar shift=(360/2:0),
+                empty nodes, nodes={circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt}] {
+                \foreach \x in {a,...,b} {
+                    \foreach \y in {\x,...,b} {
+                    \x -- \y;
+                    };
+                };
+            };
+        \end{tikzpicture}
+        \caption{$K_2$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \graph[circular placement, radius=1.8cm, group polar shift=(360/3:0),
+                empty nodes, nodes={circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt}] {
+                \foreach \x in {a,...,c} {
+                    \foreach \y in {\x,...,c} {
+                    \x -- \y;
+                    };
+                };
+            };
+        \end{tikzpicture}
+        \caption{$K_3$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \graph[circular placement, radius=1.8cm, group polar shift=(360/4:0),
+                empty nodes, nodes={circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt}] {
+                \foreach \x in {a,...,d} {
+                    \foreach \y in {\x,...,d} {
+                    \x -- \y;
+                    };
+                };
+            };
+        \end{tikzpicture}
+        \caption{$K_4$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \graph[circular placement, radius=1.9cm, group polar shift=(360/5:0),
+                empty nodes, nodes={circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt}] {
+                \foreach \x in {a,...,e} {
+                    \foreach \y in {\x,...,e} {
+                    \x -- \y;
+                    };
+                };
+            };
+        \end{tikzpicture}
+        \caption{$K_5$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \graph[circular placement, radius=1.8cm,
+                empty nodes, nodes={circle, fill=black, draw, minimum size=0.15cm,inner sep=0pt}] {
+                \foreach \x in {a,...,f} {
+                    \foreach \y in {\x,...,f} {
+                    \x -- \y;
+                    };
+                };
+            };
+        \end{tikzpicture}
+        \caption{$K_6$}
+    \end{subfigure}
+\end{figure}\phantom{}
+\\\\
+이분 그래프(Bipartite Graph): $V$가 $X$와 $Y = V - X$로 나누어져, 각 Edge가 X 내의 Vertex와 Y 내의 Vertex의 쌍으로 연결될 때, $G = (V, E)$\\
+완전 이분 그래프(Complete Bipartite Graph): $X$내의 모든 Vertex와 $Y$내의 모든 Vertex 사이에 Edge가 존재할 때, 그래프 $G$
+
+e.g.)
+\begin{figure}[H]
+    \centering
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+
+        \tikz \graph[nodes={circle, fill=black, empty nodes, draw, minimum size=0.15cm,inner sep=0pt}] {
+        {1,2} -- [complete bipartite] {a,b,c}
+        };
+        \caption{$K_{2, 3}$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+
+        \tikz \graph[nodes={circle, fill=black, empty nodes, draw, minimum size=0.15cm,inner sep=0pt}] {
+        {1,2} -- [complete bipartite] {a,b,c,d}
+        };
+        \caption{$K_{2, 4}$}
+    \end{subfigure}
+    \hfill
+    \hfill
+\end{figure}\phantom{}
+
+\subsection{그래프의 표현 방법}
+인접 행렬(Adjacency Matrix): $G = (V, E)$에서, $|V| = n$일 때, $G$의 인접 행렬은 $n \times n$ 행렬 $A$
+$$a_{ij} = \begin{cases}
+    1 \quad (v_i, v_j)\in E\\
+    0 \quad \text{otherwise}
+\end{cases}$$
+\\\\
+인접 리스트(Adjacency List): 각 Vertex에 대해 포인터가 주어지고, 그 Vertex로 부터 인접한 Vertex들을 모두 Linked List에 담음 (List 내에서는 순서에 관계가 없음)
+
+Linked List는 Node의 연결로 표현
+\begin{itemize}
+    \item Head: Linked List의 시작 Node (그래프의 각 Vertex들)
+    \item Node: 데이터 필드 + 포인트 필드 (다음에 연결된 Node의 주소 저장)
+    \item 마지막 Node의 포인트 필드는 \texttt{null}
+\end{itemize}
+
+\subsection{그래프의 응용 및 활용}
+최단 경로 찾기(Shortest Path Problem): 다익스트라(Dijkstra) 알고리즘
+
+\newpage
+해밀턴 순회의 응용: 일반적인 해결 알고리즘 존재 X $\to$ 최근접 이웃 방법(Nearest Neighbour Method, Greedy 알고리즘)
+
+\subsection{그래프의 탐색(Traversal)}
+깊이 우선 탐색(Depth First Search; DFS):
+\begin{itemize}
+    \item 시작 Vertex $v$에서 인접 Vertex 중 방문하지 않은 Vertex $w$ 방문
+    \item $w$에서 다시 인접 Vertex 중 방문하지 않은 Vertex $u$ 방문 반복
+    \item 어떤 Vertex $\nu$ 방문 후 $\nu$에 인접한 모든 Vertex 방문한 경우, 바로 이전 Vertex로 돌아가 위 반복
+    \item 모든 Vertex 방문 후 탐색 종료
+\end{itemize}
+
+Stack 사용 or 재귀 알고리즘으로 구현\\\\
+너비 우선 탐색(Breath First Search; BFS): 처음 방문한 Vertex와 인접한 Vertex들을 차례로 방문
+\begin{itemize}
+    \item 시작 Vertex $v$에서 인접한 Vertex 모두 차례로 방문
+    \item 더 이상 방문할 Vertex가 없을 때, 다시 $v$에 인접한 Vertex중 처음 방문한 Vertex와 인접한 Vertex 방문
+    \item $v$에 인접한 Vertex중 두 번째 방문한 Vertex와 인접한 Vertex 방문 반복
+    \item 모든 Vertex 방문 후 탐색 종료
+\end{itemize}
+
+Queue 사용\\\\
 \end{document}

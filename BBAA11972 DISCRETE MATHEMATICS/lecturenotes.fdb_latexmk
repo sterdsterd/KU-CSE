@@ -1,10 +1,10 @@
 # Fdb version 3
-["xdvipdfmx"] 1669044163 "lecturenotes.xdv" "lecturenotes.pdf" "lecturenotes" 1669044164
-  "lecturenotes.xdv" 1669044163 171884 528c9d82a887261248eaf6636bd5643a "xelatex"
+["xdvipdfmx"] 1669150570 "lecturenotes.xdv" "lecturenotes.pdf" "lecturenotes" 1669150571
+  "lecturenotes.xdv" 1669150569 302736 be66939122342b6c0df8988e81b81167 "xelatex"
   (generated)
   "lecturenotes.pdf"
-["xelatex"] 1669044348 "/Users/dex.rhee/Desktop/KU-CSE/KU-CSE/BBAA11972 DISCRETE MATHEMATICS/lecturenotes.tex" "lecturenotes.xdv" "lecturenotes" 1669044348
-  "/Users/dex.rhee/Desktop/KU-CSE/KU-CSE/BBAA11972 DISCRETE MATHEMATICS/lecturenotes.tex" 1669044347 28202 69054f45b2b62d9808a38654df649018 ""
+["xelatex"] 1669150562 "/Users/dex.rhee/Desktop/KU-CSE/KU-CSE/BBAA11972 DISCRETE MATHEMATICS/lecturenotes.tex" "lecturenotes.xdv" "lecturenotes" 1669150571
+  "/Users/dex.rhee/Desktop/KU-CSE/KU-CSE/BBAA11972 DISCRETE MATHEMATICS/lecturenotes.tex" 1669150561 45002 0690ca8e3fedb3f042a55a9488956405 ""
   "/dev/null" 0 -1 0 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -43,6 +43,7 @@
   "/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex" 1601326656 21989 fdc867d05d228316de137a9fc5ec3bbe ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex" 1601326656 8893 e851de2175338fdf7c17f3e091d94618 ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.code.tex" 1601326656 86658 8a9c1b9df587ffc661c1b74c41cecb65 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.standard.code.tex" 1601326656 2576 6afe8f29478dcd45cb4795bbeb732452 ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryangles.code.tex" 1601326656 3614 3404a408629b6c0bbcaf4731a9871bf8 ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex" 1601326656 319 225dfe354ba678ff3c194968db39d447 ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex" 1601326656 15929 463535aa2c4268fead6674a75c0e8266 ""
@@ -183,9 +184,9 @@
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1656798663 5459894 2bd55e3d04f0d97b67be6ab648b55228 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "header.tex" 1669043377 2281 b884f4e8f81e8a89e07b44c8cf87635b ""
-  "lecturenotes.aux" 1669044163 14703 ac0d2648a6d18dc22ce98cd2406e0d6f "xelatex"
-  "lecturenotes.tex" 1669044347 28202 69054f45b2b62d9808a38654df649018 ""
+  "header.tex" 1669146030 2305 351ec7e0708357991d1f6e44986f3a98 ""
+  "lecturenotes.aux" 1669150569 16101 44eb0d05e33f2d8936d6979f2e5bc96f "xelatex"
+  "lecturenotes.tex" 1669150561 45002 0690ca8e3fedb3f042a55a9488956405 ""
   "llncs.cls" 1665597564 41215 4b1da73c3c1066c3caeca2800609f48c ""
   (generated)
   "lecturenotes.aux"

@@ -1107,6 +1107,8 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libr
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.standard.code.tex
+INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.standard.code.tex
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/textcomp.sty
 INPUT ./lecturenotes.aex
 INPUT lecturenotes.aex

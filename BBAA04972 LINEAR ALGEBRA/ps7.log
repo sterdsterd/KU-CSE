@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.3)  21 NOV 2022 03:14
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.3)  24 NOV 2022 05:19
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -826,44 +826,46 @@ Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 
-Package fontspec Info: Font family 'SFMono(0)' created for font 'SF Mono' with
-(fontspec)             options
+Package fontspec Info: Font family 'SFMonoNerdFont(0)' created for font
+(fontspec)             'SFMono Nerd Font' with options
 (fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=WordSpace].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"SF
-(fontspec)             Mono/OT:script=latn;language=dflt;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"SF
-(fontspec)             Mono/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"SFMono Nerd
+(fontspec)             Font/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"SFMono Nerd
+(fontspec)             Font/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
 (fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"SF
-(fontspec)             Mono/B/OT:script=latn;language=dflt;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"SF
-(fontspec)             Mono/B/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"SFMono Nerd
+(fontspec)             Font/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"SFMono
+(fontspec)             Nerd Font/B/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
 (fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"SF
-(fontspec)             Mono/I/OT:script=latn;language=dflt;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: <->"SF
-(fontspec)             Mono/I/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"SFMono Nerd
+(fontspec)             Font/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"SFMono Nerd
+(fontspec)             Font/I/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
 (fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"SF
-(fontspec)             Mono/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"SFMono Nerd
+(fontspec)             Font/BI/OT:script=latn;language=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->"SF Mono/BI/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             <->"SFMono Nerd
+(fontspec)             Font/BI/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
 (fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
@@ -1025,8 +1027,8 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
  ) 
 Here is how much of TeX's memory you used:
  27740 strings out of 475882
- 552452 string characters out of 5802500
- 917335 words of memory out of 5000000
+ 552777 string characters out of 5802500
+ 917394 words of memory out of 5000000
  48283 multiletter control sequences out of 15000+600000
  478973 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

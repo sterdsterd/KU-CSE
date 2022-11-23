@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.3)  22 NOV 2022 03:32
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.3)  23 NOV 2022 05:56
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -898,7 +898,9 @@ File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \arrowsize=\dimen365
-))
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.standard.code.tex
+File: tikzlibrarygraphs.standard.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
 
 Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
 (fontspec)             New Roman' with options [Ligatures=TeX].
@@ -941,44 +943,46 @@ Package fontspec Info: Font family 'NanumMyeongjo(0)' created for font 'Nanum
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 
-Package fontspec Info: Font family 'SFMono(0)' created for font 'SF Mono' with
-(fontspec)             options
+Package fontspec Info: Font family 'SFMonoNerdFont(0)' created for font
+(fontspec)             'SFMono Nerd Font' with options
 (fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=WordSpace].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"SF
-(fontspec)             Mono/OT:script=latn;language=dflt;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"SF
-(fontspec)             Mono/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"SFMono Nerd
+(fontspec)             Font/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"SFMono Nerd
+(fontspec)             Font/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
 (fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"SF
-(fontspec)             Mono/B/OT:script=latn;language=dflt;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"SF
-(fontspec)             Mono/B/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"SFMono Nerd
+(fontspec)             Font/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"SFMono
+(fontspec)             Nerd Font/B/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
 (fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"SF
-(fontspec)             Mono/I/OT:script=latn;language=dflt;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: <->"SF
-(fontspec)             Mono/I/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"SFMono Nerd
+(fontspec)             Font/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"SFMono Nerd
+(fontspec)             Font/I/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
 (fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"SF
-(fontspec)             Mono/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"SFMono Nerd
+(fontspec)             Font/BI/OT:script=latn;language=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->"SF Mono/BI/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             <->"SFMono Nerd
+(fontspec)             Font/BI/OT:script=latn;language=dflt;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
 (fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
@@ -1408,14 +1412,191 @@ Underfull \hbox (badness 10000) in paragraph at lines 816--819
 
  []
 
-[19] (./lecturenotes.aux) ) 
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 839--841
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 871--872
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 871--872
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 877--880
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 915--917
+
+ []
+
+[21]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 938.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 938.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 953.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 953.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 953.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 953.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 968.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 968.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 968.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 968.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 968.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 968.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 982.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 982.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 982.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 982.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 982.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 982.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 982.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 982.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 997.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 997.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 997.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 997.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 997.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 997.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 997.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 997.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``e''? on input line 997.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``e''? on input line 997.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 1012.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 1012.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 1012.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 1012.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 1012.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 1012.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 1012.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 1012.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``e''? on input line 1012.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``e''? on input line 1012.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``f''? on input line 1012.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``f''? on input line 1012.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1016--1020
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1054
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 1077--1080
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1086--1087
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1086--1087
+
+ []
+
+[24] (./lecturenotes.aux) ) 
 Here is how much of TeX's memory you used:
- 32774 strings out of 475882
- 692821 string characters out of 5802500
- 1058115 words of memory out of 5000000
- 53263 multiletter control sequences out of 15000+600000
- 488407 words of font info for 131 fonts, out of 8000000 for 9000
+ 33006 strings out of 475882
+ 698080 string characters out of 5802500
+ 1085854 words of memory out of 5000000
+ 53491 multiletter control sequences out of 15000+600000
+ 488415 words of font info for 132 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  106i,16n,108p,613b,2709s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on lecturenotes.xdv (19 pages, 206100 bytes).
+Output written on lecturenotes.xdv (24 pages, 302736 bytes).
