@@ -16,35 +16,141 @@
 
 (a) Calculate the eigenvalues and eigenvectors of $A$.
 \paragraph*{Solution.}
-$$\mathrm{det}(A-\lambda I) = 0$$
 \begin{align*}
-    \mathrm{det}(A-\lambda I) &= \begin{vmatrix}
+    |A-\lambda I| &= \begin{vmatrix}
         1-\lambda&0&1\\
         -1&2-\lambda&1\\
         -2&0&4-\lambda
     \end{vmatrix}\\
     &= -\lambda^3 + 7\lambda^2-16\lambda+12\\
-    &= -(\lambda - 3)(\lambda^2 -4\lambda + 4)\\
     &= -(\lambda - 3)(\lambda - 2)^2\\
     &= 0
 \end{align*}
-$$\therefore \lambda_1 = 3,\ \lambda_2 = 2$$
+$$\therefore \lambda_1 = 3,\ \lambda_2 = 2$$\\
+For every $\lambda$, we find its own vectors:
 
-(b) If $A$ has three linearly independent eigenvectors, find the diagonalization of $A$
+1. $\lambda_1 = 3$
+
+$$A - \lambda_1 I = \begin{bmatrix}
+    -2&0&1\\-1&-1&1\\-2&0&1
+\end{bmatrix} \Rightarrow \mathbf{v}_1=\begin{bmatrix}
+    \dfrac{1}{2}\\[0.3cm]
+    \dfrac{1}{2}\\[0.3cm]
+    1
+\end{bmatrix}$$
+
+2. $\lambda_1 = 2$
+
+$$A - \lambda_1 I = \begin{bmatrix}
+    -1&0&1\\-1&0&1\\-2&0&2
+\end{bmatrix} \Rightarrow \mathbf{v}_2=\begin{bmatrix}
+    0\\1\\0
+\end{bmatrix},\ \mathbf{v}_3=\begin{bmatrix}
+    1\\0\\1
+\end{bmatrix}$$
+\newpage
+(b) If $A$ has three linearly independent eigenvectors, find the diagonaliation of $A$
+\paragraph{Solution.}
+$$P=\begin{bmatrix}
+    \dfrac{1}{2} & 0 & 1\\[0.3cm]
+    \dfrac{1}{2} & 1 & 0\\[0.3cm]
+    1 & 0 & 1
+\end{bmatrix},\quad D=\begin{bmatrix}
+    3 & 0 & 0\\
+    0 & 2 & 0\\
+    0 & 0 & 2
+\end{bmatrix}$$
+$$PDP^{-1} = \begin{bmatrix}
+    1&0&1\\
+    -1&2&1\\
+    -2&0&4
+\end{bmatrix}$$
 
 (c) What are the eigenvalues and eigenvectors of $A^{-1}$ (if $A^{-1}$ exists).
+\paragraph{Solution.}
+$$A^{-1} = \begin{bmatrix}
+    \dfrac{2}{3} & 0 & -\dfrac{1}{6}\\[0.3cm]
+    \dfrac{1}{6} & 0 & -\dfrac{1}{6}\\[0.3cm]
+    \dfrac{1}{3} & 0 & \dfrac{1}{6}
+\end{bmatrix}$$
+$$|A^T-\lambda I| = -\lambda^3 + \frac{5}{6}\lambda^2-\frac{1}{6}\lambda$$
+$$\lambda_1 = 0,\quad\lambda_2 = \frac{1}{3},\quad\lambda_3 = \frac{1}{2}$$
 
+1. $\lambda_1 = 0$
+
+$$A - \lambda_1 I = \begin{bmatrix}
+    2/3&0&-1/6\\
+    1/6&0&-1/6\\
+    1/3&0&1/6
+\end{bmatrix} \Rightarrow \mathbf{v}_1=\begin{bmatrix}
+    0\\1\\0
+\end{bmatrix}$$
+
+2. $\lambda_2 = \dfrac{1}{3}$
+
+$$A - \lambda_2 I = \begin{bmatrix}
+    1/3&0&-1/6\\
+    1/6&-1/3&-1/6\\
+    1/3&0&1/6
+\end{bmatrix} \Rightarrow \mathbf{v}_2=\begin{bmatrix}
+    1/2\\-1/4\\1
+\end{bmatrix}$$
+
+3. $\lambda_3 = \dfrac{1}{2}$
+
+$$A - \lambda_3 I = \begin{bmatrix}
+    1/6&0&-1/6\\
+    1/6&-1/2&-1/6\\
+    1/3&0&-1/3
+\end{bmatrix} \Rightarrow \mathbf{v}_3=\begin{bmatrix}
+    1\\0\\1
+\end{bmatrix}$$
+\newpage
 (d) Let $B = A + 3I$, where $I$ is the identity matrix. Find the eigenvalues of $B$.
+\paragraph{Solution.}
+$$B = \begin{bmatrix}
+    4&0&1\\
+    -1&5&1\\
+    -2&0&7
+\end{bmatrix}$$
+\begin{align*}
+    \begin{vmatrix}
+        4-\lambda&0&1\\
+        -1&5-\lambda&1\\
+        -2&0&7-\lambda
+    \end{vmatrix} &= -\lambda^3 + 16\lambda^2 - 85\lambda + 150\\
+    &= -(\lambda - 6)(\lambda - 5)^2 = 0
+\end{align*}
+$$\therefore \lambda_1 = 5,\quad \lambda_2 = 6$$
 
 \subsubsection{2.} Consider a square matrix $A$. Suppose that $A$ has full column rank. Can $A$ have eigenvalue $0$? Justify your answer.
-
+\paragraph{Solution.}\phantom{}\\
+If $A$ is a square matrix, the $r(A) + \mathrm{dim}(N(A)) = n$; which is the rank-nullity theorem.
+The nullity is the dimension of the null space of the matrix, which is all vectors $\mathbf{v}$ of the form:
+$$A\mathbf{v} = 0 = 0\mathbf{v}$$
+The null space of $A$ is precisely the eigenspace corresponding to eigenvalue $0$.
+\\\\\\
 \subsubsection{3.} The characteristic polynomial equation (CPE) of $A$ is written as $|A - \lambda I| = 0$. Likewise, the characteristic polynomial equation of $AT$ is $|AT - \lambda I| = 0$. Solving CPE gives eigenvalues.
 
 (a) Show that $A$ and $A^T$ have the same eigenvalues (Hint. Take a look at the CPEs of $A$ and $A^T$, and use the fact that transposing a matrix does not change the determinant)
-
-\subsubsection{4.} Consider a matrix $A = \begin{bmatrix}2&a\\1&0\end{bmatrix}$. Find a condition for $A$ to be diagonalisable.
+\paragraph{Solution.}\phantom{}\\
+The matrix $(A-\lambda I)^T$ is equals to the matrix $(A^T-\lambda I)$, since the matrix $I$ is symmetric.
+Thus, $$|A^T - \lambda I| = |(A - \lambda I)^T| = |A-\lambda I|$$
+From above, it is obvious that the eigenvalues are the same for both $A$ and $A^T$.
+\newpage
+\subsubsection{4.}
+Consider a matrix $A = \begin{bmatrix}2&a\\1&0\end{bmatrix}$. Find a condition for $A$ to be diagonalisable.
 (Hint. $A$ needs to have two linearly independent eigenvectors. Eigenvectors associated to distinct eigenvalues are linearly independent)
-
+\paragraph{Solution.}\phantom{}\\
+Matrix $A$ is diagonalisable iff the sum of the dimension of eigenspaces is equal to $n$.
+\begin{align*}
+    |A-\lambda I| &= \begin{vmatrix}
+        2-\lambda&a\\
+        1&-\lambda
+    \end{vmatrix}\\
+    &= \lambda^2 - 2\lambda + a
+\end{align*}
+$$\therefore a \neq 1$$
 \subsubsection{5.} Check if the following matrices are positive definite:
 
 (a) $\begin{bmatrix}
@@ -52,15 +158,88 @@ $$\therefore \lambda_1 = 3,\ \lambda_2 = 2$$
     2&5&3\\
     0&3&8
 \end{bmatrix}$
+\paragraph{Solution.}
+$$|2| = 2$$
+$$\begin{vmatrix}
+    2&2\\
+    2&5
+\end{vmatrix}=6$$
+$$\begin{vmatrix}
+    2&2&0\\
+    2&5&3\\
+    0&3&8
+\end{vmatrix}=30$$
+Since all determinants are positive, the matrix (a) is a positive definite.
+
 
 (b) $\begin{bmatrix}
     1&2\\3&4
 \end{bmatrix}$
-
+\paragraph{Solution.}
+\begin{align*}
+    |A-\lambda I| &= \begin{vmatrix}
+        1-\lambda & 2\\3 & 4 - \lambda
+    \end{vmatrix}\\
+    &= \lambda^2 - 5\lambda - 2\\
+    &= (\lambda + \frac{\sqrt{33} - 5}{2})(\lambda - \frac{\sqrt{33} + 5}{2})
+\end{align*}
+$$\therefore \lambda_1 = \frac{-\sqrt{33}+5}{2},\quad \lambda_2 = \frac{\sqrt{33}+5}{2}$$
+Since all eigenvalues are not positive, the matrix (b) is not a positive definite.
+\newpage
 \subsubsection{6.} Show that $R^TR$ is positive semidefinite for any matrix $R$.
+\paragraph{Solution.}\phantom{}\\
+Let $R = \begin{bmatrix}
+    1&2\\3&4
+\end{bmatrix}$.
+$$R^TR = \begin{bmatrix}
+    1 &3\\2&4
+\end{bmatrix}\begin{bmatrix}
+    1&2\\3&4
+\end{bmatrix} = \begin{bmatrix}
+    5 & 11\\11 & 25
+\end{bmatrix}$$
+$$|R^TR-\lambda I| = \begin{vmatrix}
+    5 - \lambda & 11\\11 & 25 - \lambda
+\end{vmatrix}$$
+$$\therefore \lambda_1 = 15 + \sqrt{221},\ \lambda_2 = 15 - \sqrt{221}$$
+Since all eigenvalues are positive, the matrix $R^TR$ is positive semidefinite.
 
 \subsubsection{7.} Show that $R^TR$ is positive definite if and only if $R$ has full column rank.
-
+\paragraph{Solution.}\phantom{}\\
+Let $R = \begin{bmatrix}
+    1&1\\1&2
+\end{bmatrix}$.
+$$R^TR = \begin{bmatrix}
+    1 &1\\1&2
+\end{bmatrix}\begin{bmatrix}
+    1&1\\1&2
+\end{bmatrix} = \begin{bmatrix}
+    2&3\\3&5
+\end{bmatrix}$$
+$$|R^TR-\lambda I| = \begin{vmatrix}
+    2 - \lambda & 3\\3 & 5 - \lambda
+\end{vmatrix}$$
+$$\therefore \lambda_1 = \frac{7+3\sqrt{5}}{2},\ \lambda_2 = \frac{7-3\sqrt{5}}{2}$$
+Since all eigenvalues are positive, the matrix $R^TR$ is positive definite.
+\newpage
 \subsubsection{8.} Prove that if $B = M^{-1}AM$, then $A$ and $B$ have the same eigenvalues. (Hint: multiply an eigenvector of $B$ on the right, and then multiply $M$ on the left)
+\paragraph{Solution.}\phantom{}\\
+Let $X_i$ be an eigenvector of $A$ corresponding to $\lambda_i$, and let the eigenvectors be independent of each other.
+$$AX_i=\lambda_i X_i$$
+Let $M=[X_1\ X_2\ \cdots\ X_n]$ which contains the columns with the eigenvectors of $A$.\\
+So,
+\begin{align*}
+    AM &= [AX_1\ AX_2\ \cdots\ AX_n]\\
+    &=[\lambda_1X_1\ \lambda_2 X2\ \cdots\ \lambda_nX_n]\\
+    &=[X_1\ X_2\ \cdots\ X_n]\begin{bmatrix}
+        \lambda_1 & 0 & \cdots & 0\\
+        0 & \lambda_2 & \cdots & 0\\
+        \vdots & \vdots & \ddots & \vdots\\
+        0 & 0 & \cdots & \lambda_n
+    \end{bmatrix}
+\end{align*}
+$$AM=MB$$
+$B$ is the diagonal matrix. $M$ is invertible as the eigenvectors are independent and $|M|\neq 0$.\\
+Therefore, $$M^{-1}AM=B$$
 
 \end{document}
