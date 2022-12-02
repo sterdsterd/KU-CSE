@@ -1,0 +1,206 @@
+% !TeX program = xelatex
+\input{header}
+
+\begin{document}
+
+\title{Linear Algebra (0031)\newline\space Project 2}
+\author{Yulwon Rhee (202211342)}
+\institute{Department of Computer Science and Engineering, Konkuk University}
+
+\maketitle
+\subsubsection{Solution.}\phantom{}\\\\
+Let $A = \begin{bmatrix}
+    3&5\\5&8
+\end{bmatrix}$
+
+\begin{align*}
+    T_0 &= U_0^T A\ U_0\\
+    &= A (\because U_0 = \begin{bmatrix}
+        1&0\\0&1
+        \end{bmatrix})
+\end{align*}
+
+Given that $T_{k-1} = U_k R_k,\ T_k=R_k U_k$
+
+\subsubsection{$\cdot\quad k = 1$}
+\begin{align*}
+    T_0 &= U_1R_1\text{(QR Factorization)}\\
+    &= \begin{bmatrix}
+        0.514 & 0.857\\
+        0.857 & -0.514
+    \end{bmatrix} \begin{bmatrix}
+        5.831 & 9.432\\
+        0 & 0.171
+    \end{bmatrix}
+\end{align*}
+\begin{align*}
+    T_1 &= R_1U_1\\
+    &= \begin{bmatrix}
+        5.831 & 9.432\\
+        0 & 0.171
+    \end{bmatrix} \begin{bmatrix}
+        0.514 & 0.857\\
+        0.857 & -0.514
+    \end{bmatrix}\\
+    &= \begin{bmatrix}
+        11.080 & 0.149\\
+        0.147 & -0.088
+    \end{bmatrix}
+\end{align*}
+
+\newpage
+\subsubsection{$\cdot\quad k = 2$}
+\begin{align*}
+    T_1 &= U_2R_2\text{(QR Factorization)}\\
+    &= \begin{bmatrix}
+        1 & 0.013\\
+        0.013 & -1
+    \end{bmatrix} \begin{bmatrix}
+        11.081 & 0.148\\
+        0 & 0.090
+    \end{bmatrix}
+\end{align*}
+\begin{align*}
+    T_1 &= R_2U_2\\
+    &= \begin{bmatrix}
+        11.081 & 0.148\\
+        0 & 0.090
+    \end{bmatrix} \begin{bmatrix}
+        1 & 0.013\\
+        0.013 & -1
+    \end{bmatrix}\\
+    &= \begin{bmatrix}
+        11.083 & -0.004\\
+        0.001 & -0.090
+    \end{bmatrix}
+\end{align*}
+
+\subsubsection{$\cdot\quad k = 3$}
+\begin{align*}
+    T_2 &= U_3R_3\text{(QR Factorization)}\\
+    &= \begin{bmatrix}
+        1 & 0.013\\
+        0.013 & -1
+    \end{bmatrix} \begin{bmatrix}
+        11.081 & 0.148\\
+        0 & 0.090
+    \end{bmatrix}
+\end{align*}
+\begin{align*}
+    T_3 &= R_3U_3\\
+    &= \begin{bmatrix}
+        1 & 0\\
+        0 & -1
+    \end{bmatrix} \begin{bmatrix}
+        11.083 & -0.004\\
+        0 & 0.090
+    \end{bmatrix}\\
+    &= \begin{bmatrix}
+        11.083 & -0.004\\
+        0 & -0.090
+    \end{bmatrix}
+\end{align*}
+
+\subsubsection{$\cdot\quad$Calculate $Q_3$}
+\begin{align*}
+    Q_3 &= U_0 U_1 U_2 U_3\\
+    &= \begin{bmatrix}
+        1&0\\0&1
+    \end{bmatrix}\begin{bmatrix}
+        0.514 & 0.857\\
+        0.857 & -0.514
+    \end{bmatrix}\begin{bmatrix}
+        1 & 0.013\\
+        0.013 & -1
+    \end{bmatrix}\begin{bmatrix}
+        1 & 0.013\\
+        0.013 & -1
+    \end{bmatrix}\\
+    &= \begin{bmatrix}
+        0.525&-0.850\\
+        0.850&0.525
+    \end{bmatrix} \begin{bmatrix}
+        1 & 0.013\\
+        0.013 & -1
+    \end{bmatrix}\\
+    &= \begin{bmatrix}
+        0.514 & 0.857\\
+        0.857 & -0.514
+    \end{bmatrix}
+\end{align*}
+
+\subsubsection{$\cdot\quad$Calculate reconstructed $A$}
+\begin{align*}
+    A &= Q_3 T_3 Q_3^T\\
+    &= \begin{bmatrix}
+        0.514 & 0.857\\
+        0.857 & -0.514
+    \end{bmatrix} \begin{bmatrix}
+        11.083 & -0.004\\
+        0 & -0.090
+    \end{bmatrix} \begin{bmatrix}
+        0.514 & 0.857\\
+        0.857 & -0.514
+    \end{bmatrix}\\
+    &= \begin{bmatrix}
+        5.697 & -0.08\\
+        9.498 & 0.043
+    \end{bmatrix} \begin{bmatrix}
+        0.514 & 0.857\\
+        0.857 & -0.514
+    \end{bmatrix}\\
+    &= \begin{bmatrix}
+        2.860 & 4.923\\
+        4.919 & 8.118
+    \end{bmatrix}
+\end{align*}
+
+\subsubsection{Console Output After Running The Program}
+\begin{minted}[linenos, fontsize=\small, breaklines]{text}
+Terminated after 3 iterations
+Tk
+2 x 2
+   11.090    0.000
+    0.000   -0.090
+
+Qk=U0*...*Uk
+2 x 2
+    0.526   -0.851
+    0.851    0.526
+
+Reconstructed A=Qk * Tk * Qk^T
+2 x 2
+    3.000    5.000
+    5.000    8.000
+
+\end{minted}
+
+\subsubsection{Result.}
+\begin{align*}
+    T_3 &=
+    \begin{bmatrix}
+        11.083 & -0.004\\
+        0 & -0.090
+    \end{bmatrix} \approx \begin{bmatrix}
+        11.090 & 0.000\\
+        0.000 & -0.090
+    \end{bmatrix}\\
+    Q_3 &=
+    \begin{bmatrix}
+        0.514 & 0.857\\
+        0.857 & -0.514
+    \end{bmatrix}\approx\begin{bmatrix}
+        0.526 & -0.851\\
+        0.851 & 0.526
+    \end{bmatrix}\\
+    A &=
+    \begin{bmatrix}
+        2.860 & 4.923\\
+        4.919 & 8.118
+    \end{bmatrix}\approx\begin{bmatrix}
+        3.000 & 5.000\\
+        5.000 & 8.000
+    \end{bmatrix}
+\end{align*}
+
+\end{document}

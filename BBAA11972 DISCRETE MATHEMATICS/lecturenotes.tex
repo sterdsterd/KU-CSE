@@ -1083,5 +1083,204 @@ Stack 사용 or 재귀 알고리즘으로 구현\\\\
     \item 모든 Vertex 방문 후 탐색 종료
 \end{itemize}
 
-Queue 사용\\\\
+Queue 사용
+
+\subsection{트리}
+트리(Tree):
+\begin{itemize}
+    \item A connected undirected graph with no circuits
+    \item An undirected graph is a tree iff there is a unique simple path between any two of its vertices
+    \item 특별히 지정된 노드인 루트가 있고, 나머지 노드들은 다시 각각 트리이면서 연결되지 않는(disjoint) $T_1, T_2, \cdots, T_n(N \geq 0)$으로 나누어 진다.
+    \item 이 때 $T_1, T_2, \cdots, T_n$을 루트의 서브 트리(Subtree)라고 한다.
+\end{itemize}\phantom{}
+\\
+루트(Root): 주어진 트리의 시작 노드, 트리의 가장 높은 곳에 위치\\
+차수(Degree): 각 노드의 서브 트리의 개수\\
+잎 노드 or 단말 노드(Leaf Node): 차수가 0인 노드\\
+자식 노드(Children Node): 어떤 노드의 서브 트리의 루트 노드\\
+부모 노드(Parent Node): 자식 노드의 반대\\
+형제 노드(Sibling Node): 동일한 부모를 가지는 노드\\
+중간 노드(Internal Node): 루트도 아니고 잎 노드도 아닌 노드\\
+조상(Ancestor): 루트로부터 각 노드에 이르는 경로 상에 나타난 모든 노드들\\
+자손(Descendant): 각 노드부터 잎 노드에 이르는 경로 상에 나타난 모든 노드들\\
+레벨(Level): 루트의 레벨 $= 0$, 자손 노드로 내려가며 \texttt{++}\\
+트리의 높이 or 깊이(Height or Depth): 트리에서 노드가 가질 수 있는 맥스 레벨\\
+숲(Forest): 서로 연결되지 않는 트리들의 집합, 트리에서 루트를 제거 $\to$ 숲 생성
+\\\\
+$G$는 트리\\
+$\equiv$ $G$는 연결되어 있고, $M = n - 1$\\
+$\equiv$ $G$는 연결되어 있고, 어느 한 연결선만을 제거하더라도 $G$는 연결되지 않음\\
+$\equiv$ $G$는 사이클을 가지지 않고, $m = n - 1$\\
+$\equiv$ $G$는 어느 한 연결선만 첨가하더라도 사이클 형성\\
+
+\subsection{이진 트리}
+이진 트리(Binary Tree): 노드들의 유한 집합, 공집합이거나, 루트와 왼쪽 서브 트리, 오른쪽 서브 트리로 이루어짐\\
+사향 이진 트리(Skewed Binary Tree): 왼쪽 or 오른쪽으로 편향된 트리\\
+완전 이진 트리(Complete Binary Tree): 높이가 $k$일 때 레벨 $1$부터 $k-1$까지는 모두 차있고 레벨 $k$에서는 왼쪽 노드부터 차례로 차있는 이진 트리\\
+포화 이진 트리(Full Binary Tree): 잎 노드가 아닌 것들은 모두 $2$개씩 자식 노드를 가지며 트리의 높이가 일정할 때
+\\\\
+이진 트리가 레벨 $i$에서 가질 수 있는 최대 노드 수 $= 2^i$\\
+높이가 $k$인 이진 트리가 가질 수 있는 최대 전체 노드 수 $= 2^{k + 1} - 1$\\
+잎 노드 개수 $= n_0$, 차수가 $2$인 노드 개수 $= n_2$일 때, $n_0 = n_2 + 1$ 항상 성립
+
+\subsection{이진 트리의 표현}
+배열:
+\begin{itemize}
+    \item 트리의 중간에 새로운 노드를 삽입하거나 기존의 노드를 지울 때 비효율적
+    \item 높이가 $h$인 이진 트리는 각 노드 번호를 인덱스로 하여 1차원 배열로 구현 가능 (인덱스는 1부터 시작)
+    \item 노드 인덱스 $n$의 부모 인덱스 $= \left\lfloor \dfrac{n}{2} \right\rfloor$
+    \item 노드 인덱스 $n$의 왼쪽 자식 인덱스 $= 2n$, 오른쪽 자식 인덱스 $= 2n + 1$
+\end{itemize}\phantom{}\\
+연결 리스트: 일반적으로 가장 많이 사용. 중간 데이터, 왼쪽 자식 포인터, 오른쪽 자식 포인터 저장
+
+\newpage
+\section{Week 13}
+\subsection{이진 트리의 탐방}
+트리의 각 노드를 꼭 한 번씩만 방문(Traversal)하는 방법
+\begin{itemize}
+    \item 각 노드와 그 노드의 서브 트리를 같은 방법으로 탐방
+    \item 전순위, 중순위, 후순위 탐방 기법
+    \item D: 노드, L: 노드의 왼쪽 서브 트리, R:노드의 오른쪽 서브 트리
+    \item 왼쪽을 오른쪽보다 항상 먼저 방문한다고 가정
+    \item 중순위: LDR
+    \item 전순위: DLR
+    \item 후순위: LRD
+    \item 수식 표현에서 중순위 표기(Infix), 전순위 표기(Prefix), 후순위 표기(Postfix)와 각각 대응
+\end{itemize}\phantom{}\\
+탐방의 결과, 각 노드에 들어있는 데이터를 차례로 나열\\\\
+중순위:
+\begin{minted}[linenos, fontsize=\small, breaklines]{cpp}
+void inOrder(TREE* currentNode) {
+    if (currentNode != NULL) {
+        inOrder(currentNode->leftChild);
+        std::cout << currentNode->data;
+        inOrder(currentNode->rightChild);
+    }
+}
+\end{minted}
+전순위:
+\begin{minted}[linenos, fontsize=\small, breaklines]{cpp}
+void preOrder(TREE* currentNode) {
+    if (currentNode != NULL) {
+        std::cout << currentNode->data;
+        preOrder(currentNode->leftChild);
+        preOrder(currentNode->rightChild);
+    }
+}
+\end{minted}
+후순위:
+\begin{minted}[linenos, fontsize=\small, breaklines]{cpp}
+void postOrder(TREE* currentNode) {
+    if (currentNode != NULL) {
+        postOrder(currentNode->leftChild);
+        postOrder(currentNode->rightChild);
+        std::cout << currentNode->data;
+    }
+}
+\end{minted}
+
+\subsection{순회 표기 \& 수식 트리}
+중순위: $(a+b)\times(c-d)$\\
+전순위: $\times + ab-cd$\\
+후순위: $ab+cd-\times$\\\\
+전순위 수식 $+-\times\ 2\ 3\ 5 \div \wedge\  2\ 3\ 4$ \texttt{==} 중순위 수식 $2 \times 3 - 5 + 2^3 \div 4$\\
+후순위 수식 $7\ 2\ 3\times - 4 \wedge 9\ 3 \div +$ \texttt{==} 중순위 수식 $(7 - 2 \times 3)^4 + 9 \div 3$
+\\\\
+후순위 표기식과 스택을 활용하여 수식 트리 생성:
+
+후순위 표기식이 주어지면 스택에 피연산자 저장
+
+연산자를 만나면 스택에서 두 개의 피연산자 \texttt{pop()} 후 연산 결과(트리) 다시 저장
+
+\subsection{생성 트리와 최소 비용 생성 트리}
+생성 트리(Spanning Tree): $\exists G$에서 모든 노드들을 포함하는 트리
+
+비용(Cost): 트리 연결선의 값의 합\\
+최소 비용 생성 트리(Minimum Spanning Tree: MST): 생성 트리 중 최소 비용
+\\\\
+Prim's Algorithm:
+\begin{itemize}
+    \item $G = (V, E)$에서 $V = \{1, 2, \cdots, n\}$
+    \item 노드의 집합 $U$를 $1$로 시작
+    \item $u \in U,\ v \in V - U$일 때, $U$와 $V-U$를 연결하는 사이클 형성 X인 가장 짧은 연결선 $(u, v)$를 찾아 $v$를 $U$에 포함시킴
+    \item 위를 $U-V$까지 반복
+\end{itemize}
+\begin{minted}[linenos, fontsize=\small, breaklines, escapeinside=||, mathescape=true]{cpp}
+    void prim(graph G: set_of_edges T) {
+        set_of_vertices U;
+        vertex u, v;
+        T = NULL;
+        U = {1};
+        while (U != V) {
+            let (u, v) be a lowest cost edge such that u is in U and v is in V - U;
+            if ((u, v) does not create a cycle) {
+                T = T |$\cup$| {(u, v)};
+                U = U |$\cup$| {v};
+            }
+        }
+    }
+\end{minted}
+\phantom{}
+\newpage
+Kruskal Algorithm:
+\begin{itemize}
+    \item $G = (V, E)$에서 $V = \{1, 2, \cdots, n\}$, $T =$ (연결선의 집합)
+    \item Let $T = \varnothing$
+    \item $E$를 비용이 적은 순서로 정렬
+    \item 가장 최솟값 가진 연결선 $(u, v)$ 차례로 찾아 사이클 형성 X이면 $T$에 포함
+    \item 위를 $|T| = |V| - 1$까지 반복
+\end{itemize}
+\begin{minted}[linenos, fontsize=\small, breaklines, escapeinside=||, mathescape=true]{cpp}
+    void kruskal(graph G: set_of_edges T) {
+        T = NULL;
+        while (T contains less than n - 1 edges and E is not empty) {
+            choose an edge (v, w) from E of lowest cost;
+            delete (v, w) from E;
+            if ((v, w) does not create a cycle in T)
+                add (v, w) to T;
+            else discard (v, w);
+        }
+        if (T contains fewer than n - 1 edges)
+            std::cout << "No Spanning Tree";
+    }
+\end{minted}
+
+\subsection{트리의 활용}
+문법의 파싱(Parsing)\\
+허프만 코드(Huffman Code):
+\begin{itemize}
+    \item 알파벳 문자를 $0$과 $1$의 비트 코드로 Encoding
+    \item 문자의 발생 빈도에 따라 코드의 길이를 다르게 $\to$ 통신의 효율성
+    \item 접두어 성질: 어떤 문자 코드도 다른 문자 코드의 접두어 코드가 아님
+\end{itemize}\phantom{}\\
+Huffman Algorithm:
+\begin{itemize}
+    \item 발생 빈도가 가장 낮은 두 문자를 선택해 하나의 이진 트리로 연결
+    \begin{itemize}
+        \item 왼쪽 노드에는 빈도수 낮은 문자, 오른쪽 노드에는 빈도수 높은 문자
+        \item 그 두 문자의 루트 노드는 두 문자의 빈도의 합
+        \item 문자들을 이진 트리로 연결
+        \item 그 후에 이진 트리들을 연결
+    \end{itemize}
+    \item 위 과정을 모든 문자가 하나의 이진 트리로 묶일 때까지 반복
+    \item 생성된 이진 트리의 왼쪽 노드는 $0$, 오른쪽 노드에는 $1$ 부여
+    \item 루트부터 해당 문자까지 $0$ 또는 $1$을 순서대로 나열한 것이 해당 문자의 허프만 코드 
+\end{itemize}
+
+\newpage 
+\section{Week 14}
+\subsection{이진 탐색 트리}
+이진 탐색 트리(Binary Search Tree):
+\begin{itemize}
+    \item 모든 노드 $x$에 대하여 노드 $y$가 노드 $x$의 왼쪽 서브 트리에 있을 때 $y < x$이고,
+    노드 $z$가 노드 $x$의 오른쪽 서브 트리에 있으면 $x < z$인 이진 트리
+    \item $<$는 순서 관계를 의미
+    \item 높이 균형 이진 트리인 경우 탐색 시간은 $\log n$
+\end{itemize}
+
+\subsection{결정 트리}
+결정 트리(Decision Tree): 8개의 동전 문제
+
+
+
 \end{document}

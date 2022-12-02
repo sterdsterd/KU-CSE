@@ -1,10 +1,10 @@
 # Fdb version 3
-["xdvipdfmx"] 1669150570 "lecturenotes.xdv" "lecturenotes.pdf" "lecturenotes" 1669150571
-  "lecturenotes.xdv" 1669150569 302736 be66939122342b6c0df8988e81b81167 "xelatex"
+["xdvipdfmx"] 1669753487 "lecturenotes.xdv" "lecturenotes.pdf" "lecturenotes" 1669753488
+  "lecturenotes.xdv" 1669753486 369600 f94c85022e15e76c378ab41effdf702d "xelatex"
   (generated)
   "lecturenotes.pdf"
-["xelatex"] 1669150562 "/Users/dex.rhee/Desktop/KU-CSE/KU-CSE/BBAA11972 DISCRETE MATHEMATICS/lecturenotes.tex" "lecturenotes.xdv" "lecturenotes" 1669150571
-  "/Users/dex.rhee/Desktop/KU-CSE/KU-CSE/BBAA11972 DISCRETE MATHEMATICS/lecturenotes.tex" 1669150561 45002 0690ca8e3fedb3f042a55a9488956405 ""
+["xelatex"] 1669753480 "/Users/dex.rhee/Desktop/KU-CSE/KU-CSE/BBAA11972 DISCRETE MATHEMATICS/lecturenotes.tex" "lecturenotes.xdv" "lecturenotes" 1669753488
+  "/Users/dex.rhee/Desktop/KU-CSE/KU-CSE/BBAA11972 DISCRETE MATHEMATICS/lecturenotes.tex" 1669753478 54457 b9361775a3375f2f9473b8b6de9cb982 ""
   "/dev/null" 0 -1 0 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -162,7 +162,6 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgffor.sty" 1601326656 348 ee405e64380c11319f0e249fed57e6c5 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty" 1601326656 274 5ae372b7df79135d240456a1c6f2cf9a ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty" 1601326656 325 f9f16d12354225b7dd52a3321f085955 ""
-  "/usr/local/texlive/2022/texmf-dist/tex/latex/physics/physics.sty" 1356048875 29610 a9597219b282d9c78b02393dcd7d4322 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/mathptmx.sty" 1586716065 4631 6e41de2b7a83dfa5d2c4b0a2fe01f046 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omlztmcm.fd" 1137110629 411 12564a37a279e4e0b533cdf5e03eeb7c ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omsztmcm.fd" 1137110629 348 f4ce75d394e7d9ac12ca7aac4045ed77 ""
@@ -184,9 +183,15 @@
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1656798663 5459894 2bd55e3d04f0d97b67be6ab648b55228 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "header.tex" 1669146030 2305 351ec7e0708357991d1f6e44986f3a98 ""
-  "lecturenotes.aux" 1669150569 16101 44eb0d05e33f2d8936d6979f2e5bc96f "xelatex"
-  "lecturenotes.tex" 1669150561 45002 0690ca8e3fedb3f042a55a9488956405 ""
+  "_minted-lecturenotes/1CFD68CE32728EBFA6CB230AFC5817B9D5FAB7C6F5200334653EDAB711C2DB77.pygtex" 1669743069 833 02b5350c1cbc18492bf8ee01615e4fa0 ""
+  "_minted-lecturenotes/3B04491015D63CE8E73B09E8721F7EECD5FAB7C6F5200334653EDAB711C2DB77.pygtex" 1669743069 830 dd6c449bdb054f351bcdf626182c7467 ""
+  "_minted-lecturenotes/573A135A0733037BAE4D04E0BC84A5FA41D027C2755B58C835169ED6795B459B.pygtex" 1669748666 2189 f1cf09f09f0c85a4e7836c14c1075272 ""
+  "_minted-lecturenotes/ACC5E407C79C4AD130AF989F12015C56D5FAB7C6F5200334653EDAB711C2DB77.pygtex" 1669742601 827 2698a4b4dc98063d4db8cde0188ffdcd ""
+  "_minted-lecturenotes/F74488522B28919198BC9942EE284DD941D027C2755B58C835169ED6795B459B.pygtex" 1669748667 2379 bc75e74a5079959acadf4bff0e75a97d ""
+  "_minted-lecturenotes/default.pygstyle" 1669742601 6365 683ea4fd81022f120108d52c508c17f9 ""
+  "header.tex" 1669746593 2290 1d050a39c2b45bc6972de95de2fb3a69 ""
+  "lecturenotes.aux" 1669753486 17761 41f9d8fec9f493b15fac94d559a19f62 "xelatex"
+  "lecturenotes.tex" 1669753478 54457 b9361775a3375f2f9473b8b6de9cb982 ""
   "llncs.cls" 1665597564 41215 4b1da73c3c1066c3caeca2800609f48c ""
   (generated)
   "lecturenotes.aux"

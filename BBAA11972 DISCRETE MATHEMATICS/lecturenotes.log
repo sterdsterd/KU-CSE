@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.3)  23 NOV 2022 05:56
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.3)  30 NOV 2022 05:24
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -492,8 +492,6 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count336
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/physics/physics.sty
-Package: physics 
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks34
 \pgfutil@tempdima=\dimen266
@@ -922,24 +920,24 @@ Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 
-Package fontspec Info: Could not resolve font "Nanum Myeongjo/I" (it probably
-(fontspec)             doesn't exist).
+Package fontspec Info: Could not resolve font "KoPubWorldBatang_Pro/I" (it
+(fontspec)             probably doesn't exist).
 
 
-Package fontspec Info: Font family 'NanumMyeongjo(0)' created for font 'Nanum
-(fontspec)             Myeongjo' with options [Ligatures=TeX].
+Package fontspec Info: Font family 'KoPubWorldBatang_Pro(0)' created for font
+(fontspec)             'KoPubWorldBatang_Pro' with options [Ligatures=TeX].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Nanum
-(fontspec)             Myeongjo/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"KoPubWorldBatang_Pro/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Nanum
-(fontspec)             Myeongjo/B/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"KoPubWorldBatang_Pro/B/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Nanum
-(fontspec)             Myeongjo/BI/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"KoPubWorldBatang_Pro/BI/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 
@@ -1580,23 +1578,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 1077--1080
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1086--1087
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1115
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1086--1087
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1115
 
  []
 
-[24] (./lecturenotes.aux) ) 
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 1117--1125
+
+ []
+
+[25]
+\openout3 = `lecturenotes.pyg'.
+
+ (./_minted-lecturenotes/default.pygstyle) (./_minted-lecturenotes/ACC5E407C79C4AD130AF989F12015C56D5FAB7C6F5200334653EDAB711C2DB77.pygtex
+Underfull \hbox (badness 10000) in paragraph at lines 1149--1
+
+ []
+
+)
+\openout3 = `lecturenotes.pyg'.
+
+ (./_minted-lecturenotes/3B04491015D63CE8E73B09E8721F7EECD5FAB7C6F5200334653EDAB711C2DB77.pygtex)
+\openout3 = `lecturenotes.pyg'.
+
+ (./_minted-lecturenotes/1CFD68CE32728EBFA6CB230AFC5817B9D5FAB7C6F5200334653EDAB711C2DB77.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 1183--1190
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1183--1190
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26]
+Underfull \hbox (badness 10000) in paragraph at lines 1198--1203
+
+ []
+
+\openout3 = `lecturenotes.pyg'.
+
+(./_minted-lecturenotes/573A135A0733037BAE4D04E0BC84A5FA41D027C2755B58C835169ED6795B459B.pygtex) [27]
+\openout3 = `lecturenotes.pyg'.
+
+ (./_minted-lecturenotes/F74488522B28919198BC9942EE284DD941D027C2755B58C835169ED6795B459B.pygtex) [28] [29] (./lecturenotes.aux)
+runsystem(rm lecturenotes.pyg)...executed.
+
+ ) 
 Here is how much of TeX's memory you used:
- 33006 strings out of 475882
- 698080 string characters out of 5802500
- 1085854 words of memory out of 5000000
- 53491 multiletter control sequences out of 15000+600000
- 488415 words of font info for 132 fonts, out of 8000000 for 9000
+ 32584 strings out of 475882
+ 697467 string characters out of 5802500
+ 1075728 words of memory out of 5000000
+ 53048 multiletter control sequences out of 15000+600000
+ 488463 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 106i,16n,108p,613b,2709s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 106i,16n,108p,679b,2709s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on lecturenotes.xdv (24 pages, 302736 bytes).
+Output written on lecturenotes.xdv (29 pages, 369600 bytes).
