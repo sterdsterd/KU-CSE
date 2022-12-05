@@ -4,9 +4,7 @@ import com.formdev.flatlaf.FlatDarkLaf;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.*;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class BingoGame {
 
@@ -23,45 +21,12 @@ public class BingoGame {
             e.printStackTrace();
         }
 
-        ArrayList<Game> statisticList = new ArrayList<>();
-        File statisticFile;
-        FileWriter statisticWriter = null;
-        try {
-            statisticFile = new File("statistics.txt");
-
-            if (!statisticFile.exists()) statisticFile.createNewFile();
-
-            statisticWriter = new FileWriter(statisticFile, true);
-
-            Scanner statisticScanner = new Scanner(statisticFile);
-            while(statisticScanner.hasNextLine()) {
-                String str = statisticScanner.nextLine();
-                statisticList.add(Game.parseGameInfo(str));
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        StatisticUtil.init();
 
         while (true) {
-            ArrayList<Word> wordList = new ArrayList<>();
-            StartFrame startFrame = new StartFrame("BINGO GAME", statisticList);
+            StartFrame startFrame = new StartFrame("BINGO GAME", StatisticUtil.getStatisticList());
 
-            try (Scanner fileScanner = new Scanner(startFrame.getSelectedFile())){
-                while(fileScanner.hasNextLine()) {
-                    String str = fileScanner.nextLine();
-                    String[] wordInfo = str.split("\t");
-                    String english = wordInfo[0].trim();
-                    String korean = wordInfo[1].trim();
-                    wordList.add(new Word(english, korean));
-                }
-                //System.out.println(startFrame.getSelectedFile().getAbsolutePath() + " 로딩 완료");
-
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-
+            ArrayList<Word> wordList = Word.getWordList(startFrame.getSelectedFile());
             int N = startFrame.getN();
             int difficulty = startFrame.getDifficulty();
 
@@ -69,26 +34,14 @@ public class BingoGame {
             User computer = new User(wordList, N);
 
             Game game = new Game(N, difficulty);
-
             GameFrame gameFrame = new GameFrame("BINGO GAME", user, computer, N, difficulty);
             game.setWinLoseInfo(gameFrame.getWinLoseInfo());
 
-            statisticList.add(game);
-
-            try {
-                statisticWriter.write(game.getCsvInfo());
-                statisticWriter.flush();
-                System.out.println(game.getCsvInfo());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            StatisticUtil.addToStatisticList(game);
+            StatisticUtil.writeStatistic(game);
 
         }
-//        try {
-//            statisticsWriter.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+
     }
 
 }

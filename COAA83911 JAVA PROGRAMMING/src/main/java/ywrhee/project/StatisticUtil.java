@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class StatisticHandler {
+public class StatisticUtil {
 
     private static ArrayList<Game> statisticList;
     private static FileWriter statisticWriter;

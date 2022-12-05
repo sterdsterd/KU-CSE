@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.3)  5 DEC 2022 01:53
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.3)  5 DEC 2022 20:31
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1119,14 +1119,216 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
  [1
 
-] (./final-project-report.aux) ) 
-Here is how much of TeX's memory you used:
- 30893 strings out of 475882
- 662595 string characters out of 5802500
- 1013537 words of memory out of 5000000
- 51390 multiletter control sequences out of 15000+600000
- 479005 words of font info for 101 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 106i,5n,108p,639b,2709s stack positions out of 10000i,1000n,20000p,200000b,200000s
+]
+\openout5 = `final-project-report.pyg'.
 
-Output written on final-project-report.xdv (1 page, 9696 bytes).
+ (./_minted-final-project-report/default.pygstyle) (./_minted-final-project-report/39AF26AAEDDA4B85BEBA955071B3614691503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/7727B197D0242636895DDE77F60F828E91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/7727B197D0242636895DDE77F60F828E91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/ED927E4E17EA742D8D65B354F29EDB5791503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/DA1C0644D71A64D1E1EF7D2CD152E31191503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/741DD0C329D4253481AADFA2C9469E4A91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/DA1C0644D71A64D1E1EF7D2CD152E31191503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/319E2CA69B4EBFF5D3DE93120D4E4FF191503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/95C9E776222213046AFA58B4A4354EF691503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/59A2F013465A3B1DF109BE8203D3943A91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/91DEF1260915AAF43FDD3EA416690AF791503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/741DD0C329D4253481AADFA2C9469E4A91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/DA1C0644D71A64D1E1EF7D2CD152E31191503A5BC84F5D72B41A6F04FA364127.pygtex) [2]
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/9C83D8DBCF227A7AB59712F5135A054E91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/4425322B4D3B21484E2719C278C0A45991503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/E3EBD48F4E5A08111CE7C3D0CB9304EB91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/D78F0669E42993F2EE512D8AEB0FF6D191503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/E3EBD48F4E5A08111CE7C3D0CB9304EB91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/4176B1FAB208BCA0C012945DD75792C091503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/222813790F3930C85F6ACA3231F9C5F991503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/7125CAC18AC71C3D1B7B5F6F6ED8FED291503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/693EBC6F39BE7BE77E74E8CC4E84515A91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/F2B9EF5C779FECB1147034FDC7886CFB91503A5BC84F5D72B41A6F04FA364127.pygtex)
+Overfull \hbox (2.12706pt too wide) in paragraph at lines 2--131
+[][]\TU/SFMonoNerdFont(0)/b/n/9 public[] \TU/SFMonoNerdFont(0)/m/n/9 Word []selectWordToWin[]([]\TU/SFMonoNerdFont(0)/b/n/9 int[] \TU/SFMonoNerdFont(0)/m/n/9 difficulty, ArrayList[]<[]Word[]>[] comparableList)\TU/KoPubWorldBatang_Pro(0)/m/n/10 :
+ []
+
+\openout5 = `final-project-report.pyg'.
+
+(./_minted-final-project-report/DA1C0644D71A64D1E1EF7D2CD152E31191503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/820DE34D232A150BCA6B7FDE2E23B95091503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/FC1CEB9BC84BB7B35340FD852928B4AD91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/DA1C0644D71A64D1E1EF7D2CD152E31191503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/DA1C0644D71A64D1E1EF7D2CD152E31191503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/036A378B5AD6132BC5A81766C49EDD9991503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/5E5B03AAB9060DF0F441A2F90C8AA1E291503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/C450A2E8B6F606D548BB4CA88012C70891503A5BC84F5D72B41A6F04FA364127.pygtex)
+Overfull \hbox (7.19687pt too wide) in paragraph at lines 2--147
+[][]\TU/SFMonoNerdFont(0)/b/n/9 public[] []static[] []void[] []\TU/SFMonoNerdFont(0)/m/n/9 init[]()\TU/KoPubWorldBatang_Pro(0)/m/n/10 : \TU/TimesNewRoman(0)/m/n/10 CSV \TU/KoPubWorldBatang_Pro(0)/m/n/10 형 식 으 로 쓰 여 진 통 계 파 일 에 서 통 계 를 파 싱 해 \TU/SFMonoNerdFont(0)/m/n/9 statisticList
+ []
+
+\openout5 = `final-project-report.pyg'.
+
+(./_minted-final-project-report/E8EF7934A0C1D0E107BA7EC028E8B0E091503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/5E5B03AAB9060DF0F441A2F90C8AA1E291503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/29D5505F1C0884ED62E78080A428AA6F91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/C450A2E8B6F606D548BB4CA88012C70891503A5BC84F5D72B41A6F04FA364127.pygtex)
+Overfull \hbox (36.69266pt too wide) in paragraph at lines 2--153
+[][]\TU/SFMonoNerdFont(0)/b/n/9 public[] []static[] []void[] []\TU/SFMonoNerdFont(0)/m/n/9 writeStatistic[](Game game)\TU/KoPubWorldBatang_Pro(0)/m/n/10 : \TU/TimesNewRoman(0)/m/n/10 CSV \TU/KoPubWorldBatang_Pro(0)/m/n/10 형 식 으 로 변 환 된 게 임 데 이 터 를 \TU/SFMonoNerdFont(0)/m/n/9 FileWriter
+ []
+
+\openout5 = `final-project-report.pyg'.
+
+(./_minted-final-project-report/EA1528E0F425A4BCDF312098C18BDA0591503A5BC84F5D72B41A6F04FA364127.pygtex [3])
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/C450A2E8B6F606D548BB4CA88012C70891503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/60198E08E2C92CF3DD8104C71FA34B6A91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/4536A917C69224150C61D26D7B54201791503A5BC84F5D72B41A6F04FA364127.pygtex)
+Overfull \hbox (16.56009pt too wide) in paragraph at lines 2--156
+[][]\TU/SFMonoNerdFont(0)/b/n/9 public[] []static[] []void[] []\TU/SFMonoNerdFont(0)/m/n/9 closeStatisticWriterStream[]()\TU/KoPubWorldBatang_Pro(0)/m/n/10 : \TU/SFMonoNerdFont(0)/m/n/9 FileWriter \TU/KoPubWorldBatang_Pro(0)/m/n/10 의 \TU/SFMonoNerdFont(0)/m/n/9 InputStream \TU/KoPubWorldBatang_Pro(0)/m/n/10 을 \TU/SFMonoNerdFont(0)/m/n/9 close
+ []
+
+\openout5 = `final-project-report.pyg'.
+
+(./_minted-final-project-report/DE1C138BAE0D97FBEB4984EEDD363A8791503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/7727B197D0242636895DDE77F60F828E91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/1F4E946C0DDE2E89C94B792B414A303591503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/E8FF48C19D05780C846A6A736DA8FC0A91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/FC903A038926DEF33229CFCCB993B96B91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/26C3FB50931CEB48908601B49B66EA6891503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/FCCA5134B8CB2C64F19EF10FCC93102391503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/1FCA763436783421E2E9FDF3AF57682991503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/ED927E4E17EA742D8D65B354F29EDB5791503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/538BA6C61EC75E8564347498404E38CE91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/D621BA74C734112BF61F59291D19F7F491503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/2086E6ED656E2173FEA71D01A4D7218491503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/D1BF1D106E90ED4F431C6EB594BAE8E091503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/ED927E4E17EA742D8D65B354F29EDB5791503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/1F4E946C0DDE2E89C94B792B414A303591503A5BC84F5D72B41A6F04FA364127.pygtex)
+Overfull \hbox (24.38097pt too wide) in paragraph at lines 2--183
+[][]\TU/SFMonoNerdFont(0)/b/n/9 public[] []\TU/SFMonoNerdFont(0)/m/n/9 GameFrame[](String title, User user, User computer, []\TU/SFMonoNerdFont(0)/b/n/9 int[] \TU/SFMonoNerdFont(0)/m/n/9 N, []\TU/SFMonoNerdFont(0)/b/n/9 int[] \TU/SFMonoNerdFont(0)/m/n/9 difficulty)\TU/KoPubWorldBatang_Pro(0)/m/n/10 :
+ []
+
+\openout5 = `final-project-report.pyg'.
+
+(./_minted-final-project-report/E8FF48C19D05780C846A6A736DA8FC0A91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/26C3FB50931CEB48908601B49B66EA6891503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/FCCA5134B8CB2C64F19EF10FCC93102391503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/1FCA763436783421E2E9FDF3AF57682991503A5BC84F5D72B41A6F04FA364127.pygtex)
+Overfull \hbox (14.26112pt too wide) in paragraph at lines 200--207
+\TU/SFMonoNerdFont(0)/m/n/10 OpenJDK 64- Bit Server VM Temurin-17.0.5+8 (build 17.0.5+8, mixed mode,
+ []
+
+[4] [5] (./final-project-report.aux)
+runsystem(rm final-project-report.pyg)...executed.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 31294 strings out of 475882
+ 690307 string characters out of 5802500
+ 1028734 words of memory out of 5000000
+ 51622 multiletter control sequences out of 15000+600000
+ 479077 words of font info for 110 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 106i,8n,108p,639b,2709s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on final-project-report.xdv (5 pages, 75552 bytes).

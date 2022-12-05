@@ -31,7 +31,7 @@ public class GameFrame extends JFrame implements ActionListener {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
 
-        init();
+        initUI();
 
         this.add(containerPanel);
         this.setVisible(true);
@@ -45,7 +45,7 @@ public class GameFrame extends JFrame implements ActionListener {
         }
     }
 
-    private void init() {
+    private void initUI() {
         containerPanel = new JPanel();
         containerPanel.setLayout(new BorderLayout());
         containerPanel.setBorder(BorderFactory.createEmptyBorder(25, 25, 25, 25));
@@ -116,6 +116,7 @@ public class GameFrame extends JFrame implements ActionListener {
         }
 
         Word finalSelectedWord = selectedWord;
+
         Timer timer = new Timer(1000, new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent ae) {
@@ -151,7 +152,6 @@ public class GameFrame extends JFrame implements ActionListener {
         });
         timer.setRepeats(false);
         timer.start();
-
     }
 
     private int checkWinner() {

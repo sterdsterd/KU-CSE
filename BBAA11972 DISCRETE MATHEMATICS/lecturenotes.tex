@@ -512,7 +512,7 @@ e.g.) $A={1, 2, 3}$에서 원소 $a, b$가 $a \geq b$인 관계 $R$
     \item 방향 그래프(Directed graph):
         \begin{itemize}
             \item 관계 $R$이 하나의 집합 $A$에 대한 관계 표현일 때
-            \item $A$의 각 원소 $Rightarrow$ 그래프의 정점(Vertex)
+            \item $A$의 각 원소 $\Rightarrow$ 그래프의 정점(Vertex)
             \item $(a, b) \in R$이면 $a$에서 $b$로 화살표가 있는 연결선(Edge)로 표현
         \end{itemize}
     \item 관계 행렬(Relation matrix):
@@ -686,7 +686,7 @@ DM-06-관계(2)_2 (2022) 29:57부터...
 
 $G = (V, E)$
 
-$V = \{v_1, v_2, \cdots, c_n\}$
+$V = \{v_1, v_2, \cdots, v_n\}$
 
 $E = \{e_1, e_2, \cdots, e_m\} = \{(v_i, v_j), \cdots\}$\\
 
@@ -740,8 +740,8 @@ $$V=\{1, 2, 3, 4\},\ E=\{(1, 2), (2, 3), (2, 4)\}$$\\
 인접(Adjacent)과 근접(Incident):\\
 \begin{center}
     \begin{tikzpicture}
-        \node[circle,draw,minimum size=0.9cm,inner sep=0pt](v){$v$};
-        \node[circle,draw,minimum size=0.9cm,inner sep=0pt](u)[right = 3cm of v]{$u$};
+        \node[circle,draw,minimum size=0.9cm,inner sep=0pt](v){$u$};
+        \node[circle,draw,minimum size=0.9cm,inner sep=0pt](u)[right = 3cm of v]{$v$};
 
         \path[draw, thick] (v) edge node[above] {$e$} (u);
     \end{tikzpicture}\\
@@ -1280,7 +1280,5 @@ Huffman Algorithm:
 
 \subsection{결정 트리}
 결정 트리(Decision Tree): 8개의 동전 문제
-
-
 
 \end{document}

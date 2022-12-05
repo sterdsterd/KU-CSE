@@ -1,0 +1,175 @@
+% !TeX program = xelatex
+\input{header}
+
+\begin{document}
+
+\title{Java Programming (0409)\newline\space Swing Cheet Sheet}
+\author{Yulwon Rhee (202211342)}
+\institute{Department of Computer Science and Engineering, Konkuk University}
+
+\maketitle
+\section{JFrame}
+\setminted{linenos, fontsize=\scriptsize, breaklines}
+\begin{minted}{java}
+import javax.swing.JFrame;
+
+@SuppressWarnings("serial")
+public class MyFrame extends JFrame {
+    Container frame = this.getContentPane();
+    MyDialog dialog = null;
+
+    MyFrame(String title){
+        super(title);
+        this.setSize(500, 500);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
+        init();
+        this.setVisible(true);
+    }
+
+    private void init() {
+        JButton button = new JButton("Open Dialog");
+        btn.addActionListener(e -> {
+            if (dialog == null)
+                dialog = new MyDialog(this, "Dialog Title", false);
+            else
+                dialog.requestFocus();
+        });
+
+        frame.add(button);
+    }
+
+    public static void main(String[] args) {
+        new MyFrame("JFrame Title");
+    }
+
+}
+\end{minted}
+
+\section{JDialog}
+\begin{minted}{java}
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+@SuppressWarnings("serial")
+public class MyDialog extends JDialog {
+    Container dialog = this.getContentPane();
+    MyFrame parent;
+    boolean modal;
+    MyDialog(MyFrame owner, String title, boolean modal) {
+        super(owner, title, modal);
+        parent = owner;
+        this.modal = modal;
+        this.setSize(300, 300);
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        this.setLocationRelativeTo(null);
+
+        init();
+        initWinListener();
+
+        this.setVisible(true);
+    }
+
+    private void init() {
+        
+    }
+
+    private void initWinListener() {
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                super.windowClosing(e);
+
+                if (!modal) {
+                    parent.dlg = null;
+                }
+                dispose();
+            }
+        });
+    }
+}
+
+\end{minted}
+
+\section{Wait until JFrame closed in Main Thread}
+\begin{minted}{java}
+public class SomeFrame extends JFrame implements ActionListener {
+    public SomeFrame (String title) {
+        super(title);
+
+        ...
+        
+        synchronized(this){
+            try {
+                this.wait();
+            } catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    // When window closed
+    synchronized(this){
+        this.notify();
+    }
+
+    this.setVisible(false);
+    this.dispose();
+
+}
+\end{minted}
+
+\section{Getting events from GUI component}
+\subsection{ActionListener}
+\begin{minted}{java}
+public class _ extends JFrame implements ActionListener {
+    
+    ...
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == something) {
+            // Do Something...
+        }
+    }
+}
+\end{minted}
+
+\subsection{\texttt{MouseListener (MouseAdapter)}}
+\begin{minted}{java}
+something.addMouseListener(new MouseAdapter() {
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        // Do something...
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        // Do something...
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        // Do something...
+    }
+
+    ...
+});
+\end{minted}
+
+\section{Delay in JFrame}
+\begin{minted}{java}
+Timer timer = new Timer(TIME_IN_MS, new AbstractAction() {
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        // Actions after delay
+    }
+});
+timer.setRepeats(false);
+timer.start();
+\end{minted}
+
+\end{document}

@@ -33,7 +33,7 @@ public class StartFrame extends JFrame implements ActionListener {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
 
-        init();
+        initUI();
 
         this.setVisible(true);
 
@@ -46,7 +46,7 @@ public class StartFrame extends JFrame implements ActionListener {
         }
     }
 
-    private void init() {
+    private void initUI() {
         upperPanel = new JPanel();
         upperPanel.setLayout(new BorderLayout());
         upperPanel.setBorder(BorderFactory.createEmptyBorder(60, 0, 0, 0));

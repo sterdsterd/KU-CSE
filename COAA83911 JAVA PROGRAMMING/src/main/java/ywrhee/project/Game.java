@@ -50,15 +50,6 @@ public class Game {
         return new Object[] {RESULT_TEXT[winLoseInfo], N, DIFFICULTY_TEXT[difficulty], playDateTime};
     }
 
-    public static Game parseGameInfo(String gameInfoAsCsv) {
-        StringTokenizer stringTokenizer = new StringTokenizer(gameInfoAsCsv, ",");
-        int winLoseInfo = Integer.parseInt(stringTokenizer.nextToken().trim());
-        int N = Integer.parseInt(stringTokenizer.nextToken().trim());
-        int difficulty = Integer.parseInt(stringTokenizer.nextToken().trim());
-        String playDateTime = stringTokenizer.nextToken();
-
-        return new Game(winLoseInfo, N, difficulty, playDateTime);
-    }
 
     public void setWinLoseInfo(int winLoseInfo) {
         this.winLoseInfo = winLoseInfo;
@@ -68,15 +59,13 @@ public class Game {
         return winLoseInfo;
     }
 
-    public int getN() {
-        return N;
-    }
+    public static Game parseGameInfo(String gameInfoAsCsv) {
+        StringTokenizer stringTokenizer = new StringTokenizer(gameInfoAsCsv, ",");
+        int winLoseInfo = Integer.parseInt(stringTokenizer.nextToken().trim());
+        int N = Integer.parseInt(stringTokenizer.nextToken().trim());
+        int difficulty = Integer.parseInt(stringTokenizer.nextToken().trim());
+        String playDateTime = stringTokenizer.nextToken();
 
-    public int getDifficulty() {
-        return difficulty;
-    }
-
-    public String getPlayDateTime() {
-        return playDateTime;
+        return new Game(winLoseInfo, N, difficulty, playDateTime);
     }
 }

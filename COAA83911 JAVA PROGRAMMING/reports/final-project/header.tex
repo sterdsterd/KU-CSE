@@ -51,29 +51,31 @@
 \newcommand{\ord}{\operatorname{\mathrm{ord}}}
 \newcommand{\ind}{\operatorname{\mathrm{ind}}}
 \newcommand{\legendre}[2]{\left(\frac{#1}{#2}\right)}
-\setmainfont{SFMono Nerd Font}
+\setmainfont{Times New Roman}
 \setmainhangulfont{KoPubWorldBatang_Pro}
 \setmonofont{SFMono Nerd Font}
-\setlength{\parindent}{1em}
-\setlength{\parskip}{0pt}
+% \setlength{\parindent}{1em}
+% \setlength{\parskip}{1em}
 \linespread{1.2}
-%\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arraystretch}{1.5}
 \setlength{\tabcolsep}{0.5em}%
 \newenvironment{Figure}
-  {\par\medskip\noindent\minipage{\linewidth}}
-  {\endminipage\par\medskip}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
 \newcommand{\translation}[1]{\textsuperscript{#1}}
 
 \makeatletter
 \renewcommand\NAT@citesuper[3]{\ifNAT@swa
-\if*#2*\else#2\NAT@spacechar\fi
-\unskip\kern\p@\textsuperscript{\NAT@@open#1\if*#3*\else,\NAT@spacechar#3\fi\NAT@@close}%
-   \else #1\fi\endgroup}
+  \if*#2*\else#2\NAT@spacechar\fi
+  \unskip\kern\p@\textsuperscript{\NAT@@open#1\if*#3*\else,\NAT@spacechar#3\fi\NAT@@close}%
+  \else #1\fi\endgroup}
 \makeatother
 
 \let\oldtabular\tabular% Store a copy of \tabular
 \let\endoldtabular\endtabular% Store a copy of \endtabular
 \renewenvironment{tabular}[2][\arraystretch]
-  {\edef\arraystretch{#1}% Update \arraystretch
-   \oldtabular{#2}}% \begin{tabular}[<stretch>]{<col spec>}
-  {\endoldtabular}% \end{tabular}
+{\edef\arraystretch{#1}% Update \arraystretch
+  \oldtabular{#2}}% \begin{tabular}[<stretch>]{<col spec>}
+{\endoldtabular}% \end{tabular}
+
+\setminted{linenos, fontsize=\small, breaklines}

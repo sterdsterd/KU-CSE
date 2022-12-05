@@ -130,9 +130,15 @@ public class User {
         if (difficulty == Game.NORMAL)
             return bestSelections.get(0);
 
+        System.out.println("====================");
+        bestSelections.forEach(System.out::println);
+
         // Returns first item in bestSelection which is not in comparableList when Difficulty == Hard
         if (bestSelections.stream().anyMatch(it -> it.getWeight() == N - 1))
             return bestSelections.stream().filter(it -> it.getWeight() == N - 1).toList().get(0);
+
+        if (Math.random() < 0.5)
+            return bestSelections.get(0);
         return bestSelections.stream().filter(it -> !comparableList.contains(it)).findFirst().orElse(bestSelections.get(0));
     }
 
