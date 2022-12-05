@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{something}\PYG{p}{.}\PYG{n+na}{addMouseListener}\PYG{p}{(}\PYG{k}{new} \PYG{n}{MouseAdapter}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{n+nd}{@Override}
+    \PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{mouseClicked}\PYG{p}{(}\PYG{n}{MouseEvent} \PYG{n}{e}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{c+c1}{// Do something...}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{n+nd}{@Override}
+    \PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{mouseEntered}\PYG{p}{(}\PYG{n}{MouseEvent} \PYG{n}{e}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{c+c1}{// Do something...}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{n+nd}{@Override}
+    \PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{mouseExited}\PYG{p}{(}\PYG{n}{MouseEvent} \PYG{n}{e}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{c+c1}{// Do something...}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{p}{...}
+\PYG{p}{\PYGZcb{});}
+\end{Verbatim}

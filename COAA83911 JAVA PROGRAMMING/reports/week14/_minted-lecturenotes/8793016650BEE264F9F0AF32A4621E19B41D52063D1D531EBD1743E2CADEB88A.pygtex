@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public} \PYG{k+kd}{class} \PYG{n+nc}{\PYGZus{}} \PYG{k+kd}{extends} \PYG{n}{JFrame} \PYG{k+kd}{implements} \PYG{n}{ActionListener} \PYG{p}{\PYGZob{}}
+
+    \PYG{p}{...}
+
+    \PYG{n+nd}{@Override}
+    \PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{actionPerformed}\PYG{p}{(}\PYG{n}{ActionEvent} \PYG{n}{e}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{e}\PYG{p}{.}\PYG{n+na}{getSource}\PYG{p}{()} \PYG{o}{==} \PYG{n}{something}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{c+c1}{// Do Something...}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

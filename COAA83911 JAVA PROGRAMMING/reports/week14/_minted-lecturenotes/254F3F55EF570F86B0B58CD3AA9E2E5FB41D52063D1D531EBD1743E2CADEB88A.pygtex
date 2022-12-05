@@ -1,0 +1,35 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{javax.swing.JFrame}\PYG{p}{;}
+
+\PYG{n+nd}{@SuppressWarnings}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}serial\PYGZdq{}}\PYG{p}{)}
+\PYG{k+kd}{public} \PYG{k+kd}{class} \PYG{n+nc}{MyFrame} \PYG{k+kd}{extends} \PYG{n}{JFrame} \PYG{p}{\PYGZob{}}
+    \PYG{n}{Container} \PYG{n}{frame} \PYG{o}{=} \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{getContentPane}\PYG{p}{();}
+    \PYG{n}{MyDialog} \PYG{n}{dialog} \PYG{o}{=} \PYG{k+kc}{null}\PYG{p}{;}
+
+    \PYG{n}{MyFrame}\PYG{p}{(}\PYG{n}{String} \PYG{n}{title}\PYG{p}{)\PYGZob{}}
+        \PYG{k+kd}{super}\PYG{p}{(}\PYG{n}{title}\PYG{p}{);}
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{setSize}\PYG{p}{(}\PYG{l+m+mi}{500}\PYG{p}{,} \PYG{l+m+mi}{500}\PYG{p}{);}
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{setDefaultCloseOperation}\PYG{p}{(}\PYG{n}{EXIT\PYGZus{}ON\PYGZus{}CLOSE}\PYG{p}{);}
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{setLocationRelativeTo}\PYG{p}{(}\PYG{k+kc}{null}\PYG{p}{);}
+        \PYG{n}{init}\PYG{p}{();}
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{setVisible}\PYG{p}{(}\PYG{k+kc}{true}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kd}{private} \PYG{k+kt}{void} \PYG{n+nf}{init}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{n}{JButton} \PYG{n}{button} \PYG{o}{=} \PYG{k}{new} \PYG{n}{JButton}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Open Dialog\PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{btn}\PYG{p}{.}\PYG{n+na}{addActionListener}\PYG{p}{(}\PYG{n}{e} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{p}{\PYGZob{}}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{dialog} \PYG{o}{==} \PYG{k+kc}{null}\PYG{p}{)}
+                \PYG{n}{dialog} \PYG{o}{=} \PYG{k}{new} \PYG{n}{MyDialog}\PYG{p}{(}\PYG{k}{this}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}정보 입력\PYGZdq{}}\PYG{p}{,} \PYG{k+kc}{false}\PYG{p}{);}
+            \PYG{k}{else}
+                \PYG{n}{dialog}\PYG{p}{.}\PYG{n+na}{requestFocus}\PYG{p}{();}
+        \PYG{p}{\PYGZcb{});}
+
+        \PYG{n}{frame}\PYG{p}{.}\PYG{n+na}{add}\PYG{p}{(}\PYG{n}{button}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{k+kd}{static} \PYG{k+kt}{void} \PYG{n+nf}{main}\PYG{p}{(}\PYG{n}{String}\PYG{o}{[]} \PYG{n}{args}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{new} \PYG{n}{MyFrame}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}JFrame Title\PYGZdq{}}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

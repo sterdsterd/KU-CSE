@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public} \PYG{k+kd}{static} \PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}}\PYG{n}{Word}\PYG{o}{\PYGZgt{}} \PYG{n+nf}{getWordList}\PYG{p}{(}\PYG{n}{File} \PYG{n}{file}\PYG{p}{)}
+\end{Verbatim}
