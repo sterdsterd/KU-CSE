@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{JTextArea}\PYG{p}{(}\PYG{n}{String} \PYG{n}{text}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{rows}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{cols}\PYG{p}{);}
+
+\PYG{k+kd}{public} \PYG{k+kd}{class} \PYG{n+nc}{TextAreaEx} \PYG{k+kd}{extends} \PYG{n}{JFrame} \PYG{p}{\PYGZob{}}
+    \PYG{n}{JTextField} \PYG{n}{tf} \PYG{o}{=} \PYG{k}{new} \PYG{n}{JTextField}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{p}{);}
+    \PYG{n}{JTextArea} \PYG{n}{ta} \PYG{o}{=} \PYG{k}{new} \PYG{n}{JTextArea}\PYG{p}{(}\PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{20}\PYG{p}{);}
+
+    \PYG{n}{TextAreaEx}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{n}{setTitle}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}텍스트영역 만들기 예제\PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{setDefaultCloseOperation}\PYG{p}{(}\PYG{n}{JFrame}\PYG{p}{.}\PYG{n+na}{EXIT\PYGZus{}ON\PYGZus{}CLOSE}\PYG{p}{);}
+        \PYG{n}{Container} \PYG{n}{c} \PYG{o}{=} \PYG{n}{getContentPane}\PYG{p}{();}
+        \PYG{n}{c}\PYG{p}{.}\PYG{n+na}{setLayout}\PYG{p}{(}\PYG{k}{new} \PYG{n}{FlowLayout}\PYG{p}{());}
+        \PYG{n}{c}\PYG{p}{.}\PYG{n+na}{add}\PYG{p}{(}\PYG{k}{new} \PYG{n}{JLabel}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}입력 후 \PYGZlt{}Enter\PYGZgt{} 키를 입력하세요\PYGZdq{}}\PYG{p}{));}
+        \PYG{n}{c}\PYG{p}{.}\PYG{n+na}{add}\PYG{p}{(}\PYG{n}{tf}\PYG{p}{);}
+        \PYG{n}{c}\PYG{p}{.}\PYG{n+na}{add}\PYG{p}{(}\PYG{k}{new} \PYG{n}{JScrollPane}\PYG{p}{(}\PYG{n}{ta}\PYG{p}{));}
+
+        \PYG{n}{tf}\PYG{p}{.}\PYG{n+na}{addActionListener}\PYG{p}{(}\PYG{k}{new} \PYG{n}{ActionListener}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+            \PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{actionPerformed}\PYG{p}{(}\PYG{n}{ActionEvent} \PYG{n}{e}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{JTextField} \PYG{n}{t} \PYG{o}{=} \PYG{p}{(}\PYG{n}{JTextField}\PYG{p}{)}\PYG{n}{e}\PYG{p}{.}\PYG{n+na}{getSource}\PYG{p}{();}
+                \PYG{n}{ta}\PYG{p}{.}\PYG{n+na}{append}\PYG{p}{(}\PYG{n}{t}\PYG{p}{.}\PYG{n+na}{getText}\PYG{p}{()} \PYG{o}{+} \PYG{l+s}{\PYGZdq{}\PYGZbs{}n\PYGZdq{}}\PYG{p}{);} \PYG{n}{t}\PYG{p}{.}\PYG{n+na}{setText}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZdq{}}\PYG{p}{);}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{});}
+        \PYG{n}{setSize}\PYG{p}{(}\PYG{l+m+mi}{300}\PYG{p}{,}\PYG{l+m+mi}{300}\PYG{p}{);}
+        \PYG{n}{setVisible}\PYG{p}{(}\PYG{k+kc}{true}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,83 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{package} \PYG{n+nn}{ywrhee.project}\PYG{p}{;}
+
+\PYG{k+kn}{import} \PYG{n+nn}{java.time.LocalDateTime}\PYG{p}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{java.time.format.DateTimeFormatter}\PYG{p}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{java.util.StringTokenizer}\PYG{p}{;}
+
+\PYG{k+kd}{public} \PYG{k+kd}{class} \PYG{n+nc}{Game} \PYG{p}{\PYGZob{}}
+    \PYG{k+kd}{static} \PYG{k+kd}{final} \PYG{n}{String}\PYG{o}{[]} \PYG{n}{RESULT\PYGZus{}TEXT} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s}{\PYGZdq{}승리\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}패배\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}무승부\PYGZdq{}}\PYG{p}{\PYGZcb{};}
+    \PYG{k+kd}{static} \PYG{k+kd}{final} \PYG{k+kt}{int} \PYG{n}{VICTORY} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k+kd}{static} \PYG{k+kd}{final} \PYG{k+kt}{int} \PYG{n}{DEFEAT} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{k+kd}{static} \PYG{k+kd}{final} \PYG{k+kt}{int} \PYG{n}{DRAW} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{p}{;}
+    \PYG{k+kd}{static} \PYG{k+kd}{final} \PYG{k+kt}{int} \PYG{n}{CONTINUE} \PYG{o}{=} \PYG{l+m+mi}{3}\PYG{p}{;}
+
+    \PYG{k+kd}{static} \PYG{k+kd}{final} \PYG{n}{String}\PYG{o}{[]} \PYG{n}{DIFFICULTY\PYGZus{}TEXT} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s}{\PYGZdq{}쉬움\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}보통\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}어려움\PYGZdq{}}\PYG{p}{\PYGZcb{};}
+    \PYG{k+kd}{static} \PYG{k+kd}{final} \PYG{k+kt}{int} \PYG{n}{EASY} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k+kd}{static} \PYG{k+kd}{final} \PYG{k+kt}{int} \PYG{n}{NORMAL} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{k+kd}{static} \PYG{k+kd}{final} \PYG{k+kt}{int} \PYG{n}{HARD} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{p}{;}
+
+
+    \PYG{k+kd}{private} \PYG{k+kt}{int} \PYG{n}{winLoseInfo}\PYG{p}{;}
+    \PYG{k+kd}{private} \PYG{k+kt}{int} \PYG{n}{N}\PYG{p}{;}
+    \PYG{k+kd}{private} \PYG{k+kt}{int} \PYG{n}{difficulty}\PYG{p}{;}
+    \PYG{k+kd}{private} \PYG{n}{String} \PYG{n}{playDateTime}\PYG{p}{;}
+
+    \PYG{k+kd}{public} \PYG{n+nf}{Game}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{N}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{difficulty}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{N} \PYG{o}{=} \PYG{n}{N}\PYG{p}{;}
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{difficulty} \PYG{o}{=} \PYG{n}{difficulty}\PYG{p}{;}
+
+        \PYG{n}{DateTimeFormatter} \PYG{n}{formatter} \PYG{o}{=} \PYG{n}{DateTimeFormatter}\PYG{p}{.}\PYG{n+na}{ofPattern}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}yyyy/MM/dd HH:mm:ss\PYGZdq{}}\PYG{p}{);}
+
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{playDateTime} \PYG{o}{=} \PYG{n}{LocalDateTime}\PYG{p}{.}\PYG{n+na}{now}\PYG{p}{().}\PYG{n+na}{format}\PYG{p}{(}\PYG{n}{formatter}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{n+nf}{Game}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{winLoseInfo}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{N}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{difficulty}\PYG{p}{,} \PYG{n}{String} \PYG{n}{playDateTime}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{winLoseInfo} \PYG{o}{=} \PYG{n}{winLoseInfo}\PYG{p}{;}
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{N} \PYG{o}{=} \PYG{n}{N}\PYG{p}{;}
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{difficulty} \PYG{o}{=} \PYG{n}{difficulty}\PYG{p}{;}
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{playDateTime} \PYG{o}{=} \PYG{n}{playDateTime}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{c+cm}{/**}
+\PYG{c+cm}{     * 승패 정보, 빙고판 크기, AI 수준, 플레이 시간 순으로 CSV 만들어 반환}
+\PYG{c+cm}{     * @return CSV Formatted data}
+\PYG{c+cm}{     */}
+    \PYG{k+kd}{public} \PYG{n}{String} \PYG{n+nf}{getCsvInfo}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{winLoseInfo} \PYG{o}{+} \PYG{l+s}{\PYGZdq{}, \PYGZdq{}}
+                \PYG{o}{+} \PYG{n}{N} \PYG{o}{+} \PYG{l+s}{\PYGZdq{}, \PYGZdq{}}
+                \PYG{o}{+} \PYG{n}{difficulty} \PYG{o}{+} \PYG{l+s}{\PYGZdq{}, \PYGZdq{}}
+                \PYG{o}{+} \PYG{n}{playDateTime} \PYG{o}{+} \PYG{l+s}{\PYGZdq{}\PYGZbs{}n\PYGZdq{}}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{c+cm}{/**}
+\PYG{c+cm}{     * @return Convert Game to Object[]}
+\PYG{c+cm}{     */}
+    \PYG{k+kd}{public} \PYG{n}{Object}\PYG{o}{[]} \PYG{n+nf}{getTableRow}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{k}{new} \PYG{n}{Object}\PYG{o}{[]} \PYG{p}{\PYGZob{}}\PYG{n}{RESULT\PYGZus{}TEXT}\PYG{o}{[}\PYG{n}{winLoseInfo}\PYG{o}{]}\PYG{p}{,} \PYG{n}{N}\PYG{p}{,} \PYG{n}{DIFFICULTY\PYGZus{}TEXT}\PYG{o}{[}\PYG{n}{difficulty}\PYG{o}{]}\PYG{p}{,} \PYG{n}{playDateTime}\PYG{p}{\PYGZcb{};}
+    \PYG{p}{\PYGZcb{}}
+
+
+    \PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{setWinLoseInfo}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{winLoseInfo}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{winLoseInfo} \PYG{o}{=} \PYG{n}{winLoseInfo}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{k+kt}{int} \PYG{n+nf}{getWinLoseInfo}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{winLoseInfo}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{c+cm}{/**}
+\PYG{c+cm}{     * @param gameInfoAsCsv Game Information written in CSV format}
+\PYG{c+cm}{     * @return Parsed CSV Data as Game}
+\PYG{c+cm}{     */}
+    \PYG{k+kd}{public} \PYG{k+kd}{static} \PYG{n}{Game} \PYG{n+nf}{parseGameInfo}\PYG{p}{(}\PYG{n}{String} \PYG{n}{gameInfoAsCsv}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{StringTokenizer} \PYG{n}{stringTokenizer} \PYG{o}{=} \PYG{k}{new} \PYG{n}{StringTokenizer}\PYG{p}{(}\PYG{n}{gameInfoAsCsv}\PYG{p}{,} \PYG{l+s}{\PYGZdq{},\PYGZdq{}}\PYG{p}{);}
+        \PYG{k+kt}{int} \PYG{n}{winLoseInfo} \PYG{o}{=} \PYG{n}{Integer}\PYG{p}{.}\PYG{n+na}{parseInt}\PYG{p}{(}\PYG{n}{stringTokenizer}\PYG{p}{.}\PYG{n+na}{nextToken}\PYG{p}{().}\PYG{n+na}{trim}\PYG{p}{());}
+        \PYG{k+kt}{int} \PYG{n}{N} \PYG{o}{=} \PYG{n}{Integer}\PYG{p}{.}\PYG{n+na}{parseInt}\PYG{p}{(}\PYG{n}{stringTokenizer}\PYG{p}{.}\PYG{n+na}{nextToken}\PYG{p}{().}\PYG{n+na}{trim}\PYG{p}{());}
+        \PYG{k+kt}{int} \PYG{n}{difficulty} \PYG{o}{=} \PYG{n}{Integer}\PYG{p}{.}\PYG{n+na}{parseInt}\PYG{p}{(}\PYG{n}{stringTokenizer}\PYG{p}{.}\PYG{n+na}{nextToken}\PYG{p}{().}\PYG{n+na}{trim}\PYG{p}{());}
+        \PYG{n}{String} \PYG{n}{playDateTime} \PYG{o}{=} \PYG{n}{stringTokenizer}\PYG{p}{.}\PYG{n+na}{nextToken}\PYG{p}{();}
+
+        \PYG{k}{return} \PYG{k}{new} \PYG{n}{Game}\PYG{p}{(}\PYG{n}{winLoseInfo}\PYG{p}{,} \PYG{n}{N}\PYG{p}{,} \PYG{n}{difficulty}\PYG{p}{,} \PYG{n}{playDateTime}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="60ee2e0e-0309-4a25-8a74-6466c5fb646b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/1DF9501D4127200957E2CBFD026FD2EF91503A5BC84F5D72B41A6F04FA364127.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/301C50185EF1FC9C3BCC4FEF59F018B59BD59EBFAC3A72523B2C758F3060C081.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/3F1CA8E5A609F770DA96B1BAA33F7C75C15ECB2C4E9E3BDFF0CC7FCC2A4A6A33.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/48A85C92EAE1B5E1073EE99A8086214004416ABA36D8D79DC99B40E2ED3B3780.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/4E089256F614B9752A4544F8DC3F493091503A5BC84F5D72B41A6F04FA364127.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/51F0E040051002688E83368CDF5B279691503A5BC84F5D72B41A6F04FA364127.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/5D234812D782CF342FB837D846B8E9D191503A5BC84F5D72B41A6F04FA364127.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/6B533F7C9ACD057ADA8B8BA6A309239291503A5BC84F5D72B41A6F04FA364127.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/72B589C1A9FFA3854C6FD3D4DA7E850891503A5BC84F5D72B41A6F04FA364127.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/7D6734380361057C189EC54A98E0A39491503A5BC84F5D72B41A6F04FA364127.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/878E30FA234C12DD0446E336E01FCB5691503A5BC84F5D72B41A6F04FA364127.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/8810A93F28B6C4897C2DA20ADF754C1182CBE0603BF6247D755274C25A10D147.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/994C07B6DCBF3A36B68AF36BEBE91CCD739B89426A87E46E430EF4F87568CB7A.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/B2A557445FF6058A16C2CA0D9A8E737791503A5BC84F5D72B41A6F04FA364127.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/B5B14EB0A517EDD22D2C889230EC359005F3FD7E2264FD27D29B0E6FB8FF7F3F.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/EFA91D324E32CE7E26276C7006F0D46C91503A5BC84F5D72B41A6F04FA364127.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/F12E5BA34D1FFC39FAA8F608EAD3CDC0783DA650EBE0DA7F8A2FB8D9E69059C8.pygtex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/friendly.pygstyle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/img/file-chooser.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/img/game-3x3-defeat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/img/game-3x3-draw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/img/game-3x3-playing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/img/game-3x3-victory.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/img/game-3x3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/img/game-5x5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/img/game-6x6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/img/game-7x7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/img/main-file-not-found.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/img/main-n-range-error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/img/main-word-list-size-error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/img/main.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/img/statistic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/header.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/header.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/lecturenote-final.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/lecturenote-final.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/lecturenote-final.fdb_latexmk" beforeDir="false" afterPath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/lecturenote-final.fdb_latexmk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/lecturenote-final.fls" beforeDir="false" afterPath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/lecturenote-final.fls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/lecturenote-final.log" beforeDir="false" afterPath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/lecturenote-final.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/lecturenote-final.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/lecturenote-final.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/lecturenote-final.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/lecturenote-final.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/lecturenote-final.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/lecturenote-final.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/lecturenote-final.xdv" beforeDir="false" afterPath="$PROJECT_DIR$/../BBAA11972 DISCRETE MATHEMATICS/lecturenote-final.xdv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/BingoGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/BingoGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/GameFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/GameFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/GameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/GameFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/StatisticDialog$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/StatisticDialog$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/StatisticDialog$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/StatisticDialog$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/StatisticDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/StatisticDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/StatisticUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/StatisticUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/Word.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/bin/main/ywrhee/project/Word.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/BingoGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/BingoGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/GameFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/GameFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/GameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/GameFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/StartFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/StartFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/StartFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/StartFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/StatisticDialog$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/StatisticDialog$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/StatisticDialog$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/StatisticDialog$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/StatisticDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/StatisticDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/StatisticHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/Word.class" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/classes/java/main/ywrhee/project/Word.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/_minted-final-project-report/default.pygstyle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.fdb_latexmk" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.fdb_latexmk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.fls" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.fls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.log" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.xdv" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/final-project-report.xdv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/header.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/reports/final-project/header.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/src/main/java/ywrhee/project/BingoGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/src/main/java/ywrhee/project/BingoGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/src/main/java/ywrhee/project/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/src/main/java/ywrhee/project/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/src/main/java/ywrhee/project/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/src/main/java/ywrhee/project/GameFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/src/main/java/ywrhee/project/StatisticDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/src/main/java/ywrhee/project/StatisticDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/src/main/java/ywrhee/project/StatisticUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/src/main/java/ywrhee/project/StatisticUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/src/main/java/ywrhee/project/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/src/main/java/ywrhee/project/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/src/main/java/ywrhee/project/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/src/main/java/ywrhee/project/Word.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/statistics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../COAA83911 JAVA PROGRAMMING/statistics.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="COAA83911 JAVA PROGRAMMING" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar:///Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/lib/src.zip!/java.base/java/util/ArrayList.java" root0="SKIP_INSPECTION" />
+    <setting file="jar:///Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/lib/src.zip!/java.base/java/util/LinkedList.java" root0="SKIP_INSPECTION" />
+    <setting file="jar:///Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Queue.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2E3KyWjwyYcSscXejZOqYwpYo0k" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "full.screen.before.presentation.mode": "false",
+    "last_opened_file_path": "/Users/dex.rhee/Desktop/KU-CSE/KU-CSE/JAVA PROGRAMMING PROJECT",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/ywrhee/project" />
+      <recent name="$PROJECT_DIR$/src/ywrhee/assignment03" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/ywrhee/week13" />
+      <recent name="$PROJECT_DIR$/src/ywrhee/assignment03" />
+      <recent name="$PROJECT_DIR$/src/ywrhee/assignment" />
+      <recent name="$PROJECT_DIR$/src/ywrhee/week06/team2" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ywrhee.midtest.ex" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ywrhee.week11" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.BingoGame">
+    <configuration name="BingoGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ywrhee.project.BingoGame" />
+      <module name="COAA83911_JAVA_PROGRAMMING.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ywrhee.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ywrhee.project.Main" />
+      <module name="COAA83911_JAVA_PROGRAMMING.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ywrhee.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ywrhee.week14.MyFrame" />
+      <module name="COAA83911_JAVA_PROGRAMMING.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ywrhee.week14.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ywrhee.week14.TestFrame" />
+      <module name="COAA83911_JAVA_PROGRAMMING.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ywrhee.week14.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="YwrheeLab01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ywrhee.week13.YwrheeLab01" />
+      <module name="COAA83911_JAVA_PROGRAMMING.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ywrhee.week13.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.TestFrame" />
+      <item itemvalue="Application.BingoGame" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.YwrheeLab01" />
+      <item itemvalue="Application.MyFrame" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BingoGame" />
+        <item itemvalue="Application.TestFrame" />
+        <item itemvalue="Application.MyFrame" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.YwrheeLab01" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60ee2e0e-0309-4a25-8a74-6466c5fb646b" name="Changes" comment="" />
+      <created>1661819088303</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661819088303</updated>
+      <workItem from="1661819089311" duration="3500000" />
+      <workItem from="1661996103589" duration="5066000" />
+      <workItem from="1662134541410" duration="237000" />
+      <workItem from="1662431165668" duration="3795000" />
+      <workItem from="1662601190551" duration="3278000" />
+      <workItem from="1662804315183" duration="141000" />
+      <workItem from="1662938302832" duration="14368000" />
+      <workItem from="1663183523411" duration="6097000" />
+      <workItem from="1663237821745" duration="13233000" />
+      <workItem from="1663810199374" duration="6249000" />
+      <workItem from="1663913219829" duration="12480000" />
+      <workItem from="1664242422932" duration="5950000" />
+      <workItem from="1664415204542" duration="3500000" />
+      <workItem from="1664512327783" duration="8508000" />
+      <workItem from="1664587232175" duration="467000" />
+      <workItem from="1664623070912" duration="740000" />
+      <workItem from="1664847069024" duration="3938000" />
+      <workItem from="1665021036314" duration="11122000" />
+      <workItem from="1665041155917" duration="1007000" />
+      <workItem from="1665126259264" duration="512000" />
+      <workItem from="1665194019013" duration="1084000" />
+      <workItem from="1665451939383" duration="5749000" />
+      <workItem from="1665555484285" duration="10188000" />
+      <workItem from="1665625001310" duration="250000" />
+      <workItem from="1665625284961" duration="1429000" />
+      <workItem from="1665676487694" duration="268000" />
+      <workItem from="1666650849335" duration="76000" />
+      <workItem from="1666650941706" duration="320000" />
+      <workItem from="1666651276958" duration="548000" />
+      <workItem from="1666651997432" duration="496000" />
+      <workItem from="1667266180857" duration="5810000" />
+      <workItem from="1667439493051" duration="3218000" />
+      <workItem from="1667572324820" duration="3890000" />
+      <workItem from="1667833212271" duration="257000" />
+      <workItem from="1667870893605" duration="8332000" />
+      <workItem from="1668181074258" duration="1638000" />
+      <workItem from="1668461668857" duration="16358000" />
+      <workItem from="1668595293580" duration="84000" />
+      <workItem from="1668623933458" duration="19994000" />
+      <workItem from="1669080450757" duration="1787000" />
+      <workItem from="1669083589141" duration="922000" />
+      <workItem from="1669084542303" duration="2846000" />
+      <workItem from="1669090704238" duration="2000" />
+      <workItem from="1669206867106" duration="62000" />
+      <workItem from="1669223080631" duration="32000" />
+      <workItem from="1669283104835" duration="913000" />
+      <workItem from="1669307562573" duration="3372000" />
+      <workItem from="1669624953270" duration="37730000" />
+      <workItem from="1669704747316" duration="16978000" />
+      <workItem from="1669739673527" duration="38372000" />
+      <workItem from="1670023072869" duration="1667000" />
+      <workItem from="1670055606172" duration="1570000" />
+      <workItem from="1670167142063" duration="20542000" />
+      <workItem from="1670317175682" duration="5154000" />
+      <workItem from="1670403158832" duration="1640000" />
+      <workItem from="1670487565061" duration="1507000" />
+      <workItem from="1670504990047" duration="4330000" />
+      <workItem from="1670524346384" duration="371000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

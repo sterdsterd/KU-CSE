@@ -1,0 +1,149 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{package} \PYG{n+nn}{ywrhee.project}\PYG{p}{;}
+
+\PYG{k+kn}{import} \PYG{n+nn}{javax.swing.*}\PYG{p}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{java.awt.*}\PYG{p}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{java.util.*}\PYG{p}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{java.util.List}\PYG{p}{;}
+
+\PYG{k+kd}{public} \PYG{k+kd}{class} \PYG{n+nc}{User} \PYG{p}{\PYGZob{}}
+    \PYG{k+kd}{private} \PYG{n}{Word}\PYG{o}{[][]} \PYG{n}{bingoBoard}\PYG{p}{;}
+    \PYG{k+kd}{private} \PYG{k+kt}{int} \PYG{n}{bingoCount} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k+kd}{private} \PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}}\PYG{n}{Word}\PYG{o}{\PYGZgt{}} \PYG{n}{wordList}\PYG{p}{;}
+    \PYG{k+kd}{private} \PYG{n}{JLabel}\PYG{o}{[][]} \PYG{n}{labels}\PYG{p}{;}
+    \PYG{k+kd}{private} \PYG{n}{JPanel} \PYG{n}{bingoPanel}\PYG{p}{;}
+    \PYG{k+kd}{private} \PYG{k+kt}{int} \PYG{n}{N}\PYG{p}{;}
+
+    \PYG{k+kd}{public} \PYG{n+nf}{User}\PYG{p}{(}\PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}}\PYG{n}{Word}\PYG{o}{\PYGZgt{}} \PYG{n}{fullWordList}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{N}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{N} \PYG{o}{=} \PYG{n}{N}\PYG{p}{;}
+        \PYG{n}{bingoBoard} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Word}\PYG{o}{[}\PYG{n}{N}\PYG{o}{][}\PYG{n}{N}\PYG{o}{]}\PYG{p}{;}
+        \PYG{n}{labels} \PYG{o}{=} \PYG{k}{new} \PYG{n}{JLabel}\PYG{o}{[}\PYG{n}{N}\PYG{o}{][}\PYG{n}{N}\PYG{o}{]}\PYG{p}{;}
+
+        \PYG{n}{Collections}\PYG{p}{.}\PYG{n+na}{shuffle}\PYG{p}{(}\PYG{n}{fullWordList}\PYG{p}{);}
+        \PYG{n}{wordList} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}\PYGZgt{}}\PYG{p}{(}\PYG{n}{fullWordList}\PYG{p}{.}\PYG{n+na}{stream}\PYG{p}{().}\PYG{n+na}{limit}\PYG{p}{(}\PYG{n}{N} \PYG{o}{*} \PYG{n}{N}\PYG{p}{).}\PYG{n+na}{toList}\PYG{p}{());}
+
+        \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{k} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{N}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{N}\PYG{p}{;} \PYG{n}{j}\PYG{o}{++}\PYG{p}{,} \PYG{n}{k}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]} \PYG{o}{=} \PYG{n}{wordList}\PYG{p}{.}\PYG{n+na}{get}\PYG{p}{(}\PYG{n}{k}\PYG{p}{);}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{constructBingoPanel}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{n}{bingoPanel} \PYG{o}{=} \PYG{k}{new} \PYG{n}{JPanel}\PYG{p}{();}
+        \PYG{n}{bingoPanel}\PYG{p}{.}\PYG{n+na}{setLayout}\PYG{p}{(}\PYG{k}{new} \PYG{n}{GridLayout}\PYG{p}{(}\PYG{n}{N}\PYG{p}{,} \PYG{n}{N}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{));}
+        \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{N}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{N}\PYG{p}{;} \PYG{n}{j}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{labels}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]} \PYG{o}{=} \PYG{k}{new} \PYG{n}{JLabel}\PYG{p}{(}\PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{getEnglish}\PYG{p}{(),} \PYG{n}{SwingConstants}\PYG{p}{.}\PYG{n+na}{CENTER}\PYG{p}{);}
+                \PYG{n}{labels}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{setBorder}\PYG{p}{(}\PYG{n}{BorderFactory}\PYG{p}{.}\PYG{n+na}{createLineBorder}\PYG{p}{(}\PYG{n}{Color}\PYG{p}{.}\PYG{n+na}{decode}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZsh{}777777\PYGZdq{}}\PYG{p}{)));}
+                \PYG{n}{labels}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{setPreferredSize}\PYG{p}{(}\PYG{k}{new} \PYG{n}{Dimension}\PYG{p}{(}\PYG{l+m+mi}{120}\PYG{p}{,} \PYG{l+m+mi}{120}\PYG{p}{));}
+
+                \PYG{k}{if} \PYG{p}{(}\PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{isChecked}\PYG{p}{())} \PYG{p}{\PYGZob{}}
+                    \PYG{n}{labels}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{setOpaque}\PYG{p}{(}\PYG{k+kc}{true}\PYG{p}{);}
+                    \PYG{n}{labels}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{setBackground}\PYG{p}{(}\PYG{n}{Color}\PYG{p}{.}\PYG{n+na}{decode}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZsh{}3a4d43\PYGZdq{}}\PYG{p}{));} \PYG{c+c1}{//\PYGZsh{}036b3f 1f5540}
+                    \PYG{n}{labels}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{setForeground}\PYG{p}{(}\PYG{n}{Color}\PYG{p}{.}\PYG{n+na}{decode}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZsh{}dddddd\PYGZdq{}}\PYG{p}{));}
+                \PYG{p}{\PYGZcb{}}
+
+                \PYG{n}{bingoPanel}\PYG{p}{.}\PYG{n+na}{add}\PYG{p}{(}\PYG{n}{labels}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]}\PYG{p}{);}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{n}{JPanel} \PYG{n+nf}{getBingoPanel}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{bingoPanel}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}}\PYG{n}{Word}\PYG{o}{\PYGZgt{}} \PYG{n+nf}{getWordList}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{wordList}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{k+kt}{boolean} \PYG{n+nf}{isSelectable}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{getWordList}\PYG{p}{().}\PYG{n+na}{stream}\PYG{p}{().}\PYG{n+na}{filter}\PYG{p}{(}\PYG{n}{it} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{o}{!}\PYG{n}{it}\PYG{p}{.}\PYG{n+na}{isChecked}\PYG{p}{()).}\PYG{n+na}{findAny}\PYG{p}{().}\PYG{n+na}{orElse}\PYG{p}{(}\PYG{k+kc}{null}\PYG{p}{)} \PYG{o}{!=} \PYG{k+kc}{null}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{updateBingoCount}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{n}{bingoCount} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+
+        \PYG{k+kt}{int} \PYG{n}{sum1} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{sum2} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{N}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{k+kt}{int} \PYG{n}{sumV} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{sumH} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+            \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{N}\PYG{p}{;} \PYG{n}{j}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{sumV} \PYG{o}{+=} \PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{isChecked}\PYG{p}{()} \PYG{o}{?} \PYG{l+m+mi}{1} \PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{;}
+                \PYG{n}{sumH} \PYG{o}{+=} \PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{j}\PYG{o}{][}\PYG{n}{i}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{isChecked}\PYG{p}{()} \PYG{o}{?} \PYG{l+m+mi}{1} \PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{sumV} \PYG{o}{==} \PYG{n}{N}\PYG{p}{)} \PYG{n}{bingoCount}\PYG{o}{++}\PYG{p}{;}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{sumH} \PYG{o}{==} \PYG{n}{N}\PYG{p}{)} \PYG{n}{bingoCount}\PYG{o}{++}\PYG{p}{;}
+            \PYG{n}{sum1} \PYG{o}{+=} \PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{i}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{isChecked}\PYG{p}{()} \PYG{o}{?} \PYG{l+m+mi}{1} \PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{;}
+            \PYG{n}{sum2} \PYG{o}{+=} \PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{N} \PYG{o}{\PYGZhy{}} \PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{][}\PYG{n}{i}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{isChecked}\PYG{p}{()} \PYG{o}{?} \PYG{l+m+mi}{1} \PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{sum1} \PYG{o}{==} \PYG{n}{N}\PYG{p}{)} \PYG{n}{bingoCount}\PYG{o}{++}\PYG{p}{;}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{sum2} \PYG{o}{==} \PYG{n}{N}\PYG{p}{)} \PYG{n}{bingoCount}\PYG{o}{++}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{k+kt}{int} \PYG{n+nf}{getBingoCount}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{bingoCount}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{c+cm}{/**}
+\PYG{c+cm}{     * @param difficulty AI\PYGZsq{}s difficulty}
+\PYG{c+cm}{     * @param comparableList }
+\PYG{c+cm}{     * @return}
+\PYG{c+cm}{     */}
+    \PYG{k+kd}{public} \PYG{n}{Word} \PYG{n+nf}{selectWordToWin}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{difficulty}\PYG{p}{,} \PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}}\PYG{n}{Word}\PYG{o}{\PYGZgt{}} \PYG{n}{comparableList}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{c+c1}{// Returns Random Word in wordList which is not checked when Difficulty == Easy}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{difficulty} \PYG{o}{==} \PYG{n}{Game}\PYG{p}{.}\PYG{n+na}{EASY}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{n}{Collections}\PYG{p}{.}\PYG{n+na}{shuffle}\PYG{p}{(}\PYG{n}{wordList}\PYG{p}{);}
+            \PYG{k}{return} \PYG{n}{wordList}\PYG{p}{.}\PYG{n+na}{stream}\PYG{p}{().}\PYG{n+na}{filter}\PYG{p}{(}\PYG{n}{it} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{o}{!}\PYG{n}{it}\PYG{p}{.}\PYG{n+na}{isChecked}\PYG{p}{()).}\PYG{n+na}{toList}\PYG{p}{().}\PYG{n+na}{get}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{difficulty} \PYG{o}{==} \PYG{n}{Game}\PYG{p}{.}\PYG{n+na}{HARD} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{N} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{2} \PYG{o}{==} \PYG{l+m+mi}{1} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{wordList}\PYG{p}{.}\PYG{n+na}{stream}\PYG{p}{().}\PYG{n+na}{filter}\PYG{p}{(}\PYG{n}{Word}\PYG{p}{::}\PYG{n}{isChecked}\PYG{p}{).}\PYG{n+na}{toList}\PYG{p}{().}\PYG{n+na}{isEmpty}\PYG{p}{())} \PYG{p}{\PYGZob{}}
+            \PYG{k}{return} \PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{N} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{o}{][}\PYG{n}{N} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{o}{]}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+
+        \PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{hWeights} \PYG{o}{=} \PYG{k}{new} \PYG{k+kt}{int}\PYG{o}{[}\PYG{n}{N}\PYG{o}{]}\PYG{p}{;}
+        \PYG{n}{Arrays}\PYG{p}{.}\PYG{n+na}{fill}\PYG{p}{(}\PYG{n}{hWeights}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{);}
+        \PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{vWeights} \PYG{o}{=} \PYG{k}{new} \PYG{k+kt}{int}\PYG{o}{[}\PYG{n}{N}\PYG{o}{]}\PYG{p}{;}
+        \PYG{n}{Arrays}\PYG{p}{.}\PYG{n+na}{fill}\PYG{p}{(}\PYG{n}{vWeights}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{);}
+        \PYG{k+kt}{int} \PYG{n}{d1Weights} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{d2Weights} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{n}{Arrays}\PYG{p}{.}\PYG{n+na}{stream}\PYG{p}{(}\PYG{n}{bingoBoard}\PYG{p}{).}\PYG{n+na}{forEach}\PYG{p}{(}\PYG{n}{it} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{Arrays}\PYG{p}{.}\PYG{n+na}{stream}\PYG{p}{(}\PYG{n}{it}\PYG{p}{).}\PYG{n+na}{forEach}\PYG{p}{(}\PYG{n}{it2} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{it2}\PYG{p}{.}\PYG{n+na}{setWeight}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)));}
+
+        \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{N}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{N}\PYG{p}{;} \PYG{n}{j}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{hWeights}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{+=} \PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{isChecked}\PYG{p}{()} \PYG{o}{?} \PYG{l+m+mi}{1} \PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{;}
+                \PYG{n}{vWeights}\PYG{o}{[}\PYG{n}{j}\PYG{o}{]} \PYG{o}{+=} \PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{j}\PYG{o}{][}\PYG{n}{i}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{isChecked}\PYG{p}{()} \PYG{o}{?} \PYG{l+m+mi}{1} \PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+            \PYG{n}{d1Weights} \PYG{o}{+=} \PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{i}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{isChecked}\PYG{p}{()} \PYG{o}{?} \PYG{l+m+mi}{1} \PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{;}
+            \PYG{n}{d2Weights} \PYG{o}{+=} \PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{N} \PYG{o}{\PYGZhy{}} \PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{][}\PYG{n}{i}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{isChecked}\PYG{p}{()} \PYG{o}{?} \PYG{l+m+mi}{1} \PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+
+        \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{N}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{N}\PYG{p}{;} \PYG{n}{j}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{setWeight}\PYG{p}{(}\PYG{n}{Integer}\PYG{p}{.}\PYG{n+na}{max}\PYG{p}{(}\PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{getWeight}\PYG{p}{(),} \PYG{n}{hWeights}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]}\PYG{p}{));}
+                \PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{j}\PYG{o}{][}\PYG{n}{i}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{setWeight}\PYG{p}{(}\PYG{n}{Integer}\PYG{p}{.}\PYG{n+na}{max}\PYG{p}{(}\PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{j}\PYG{o}{][}\PYG{n}{i}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{getWeight}\PYG{p}{(),} \PYG{n}{vWeights}\PYG{o}{[}\PYG{n}{j}\PYG{o}{]}\PYG{p}{));}
+            \PYG{p}{\PYGZcb{}}
+            \PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{i}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{setWeight}\PYG{p}{(}\PYG{n}{Integer}\PYG{p}{.}\PYG{n+na}{max}\PYG{p}{(}\PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{i}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{getWeight}\PYG{p}{(),} \PYG{n}{d1Weights}\PYG{p}{));}
+            \PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{N} \PYG{o}{\PYGZhy{}} \PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{][}\PYG{n}{i}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{setWeight}\PYG{p}{(}\PYG{n}{Integer}\PYG{p}{.}\PYG{n+na}{max}\PYG{p}{(}\PYG{n}{bingoBoard}\PYG{o}{[}\PYG{n}{N} \PYG{o}{\PYGZhy{}} \PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{][}\PYG{n}{i}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{getWeight}\PYG{p}{(),} \PYG{n}{d2Weights}\PYG{p}{));}
+        \PYG{p}{\PYGZcb{}}
+
+        \PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{Word}\PYG{o}{\PYGZgt{}} \PYG{n}{bestSelections} \PYG{o}{=} \PYG{n}{wordList}\PYG{p}{.}\PYG{n+na}{stream}\PYG{p}{()}
+                                            \PYG{p}{.}\PYG{n+na}{filter}\PYG{p}{(}\PYG{n}{it} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{o}{!}\PYG{n}{it}\PYG{p}{.}\PYG{n+na}{isChecked}\PYG{p}{())}
+                                            \PYG{p}{.}\PYG{n+na}{sorted}\PYG{p}{(}\PYG{n}{Comparator}\PYG{p}{.}\PYG{n+na}{comparingInt}\PYG{p}{(}\PYG{n}{Word}\PYG{p}{::}\PYG{n}{getWeight}\PYG{p}{).}\PYG{n+na}{reversed}\PYG{p}{())}
+                                            \PYG{p}{.}\PYG{n+na}{toList}\PYG{p}{();}
+
+        \PYG{c+c1}{// Returns first item in bestSelection when Difficulty == Normal}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{difficulty} \PYG{o}{==} \PYG{n}{Game}\PYG{p}{.}\PYG{n+na}{NORMAL}\PYG{p}{)}
+            \PYG{k}{return} \PYG{n}{bestSelections}\PYG{p}{.}\PYG{n+na}{get}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+
+        \PYG{c+c1}{// Returns first item in bestSelection which is not in comparableList when Difficulty == Hard}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{bestSelections}\PYG{p}{.}\PYG{n+na}{stream}\PYG{p}{().}\PYG{n+na}{anyMatch}\PYG{p}{(}\PYG{n}{it} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{it}\PYG{p}{.}\PYG{n+na}{getWeight}\PYG{p}{()} \PYG{o}{==} \PYG{n}{N} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{))}
+            \PYG{k}{return} \PYG{n}{bestSelections}\PYG{p}{.}\PYG{n+na}{stream}\PYG{p}{().}\PYG{n+na}{filter}\PYG{p}{(}\PYG{n}{it} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{it}\PYG{p}{.}\PYG{n+na}{getWeight}\PYG{p}{()} \PYG{o}{==} \PYG{n}{N} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{).}\PYG{n+na}{toList}\PYG{p}{().}\PYG{n+na}{get}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{Math}\PYG{p}{.}\PYG{n+na}{random}\PYG{p}{()} \PYG{o}{\PYGZlt{}} \PYG{l+m+mf}{0.5}\PYG{p}{)}
+            \PYG{k}{return} \PYG{n}{bestSelections}\PYG{p}{.}\PYG{n+na}{get}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+        \PYG{k}{return} \PYG{n}{bestSelections}\PYG{p}{.}\PYG{n+na}{stream}\PYG{p}{().}\PYG{n+na}{filter}\PYG{p}{(}\PYG{n}{it} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{o}{!}\PYG{n}{comparableList}\PYG{p}{.}\PYG{n+na}{contains}\PYG{p}{(}\PYG{n}{it}\PYG{p}{)).}\PYG{n+na}{findFirst}\PYG{p}{().}\PYG{n+na}{orElse}\PYG{p}{(}\PYG{n}{bestSelections}\PYG{p}{.}\PYG{n+na}{get}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{));}
+    \PYG{p}{\PYGZcb{}}
+
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

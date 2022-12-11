@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{void} \PYG{n+nf}{setForeground}\PYG{p}{(}\PYG{n}{Color}\PYG{p}{)}
+\PYG{k+kt}{void} \PYG{n+nf}{setBackground}\PYG{p}{(}\PYG{n}{Color}\PYG{p}{)}
+\PYG{k+kt}{void} \PYG{n+nf}{setOpaque}\PYG{p}{(}\PYG{k+kt}{boolean}\PYG{p}{)}
+\PYG{k+kt}{void} \PYG{n+nf}{setFont}\PYG{p}{(}\PYG{n}{Font}\PYG{p}{)}
+\PYG{n}{Font} \PYG{n+nf}{getFont}\PYG{p}{()}
+\end{Verbatim}

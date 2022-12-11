@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{n}{Component} \PYG{n+nf}{add}\PYG{p}{(}\PYG{n}{Component}\PYG{p}{)}
+    \PYG{k+kt}{void} \PYG{n+nf}{remove}\PYG{p}{(}\PYG{n}{Component}\PYG{p}{)}
+    \PYG{k+kt}{void} \PYG{n+nf}{removeAll}\PYG{p}{()}
+    \PYG{n}{Component}\PYG{o}{[]} \PYG{n+nf}{getComponents}\PYG{p}{()}
+    \PYG{n}{Container} \PYG{n+nf}{getParent}\PYG{p}{()}
+    \PYG{n}{Container} \PYG{n+nf}{getTopLevelAncestor}\PYG{p}{()}
+\end{Verbatim}

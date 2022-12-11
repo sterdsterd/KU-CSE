@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{String} \PYG{n}{JOptionPane}\PYG{p}{.}\PYG{n+na}{showInputDialog}\PYG{p}{(}\PYG{n}{String} \PYG{n}{msg}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public} \PYG{n+nf}{StatisticDialog}\PYG{p}{(}\PYG{n}{StartFrame} \PYG{n}{owner}\PYG{p}{,} \PYG{n}{String} \PYG{n}{title}\PYG{p}{,} \PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}}\PYG{n}{Game}\PYG{o}{\PYGZgt{}} \PYG{n}{statisticList}\PYG{p}{,} \PYG{n}{String} \PYG{n}{statisticInfo}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,405 @@
+% !TeX program = xelatex
+\input{header}
+
+\begin{document}
+
+\title{Java Programming (0409)\newline\space Swing Cheet Sheet 2}
+\author{Yulwon Rhee (202211342)}
+\institute{Department of Computer Science and Engineering, Konkuk University}
+
+\maketitle
+\setminted{linenos, fontsize=\scriptsize, breaklines}
+\section{Method related with Components}
+\subsection{Components' look}
+\begin{minted}{java}
+void setForeground(Color)
+void setBackground(Color)
+void setOpaque(boolean)
+void setFont(Font)
+Font getFont()
+\end{minted}
+
+\subsection{Components' Location and Size}
+\begin{minted}{java}
+    int getWidth()
+    int getHeight()
+    int getX()
+    int getY()
+    Point getLocationOnScreen()
+    void setLocation(int, int)
+    void setSize(int, int)
+\end{minted}
+
+\subsection{Components' State}
+\begin{minted}{java}
+    void setEnabled(boolean)
+    void setVisible(boolean)
+    boolean isVisible()
+\end{minted}
+
+\subsection{Methods for Containers}
+\begin{minted}{java}
+    Component add(Component)
+    void remove(Component)
+    void removeAll()
+    Component[] getComponents()
+    Container getParent()
+    Container getTopLevelAncestor()
+\end{minted}
+
+\section{Draw Image with JLabel}
+\begin{minted}{java}
+ImageIcon image = new ImageIcon("images/apple.jpg"); JLabel label = new JLabel(image);
+panel.add(label);
+\end{minted}
+
+\section{JCheckBox}
+\begin{minted}{java}
+public class CheckBoxItemEventEx extends JFrame {
+	Container contentPane;
+	JCheckBox [] fruits = new JCheckBox [3];
+	String [] names = {"사과", "배", "체리"};
+	JLabel sumLabel;
+	int sum = 0;
+
+	CheckBoxItemEventEx() {
+		setTitle("체크박스와 ItemEvent 예제");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		contentPane = getContentPane();
+		contentPane.setLayout(new FlowLayout());						
+		contentPane.add(new JLabel("사과 100원, 배 500원, 체리 20000원"));
+		for(int i = 0; i < fruits.length; i++) {
+			fruits[i] = new JCheckBox(names[i]);
+			fruits[i].setBorderPainted(true);
+			contentPane.add(fruits[i]);
+			fruits[i].addItemListener(new MyItemListener());
+		}
+		sumLabel = new JLabel("현재 0원 입니다.");
+		contentPane.add(sumLabel);
+		setSize(250, 200);
+		setVisible(true);
+	}
+	
+	class MyItemListener implements ItemListener {
+		public void itemStateChanged(ItemEvent e) {
+			int selected = 1;
+			if(e.getStateChange() == ItemEvent.SELECTED)
+				selected = 1;
+			else
+				selected = -1;
+			
+			if(e.getItem() == fruits[0]) 
+				sum = sum + selected * 100;
+			else if(e.getItem() == fruits[1]) 
+				sum = sum + selected * 500;
+			else
+				sum = sum + selected * 20000;
+
+			sumLabel.setText("현재 " + sum + "원 입니다.");
+		}
+	}
+}
+\end{minted}
+
+\section{JSlider}
+\begin{minted}{java}
+slider = new JSlider();
+slider.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 20));
+slider.setMinimum(0);
+slider.setMaximum(15000);
+slider.addChangeListener(e -> {
+    weightLabel.setText(weightFormatter(slider.getValue()));
+
+    if (slider.getValue() >= MAXIMUM_WEIGHT * 100) {
+        logArea.setText(logArea.getText().trim() + "\nWeight Over " + weightFormatter((int) MAXIMUM_WEIGHT * 100) + " Detected");
+        weightLabel.setForeground(Color.decode("#FF3B30"));
+        stopEngine();
+    }
+});
+slider.setMinorTickSpacing(100);
+slider.setMajorTickSpacing(1000);
+slider.setPaintTicks(true);
+
+Hashtable<Integer, JLabel> sliderLabel = new Hashtable<>();
+for (int i = 0; i <= 15000; i += 5000) {
+    sliderLabel.put(i, new JLabel(String.valueOf(i / 100)));
+}
+sliderLabel.put((int) (MAXIMUM_WEIGHT * 100), new JLabel("<html><font color='#FF3B30'><b>" + (int) (MAXIMUM_WEIGHT) + "</b></font></html>"));
+slider.setLabelTable(sliderLabel);
+slider.setPaintLabels(true);
+
+leftPanel.add(slider, BorderLayout.CENTER);
+\end{minted}
+
+\section{Draw Image with JLabel}
+\begin{minted}{java}
+ImageIcon image = new ImageIcon("images/apple.jpg"); JLabel label = new JLabel(image);
+panel.add(label);
+\end{minted}
+
+\section{Image JButton}
+\begin{minted}{java}
+ImageIcon normalIcon = new ImageIcon("images/normalIcon.gif");
+ImageIcon rolloverIcon = new ImageIcon("images/rolloverIcon.gif");
+ImageIcon pressedIcon = new ImageIcon("images/pressedIcon.gif");
+
+JButton button = new JButton("테스트버튼", normalIcon);
+button.setRolloverIcon(rolloverIcon);
+button.setPressedIcon(pressedIcon);
+\end{minted}
+
+\section{Image JCheckBox}
+\begin{minted}{java}
+ImageIcon cherryIcon = new ImageIcon("images/cherry.jpg");
+ImageIcon selectedCherryIcon = new ImageIcon("images/selectedCherry.jpg");
+JCheckBox cherry = new JCheckBox("체리", cherryIcon);
+cherry.setSelectedIcon(selectedCherryIcon);
+\end{minted}
+
+\section{JTextField}
+\begin{minted}{java}
+    JTextField(String text, int cols)
+    JTextField.select(0, 5); // Select from index 0 letter to index 5 letter
+\end{minted}
+
+\section{JTextArea}
+\begin{minted}{java}
+JTextArea(String text, int rows, int cols);
+
+public class TextAreaEx extends JFrame {
+    JTextField tf = new JTextField(20);
+    JTextArea ta = new JTextArea(7, 20);
+
+    TextAreaEx() {
+        setTitle("텍스트영역 만들기 예제");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Container c = getContentPane();
+        c.setLayout(new FlowLayout());
+        c.add(new JLabel("입력 후 <Enter> 키를 입력하세요"));
+        c.add(tf);
+        c.add(new JScrollPane(ta));
+
+        tf.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JTextField t = (JTextField)e.getSource();
+                ta.append(t.getText() + "\n"); t.setText("");
+            }
+        });
+        setSize(300,300);
+        setVisible(true);
+    }
+}
+\end{minted}
+
+
+\section{JCombobox}
+\begin{minted}{java}
+JComboBox()
+JComboBox(ComboBoxModel model)
+JComboBox(Object[] items)
+JComboBox(Vector items)
+\end{minted}
+콤보박스의 아이템 선택시 Action 이벤트 발생\\
+ActionListener 이용\\
+콤보박스의 아이템의 선택시 Item 이벤트 발생\\
+ItemListener 이용\\
+새로운 아이템이 선택되면 두 번의 Item 이벤트 발생\\
+새로 아이템이 선택되었음을 알리는 Item 이벤트 발생\\
+이전에 선택된 아이템이 해제됨을 알리는 Item 이벤트 발생\\
+선택 상태인 아이템을 선택하는 경우 Item 이벤트 발생 않음\\
+
+현재 선택된 아이템 알아내기\\
+\texttt{int JComboBox.getSelectedIndex()}
+: 선택 상태인 아이템의 인덱스 번호 리턴\\
+\texttt{Object JComboBox.getSelectedItem()}
+: 선택 상태인 아이템 객체의 레퍼런스 리턴\\
+
+\begin{minted}{java}
+public class ComboActionEx extends JFrame {
+    String [] fruits = {"apple", "banana", "mango"};
+    ImageIcon [] images = { new ImageIcon("images/apple.jpg"),
+                            new ImageIcon("images/banana.jpg"),
+                            new ImageIcon("images/mango.jpg") };
+    JLabel imgLabel = new JLabel(images[0]);
+
+    ComboActionEx() {
+        setTitle("콤보박스 활용 예제");
+        Container c = getContentPane();
+        c.setLayout(new FlowLayout());
+        JComboBox combo = new JComboBox(fruits);
+        c.add(combo);
+        c.add(imgLabel);
+
+        // 콤보박스에 Action 리스너 등록. 선택된 아이템의 이미지 출력
+        combo.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JComboBox cb = (JComboBox)e.getSource();
+                int index = cb.getSelectedIndex();
+                imgLabel.setIcon(images[index]);
+            }
+        });
+        setSize(300, 250);
+        setVisible(true);
+    }
+}
+\end{minted}
+
+\section{JMenu}
+\begin{minted}{java}
+public class MenuActionEventEx extends JFrame {
+    Container contentPane;
+    JLabel label = new JLabel("Hello");
+
+    MenuActionEventEx() {
+        setTitle("Menu 만들기 예제");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        contentPane = getContentPane();
+        label.setHorizontalAlignment(SwingConstants.CENTER);
+        contentPane.add(label, BorderLayout.CENTER);
+        createMenu();
+        setSize(250,200);
+        setVisible(true);
+    }
+
+    void createMenu() {
+        JMenuBar mb = new JMenuBar();
+        JMenuItem [] menuItem = new JMenuItem [4];
+        String[] itemTitle = {"Color", "Font", "Top", "Bottom"};
+        JMenu textMenu = new JMenu("Text");
+        for(int i=0; i<menuItem.length; i++) {
+            menuItem[i] = new JMenuItem(itemTitle[i]);
+            menuItem[i].addActionListener(new MenuActionListener());
+            textMenu.add(menuItem[i]);
+        }
+        mb.add(textMenu);
+        this.setJMenuBar(mb);
+    }
+
+    class MenuActionListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            String cmd = e.getActionCommand();
+            if(cmd.equals("Color"))
+                label.setForeground(Color.BLUE);
+            else if(cmd.equals("Font"))
+                label.setFont(new Font("Ravie", Font.ITALIC, 30));
+            else if(cmd.equals("Top"))
+                label.setVerticalAlignment(SwingConstants.TOP);
+            else
+                label.setVerticalAlignment(SwingConstants.BOTTOM);
+        }
+    }
+}
+\end{minted}
+
+\section{JToolBar}
+툴바를 구현한 컴포넌트\\
+여러 컴포넌트를 담을 수 있는 컨테이너\\
+툴바의 모양\\
+한 행 혹은 한 열로만 표현\\
+기능\\
+버튼이나 이미지 등 모든 컴포넌트를 부착하여 이들을 메뉴처럼 사용\\
+툴바가 부착되는 위치\\
+툴바는 BorderLayout 배치 관리자를 가진 컨테이너에만 부착\\
+상(NORTH), 하(SOUTH), 좌(WEST), 우(EAST) 측의 모서리 중 선택 부착 \\
+사용자의 드래그에 의해 위의 4가지 위치에 이동 부착 가능\\
+사용자의 드래그에 의해 독립적인 다이얼로그 형태로 떨어져서 존재할 수 있음 \\
+사용자의 드래그에 의한 이동이 불가능하게 할 수 있음
+
+\begin{minted}{java}
+public class ToolBarEx extends JFrame {
+    Container contentPane; ToolBarEx() {
+        setTitle("툴바 만들기 예제");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        contentPane = getContentPane();
+        createToolBar();
+        setSize(400, 200);
+        setVisible(true);
+    }
+
+    void createToolBar() {
+        JToolBar toolBar = new JToolBar("Kitae Menu");
+        bar.setBackground(Color.LIGHT_GRAY);
+        toolBar.add(new JButton("New"));
+        toolBar.add(new JButton(new ImageIcon("images/open.jpg")));
+        toolBar.addSeparator();
+        toolBar.add(new JButton(new ImageIcon("images/save.jpg")));
+        toolBar.add(new JLabel("search"));
+        toolBar.add(new JTextField("text field"));
+        JComboBox combo = new JComboBox();
+        combo.addItem("Java");
+        combo.addItem("C#");
+        combo.addItem("C");
+        combo.addItem("C++");
+        toolBar.add(combo);
+        contentPane.add(toolBar, BorderLayout.NORTH);
+    }
+}
+\end{minted}
+
+\section{Dialog}
+\subsection{Input Dialog}
+\mintinline{java}{String JOptionPane.showInputDialog(String msg)}
+
+\subsection{Confirm Dialog}
+\begin{minted}{java}
+int result = JOptionPane.showConfirmDialog(null, "계속할 것입니까?", "Confirm", JOptionPane.YES_NO_OPTION);
+if(result == JOptionPane.CLOSED_OPTION) {
+    // 사용자가 "예"나 "아니오"의 선택없이 다이얼로그 창을 닫은 경우
+} else if(result == JOptionPane.YES_OPTION) {
+    // 사용자가 "예"를 선택한 경우
+} else {
+    // 사용자가 "아니오"를 선택한 경우
+}
+\end{minted}
+
+\subsection{Message Dialog}
+\begin{minted}{java}
+    JOptionPane.showMessageDialog(null, "조심하세요", "Message", JOptionPane.ERROR_MESSAGE);
+    JOptionPane.showMessageDialog(null, "조심하세요", "Message", JOptionPane.INFORMATION_MESSAGE);
+    JOptionPane.showMessageDialog(null, "조심하세요", "Message", JOptionPane.WARNING_MESSAGE);
+    JOptionPane.showMessageDialog(null, "조심하세요", "Message", JOptionPane.PLAIN_MESSAGE);
+\end{minted}
+
+\section{JColorChooser}
+\begin{minted}{java}
+public class MenuAndColorChooserEx extends JFrame {
+    Container contentPane;
+    JLabel label = new JLabel("Hello");
+    MenuAndColorChooserEx() {
+        setTitle("JColorChooser 예제");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        contentPane = getContentPane();
+        label.setHorizontalAlignment(SwingConstants.CENTER);
+        label.setFont(new Font("Ravie", Font.ITALIC, 30));
+        contentPane.add(label, BorderLayout.CENTER);
+        createMenu();
+        setSize(250,200);
+        setVisible(true);
+    }
+    void createMenu() {
+        JMenuBar mb = new JMenuBar();
+        JMenuItem colorMenuItem = new JMenuItem("Color");
+        JMenu fileMenu = new JMenu("Text");
+        colorMenuItem.addActionListener(new MenuActionListener());
+        fileMenu.add(colorMenuItem);
+        mb.add(fileMenu);
+        this.setJMenuBar(mb);
+    }
+
+    class MenuActionListener implements ActionListener {
+        JColorChooser chooser = new JColorChooser();
+
+        public void actionPerformed(ActionEvent e) {
+            String cmd = e.getActionCommand();
+            if(cmd.equals("Color")) {
+                Color selectedColor = chooser.showDialog(null, "Color", Color.YELLOW);
+            
+                if(selectedColor != null)
+                    label.setForeground(selectedColor);
+                }
+        }
+    }
+}
+\end{minted}
+
+\end{document}

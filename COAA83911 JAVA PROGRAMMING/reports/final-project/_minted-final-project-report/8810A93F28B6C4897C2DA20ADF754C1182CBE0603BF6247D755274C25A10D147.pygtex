@@ -1,0 +1,89 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{package} \PYG{n+nn}{ywrhee.project}\PYG{p}{;}
+
+\PYG{k+kn}{import} \PYG{n+nn}{javax.swing.*}\PYG{p}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{javax.swing.table.DefaultTableCellRenderer}\PYG{p}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{javax.swing.table.DefaultTableModel}\PYG{p}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{java.awt.*}\PYG{p}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{java.util.ArrayList}\PYG{p}{;}
+
+\PYG{k+kd}{public} \PYG{k+kd}{class} \PYG{n+nc}{StatisticDialog} \PYG{k+kd}{extends} \PYG{n}{JDialog} \PYG{p}{\PYGZob{}}
+    \PYG{k+kd}{private} \PYG{n}{Container} \PYG{n}{dialog} \PYG{o}{=} \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{getContentPane}\PYG{p}{();}
+    \PYG{k+kd}{private} \PYG{n}{StartFrame} \PYG{n}{parent}\PYG{p}{;}
+
+    \PYG{k+kd}{private} \PYG{n}{JTable} \PYG{n}{statisticTable}\PYG{p}{;}
+    \PYG{k+kd}{private} \PYG{n}{String} \PYG{n}{columns}\PYG{o}{[]} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s}{\PYGZdq{}결과\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}빙고판 크기\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}AI 수준\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}게임 시간\PYGZdq{}}\PYG{p}{\PYGZcb{};}
+
+    \PYG{k+kd}{private} \PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}}\PYG{n}{Game}\PYG{o}{\PYGZgt{}} \PYG{n}{statisticList}\PYG{p}{;}
+    \PYG{k+kd}{private} \PYG{n}{String} \PYG{n}{statisticInfo}\PYG{p}{;}
+
+    \PYG{k+kd}{public} \PYG{n+nf}{StatisticDialog}\PYG{p}{(}\PYG{n}{StartFrame} \PYG{n}{owner}\PYG{p}{,} \PYG{n}{String} \PYG{n}{title}\PYG{p}{,} \PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}}\PYG{n}{Game}\PYG{o}{\PYGZgt{}} \PYG{n}{statisticList}\PYG{p}{,} \PYG{n}{String} \PYG{n}{statisticInfo}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k+kd}{super}\PYG{p}{(}\PYG{n}{owner}\PYG{p}{,} \PYG{n}{title}\PYG{p}{,} \PYG{k+kc}{true}\PYG{p}{);}
+        \PYG{n}{parent} \PYG{o}{=} \PYG{n}{owner}\PYG{p}{;}
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{statisticList} \PYG{o}{=} \PYG{n}{statisticList}\PYG{p}{;}
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{statisticInfo} \PYG{o}{=} \PYG{n}{statisticInfo}\PYG{p}{;}
+
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{setSize}\PYG{p}{(}\PYG{l+m+mi}{450}\PYG{p}{,} \PYG{l+m+mi}{600}\PYG{p}{);}
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{setDefaultCloseOperation}\PYG{p}{(}\PYG{n}{DISPOSE\PYGZus{}ON\PYGZus{}CLOSE}\PYG{p}{);}
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{setLocation}\PYG{p}{(}\PYG{n}{parent}\PYG{p}{.}\PYG{n+na}{getLocation}\PYG{p}{().}\PYG{n+na}{x} \PYG{o}{+} \PYG{n}{parent}\PYG{p}{.}\PYG{n+na}{getWidth}\PYG{p}{(),} \PYG{n}{parent}\PYG{p}{.}\PYG{n+na}{getLocation}\PYG{p}{().}\PYG{n+na}{y}\PYG{p}{);}
+
+        \PYG{n}{initUI}\PYG{p}{();}
+
+        \PYG{k}{this}\PYG{p}{.}\PYG{n+na}{setVisible}\PYG{p}{(}\PYG{k+kc}{true}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kd}{private} \PYG{k+kt}{void} \PYG{n+nf}{initUI}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{n}{JPanel} \PYG{n}{upperPanel} \PYG{o}{=} \PYG{k}{new} \PYG{n}{JPanel}\PYG{p}{();}
+        \PYG{n}{upperPanel}\PYG{p}{.}\PYG{n+na}{setLayout}\PYG{p}{(}\PYG{k}{new} \PYG{n}{BorderLayout}\PYG{p}{());}
+        \PYG{n}{upperPanel}\PYG{p}{.}\PYG{n+na}{setBorder}\PYG{p}{(}\PYG{n}{BorderFactory}\PYG{p}{.}\PYG{n+na}{createEmptyBorder}\PYG{p}{(}\PYG{l+m+mi}{60}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{));}
+
+        \PYG{n}{JLabel} \PYG{n}{title} \PYG{o}{=} \PYG{k}{new} \PYG{n}{JLabel}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}통계\PYGZdq{}}\PYG{p}{,} \PYG{n}{SwingConstants}\PYG{p}{.}\PYG{n+na}{CENTER}\PYG{p}{);}
+        \PYG{n}{title}\PYG{p}{.}\PYG{n+na}{setFont}\PYG{p}{(}\PYG{k}{new} \PYG{n}{Font}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}GangwonEduPower\PYGZdq{}}\PYG{p}{,} \PYG{n}{Font}\PYG{p}{.}\PYG{n+na}{BOLD}\PYG{p}{,} \PYG{l+m+mi}{38}\PYG{p}{));}
+
+        \PYG{n}{upperPanel}\PYG{p}{.}\PYG{n+na}{add}\PYG{p}{(}\PYG{n}{title}\PYG{p}{,} \PYG{n}{BorderLayout}\PYG{p}{.}\PYG{n+na}{NORTH}\PYG{p}{);}
+
+        \PYG{n}{JLabel} \PYG{n}{winningInfo} \PYG{o}{=} \PYG{k}{new} \PYG{n}{JLabel}\PYG{p}{(}\PYG{n}{statisticInfo}\PYG{p}{,} \PYG{n}{SwingConstants}\PYG{p}{.}\PYG{n+na}{CENTER}\PYG{p}{);}
+        \PYG{n}{winningInfo}\PYG{p}{.}\PYG{n+na}{setBorder}\PYG{p}{(}\PYG{n}{BorderFactory}\PYG{p}{.}\PYG{n+na}{createEmptyBorder}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{30}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{));}
+        \PYG{n}{upperPanel}\PYG{p}{.}\PYG{n+na}{add}\PYG{p}{(}\PYG{n}{winningInfo}\PYG{p}{,} \PYG{n}{BorderLayout}\PYG{p}{.}\PYG{n+na}{SOUTH}\PYG{p}{);}
+
+        \PYG{n}{dialog}\PYG{p}{.}\PYG{n+na}{add}\PYG{p}{(}\PYG{n}{upperPanel}\PYG{p}{,} \PYG{n}{BorderLayout}\PYG{p}{.}\PYG{n+na}{NORTH}\PYG{p}{);}
+
+
+        \PYG{n}{DefaultTableModel} \PYG{n}{tableModel} \PYG{o}{=} \PYG{k}{new} \PYG{n}{DefaultTableModel}\PYG{p}{(}\PYG{n}{columns}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{n+nd}{@Override}
+            \PYG{k+kd}{public} \PYG{k+kt}{boolean} \PYG{n+nf}{isCellEditable}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{row}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{column}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{k}{return} \PYG{k+kc}{false}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{};}
+
+        \PYG{n}{statisticTable} \PYG{o}{=} \PYG{k}{new} \PYG{n}{JTable}\PYG{p}{(}\PYG{n}{tableModel}\PYG{p}{);}
+
+        \PYG{n}{DefaultTableCellRenderer} \PYG{n}{tableCellRenderer} \PYG{o}{=} \PYG{k}{new} \PYG{n}{DefaultTableCellRenderer}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+            \PYG{n+nd}{@Override}
+            \PYG{k+kd}{public} \PYG{n}{Component} \PYG{n+nf}{getTableCellRendererComponent}\PYG{p}{(}\PYG{n}{JTable} \PYG{n}{table}\PYG{p}{,} \PYG{n}{Object} \PYG{n}{value}\PYG{p}{,} \PYG{k+kt}{boolean} \PYG{n}{isSelected}\PYG{p}{,} \PYG{k+kt}{boolean} \PYG{n}{hasFocus}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{row}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{column}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{k+kd}{final} \PYG{n}{Component} \PYG{n}{c} \PYG{o}{=} \PYG{k+kd}{super}\PYG{p}{.}\PYG{n+na}{getTableCellRendererComponent}\PYG{p}{(}\PYG{n}{table}\PYG{p}{,} \PYG{n}{value}\PYG{p}{,} \PYG{n}{isSelected}\PYG{p}{,} \PYG{n}{hasFocus}\PYG{p}{,} \PYG{n}{row}\PYG{p}{,} \PYG{n}{column}\PYG{p}{);}
+                \PYG{k}{switch} \PYG{p}{(}\PYG{n}{statisticList}\PYG{p}{.}\PYG{n+na}{get}\PYG{p}{(}\PYG{n}{row}\PYG{p}{).}\PYG{n+na}{getWinLoseInfo}\PYG{p}{())} \PYG{p}{\PYGZob{}}
+                    \PYG{k}{case} \PYG{n}{Game}\PYG{p}{.}\PYG{n+na}{VICTORY} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{c}\PYG{p}{.}\PYG{n+na}{setBackground}\PYG{p}{(}\PYG{n}{Color}\PYG{p}{.}\PYG{n+na}{decode}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZsh{}3a4d43\PYGZdq{}}\PYG{p}{));}
+                    \PYG{k}{case} \PYG{n}{Game}\PYG{p}{.}\PYG{n+na}{DRAW} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{c}\PYG{p}{.}\PYG{n+na}{setBackground}\PYG{p}{(}\PYG{n}{Color}\PYG{p}{.}\PYG{n+na}{decode}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZsh{}4e4e3c\PYGZdq{}}\PYG{p}{));}
+                    \PYG{k}{case} \PYG{n}{Game}\PYG{p}{.}\PYG{n+na}{DEFEAT} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{c}\PYG{p}{.}\PYG{n+na}{setBackground}\PYG{p}{(}\PYG{n}{Color}\PYG{p}{.}\PYG{n+na}{decode}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZsh{}4e4040\PYGZdq{}}\PYG{p}{));}
+                \PYG{p}{\PYGZcb{}}
+
+                \PYG{k}{return} \PYG{n}{c}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{};}
+        \PYG{n}{tableCellRenderer}\PYG{p}{.}\PYG{n+na}{setHorizontalAlignment}\PYG{p}{(}\PYG{n}{JLabel}\PYG{p}{.}\PYG{n+na}{CENTER}\PYG{p}{);}
+
+        \PYG{n}{statisticTable}\PYG{p}{.}\PYG{n+na}{setDefaultRenderer}\PYG{p}{(}\PYG{n}{Object}\PYG{p}{.}\PYG{n+na}{class}\PYG{p}{,} \PYG{n}{tableCellRenderer}\PYG{p}{);}
+        \PYG{n}{statisticTable}\PYG{p}{.}\PYG{n+na}{setEnabled}\PYG{p}{(}\PYG{k+kc}{false}\PYG{p}{);}
+
+        \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{3}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+            \PYG{n}{statisticTable}\PYG{p}{.}\PYG{n+na}{getColumnModel}\PYG{p}{().}\PYG{n+na}{getColumn}\PYG{p}{(}\PYG{n}{i}\PYG{p}{).}\PYG{n+na}{setPreferredWidth}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{);}
+        \PYG{n}{statisticTable}\PYG{p}{.}\PYG{n+na}{setRowHeight}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{);}
+        \PYG{n}{statisticList}\PYG{p}{.}\PYG{n+na}{forEach}\PYG{p}{(}\PYG{n}{it} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{tableModel}\PYG{p}{.}\PYG{n+na}{addRow}\PYG{p}{(}\PYG{n}{it}\PYG{p}{.}\PYG{n+na}{getTableRow}\PYG{p}{()));}
+
+        \PYG{n}{JScrollPane} \PYG{n}{scrollPane} \PYG{o}{=} \PYG{k}{new} \PYG{n}{JScrollPane}\PYG{p}{(}\PYG{n}{statisticTable}\PYG{p}{);}
+        \PYG{n}{dialog}\PYG{p}{.}\PYG{n+na}{add}\PYG{p}{(}\PYG{n}{scrollPane}\PYG{p}{,} \PYG{n}{BorderLayout}\PYG{p}{.}\PYG{n+na}{CENTER}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{JComboBox}\PYG{p}{()}
+\PYG{n}{JComboBox}\PYG{p}{(}\PYG{n}{ComboBoxModel} \PYG{n}{model}\PYG{p}{)}
+\PYG{n}{JComboBox}\PYG{p}{(}\PYG{n}{Object}\PYG{o}{[]} \PYG{n}{items}\PYG{p}{)}
+\PYG{n}{JComboBox}\PYG{p}{(}\PYG{n}{Vector} \PYG{n}{items}\PYG{p}{)}
+\end{Verbatim}

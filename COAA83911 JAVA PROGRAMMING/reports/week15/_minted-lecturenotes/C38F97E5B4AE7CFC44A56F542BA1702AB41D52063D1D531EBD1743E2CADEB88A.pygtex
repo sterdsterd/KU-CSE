@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{ImageIcon} \PYG{n}{cherryIcon} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ImageIcon}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}images/cherry.jpg\PYGZdq{}}\PYG{p}{);}
+\PYG{n}{ImageIcon} \PYG{n}{selectedCherryIcon} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ImageIcon}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}images/selectedCherry.jpg\PYGZdq{}}\PYG{p}{);}
+\PYG{n}{JCheckBox} \PYG{n}{cherry} \PYG{o}{=} \PYG{k}{new} \PYG{n}{JCheckBox}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}체리\PYGZdq{}}\PYG{p}{,} \PYG{n}{cherryIcon}\PYG{p}{);}
+\PYG{n}{cherry}\PYG{p}{.}\PYG{n+na}{setSelectedIcon}\PYG{p}{(}\PYG{n}{selectedCherryIcon}\PYG{p}{);}
+\end{Verbatim}

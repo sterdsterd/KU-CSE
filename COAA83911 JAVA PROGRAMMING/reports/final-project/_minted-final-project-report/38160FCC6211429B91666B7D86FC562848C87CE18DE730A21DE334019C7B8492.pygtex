@@ -1,0 +1,49 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{package} \PYG{n+nn}{ywrhee.project}\PYG{p}{;}
+
+\PYG{k+kn}{import} \PYG{n+nn}{com.formdev.flatlaf.FlatDarkLaf}\PYG{p}{;}
+
+\PYG{k+kn}{import} \PYG{n+nn}{javax.swing.*}\PYG{p}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{java.awt.*}\PYG{p}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{java.util.ArrayList}\PYG{p}{;}
+
+\PYG{k+kd}{public} \PYG{k+kd}{class} \PYG{n+nc}{BingoGame} \PYG{p}{\PYGZob{}}
+
+    \PYG{k+kd}{public} \PYG{k+kd}{static} \PYG{k+kt}{void} \PYG{n+nf}{main}\PYG{p}{(}\PYG{n}{String}\PYG{o}{[]} \PYG{n}{args}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{System}\PYG{p}{.}\PYG{n+na}{setProperty}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}apple.laf.useScreenMenuBar\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}true\PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{System}\PYG{p}{.}\PYG{n+na}{setProperty}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}apple.awt.application.name\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}202211342 이율원\PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{System}\PYG{p}{.}\PYG{n+na}{setProperty}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}apple.awt.application.appearance\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}system\PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{FlatDarkLaf}\PYG{p}{.}\PYG{n+na}{setup}\PYG{p}{();}
+
+        \PYG{k}{try} \PYG{p}{\PYGZob{}}
+            \PYG{n}{UIManager}\PYG{p}{.}\PYG{n+na}{setLookAndFeel}\PYG{p}{(}\PYG{k}{new} \PYG{n}{FlatDarkLaf}\PYG{p}{());}
+            \PYG{n}{UIManager}\PYG{p}{.}\PYG{n+na}{getLookAndFeelDefaults}\PYG{p}{().}\PYG{n+na}{put}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}defaultFont\PYGZdq{}}\PYG{p}{,} \PYG{k}{new} \PYG{n}{Font}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Pretendard\PYGZdq{}}\PYG{p}{,} \PYG{n}{Font}\PYG{p}{.}\PYG{n+na}{PLAIN}\PYG{p}{,} \PYG{l+m+mi}{14}\PYG{p}{));}
+        \PYG{p}{\PYGZcb{}} \PYG{k}{catch} \PYG{p}{(}\PYG{n}{Exception} \PYG{n}{e}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{n}{e}\PYG{p}{.}\PYG{n+na}{printStackTrace}\PYG{p}{();}
+        \PYG{p}{\PYGZcb{}}
+
+        \PYG{n}{StatisticUtil}\PYG{p}{.}\PYG{n+na}{init}\PYG{p}{();}
+
+        \PYG{k}{while} \PYG{p}{(}\PYG{k+kc}{true}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{n}{StartFrame} \PYG{n}{startFrame} \PYG{o}{=} \PYG{k}{new} \PYG{n}{StartFrame}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}BINGO GAME\PYGZdq{}}\PYG{p}{,} \PYG{n}{StatisticUtil}\PYG{p}{.}\PYG{n+na}{getStatisticList}\PYG{p}{());}
+
+            \PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}}\PYG{n}{Word}\PYG{o}{\PYGZgt{}} \PYG{n}{wordList} \PYG{o}{=} \PYG{n}{Word}\PYG{p}{.}\PYG{n+na}{getWordList}\PYG{p}{(}\PYG{n}{startFrame}\PYG{p}{.}\PYG{n+na}{getSelectedFile}\PYG{p}{());}
+            \PYG{k+kt}{int} \PYG{n}{N} \PYG{o}{=} \PYG{n}{startFrame}\PYG{p}{.}\PYG{n+na}{getN}\PYG{p}{();}
+            \PYG{k+kt}{int} \PYG{n}{difficulty} \PYG{o}{=} \PYG{n}{startFrame}\PYG{p}{.}\PYG{n+na}{getDifficulty}\PYG{p}{();}
+
+            \PYG{n}{User} \PYG{n}{user} \PYG{o}{=} \PYG{k}{new} \PYG{n}{User}\PYG{p}{(}\PYG{n}{wordList}\PYG{p}{,} \PYG{n}{N}\PYG{p}{);}
+            \PYG{n}{User} \PYG{n}{computer} \PYG{o}{=} \PYG{k}{new} \PYG{n}{User}\PYG{p}{(}\PYG{n}{wordList}\PYG{p}{,} \PYG{n}{N}\PYG{p}{);}
+
+            \PYG{n}{Game} \PYG{n}{game} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Game}\PYG{p}{(}\PYG{n}{N}\PYG{p}{,} \PYG{n}{difficulty}\PYG{p}{);}
+            \PYG{n}{GameFrame} \PYG{n}{gameFrame} \PYG{o}{=} \PYG{k}{new} \PYG{n}{GameFrame}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}BINGO GAME\PYGZdq{}}\PYG{p}{,} \PYG{n}{user}\PYG{p}{,} \PYG{n}{computer}\PYG{p}{,} \PYG{n}{N}\PYG{p}{,} \PYG{n}{difficulty}\PYG{p}{);}
+            \PYG{n}{game}\PYG{p}{.}\PYG{n+na}{setWinLoseInfo}\PYG{p}{(}\PYG{n}{gameFrame}\PYG{p}{.}\PYG{n+na}{getWinLoseInfo}\PYG{p}{());}
+
+            \PYG{n}{StatisticUtil}\PYG{p}{.}\PYG{n+na}{addToStatisticList}\PYG{p}{(}\PYG{n}{game}\PYG{p}{);}
+            \PYG{n}{StatisticUtil}\PYG{p}{.}\PYG{n+na}{writeStatistic}\PYG{p}{(}\PYG{n}{game}\PYG{p}{);}
+
+        \PYG{p}{\PYGZcb{}}
+
+    \PYG{p}{\PYGZcb{}}
+
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
