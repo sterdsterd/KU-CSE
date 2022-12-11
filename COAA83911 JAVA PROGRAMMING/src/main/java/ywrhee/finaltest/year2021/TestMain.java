@@ -1,9 +1,10 @@
-package jhchi0409.finaltest;
+package ywrhee.finaltest.year2021;
 
 public class TestMain {
 
 	public static void main(String[] args) {
 
+		System.out.println("202211342 이율원");
 		System.out.println("---------- 봉사활동 생성 --------");
 		Volunteer volunteer = new Volunteer("도서관 책 정리", 3, 2);	
 		System.out.println(volunteer);

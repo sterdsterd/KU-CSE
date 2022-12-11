@@ -4,12 +4,13 @@
 \begin{document}
 
 \title{Java Programming (0409)\newline\space Final Project Report}
-\author{Department of Computer Science and Engineering, Konkuk University\newline Yulwon Rhee (202211342)}
-\institute{담당 교수: 지정희 교수님\newline제출일: 2022년 12월 5일 월요일}
+\author{Department of Computer Science and Engineering, Konkuk University\newline\space Yulwon Rhee (202211342)}
+\renewcommand\leftmark{Yulwon Rhee (202211342)}
+\institute{담당 교수: 지정희 교수님\newline제출일: 2022년 12월 9일 금요일}
 
 \maketitle
 \section{문제 정의 및 분석}
-본 프로젝트에서는 Java와 Swing을 이용하여 빙고 게임 데스크탑 애플리케이션을 제작한다.
+본 프로젝트는 Java와 Swing을 이용하여 빙고 게임 데스크탑 애플리케이션을 제작하는 것을 목표로 한다.
 
 \subsection{문제 정의}
 \textbf{빙고판 생성:}
@@ -64,31 +65,11 @@ Swing을 이용하여 UI를 개선한다.
 시작 시 저장된 통계 파일을 읽어와 \mintinline{java}{StartFrame}을 호출한다.
 이후, \mintinline{java}{StartFrame}에서 단어장 파일, $N$의 값과 AI 수준을 받아와 \mintinline{java}{GameFrame}을 호출한다.
 게임이 끝나면, 게임 시작 시간, $N$의 값, AI 수준과 승패 여부를 받아와 통계 리스트에 저장하고, 통계 파일에 추가한다.
-% \begin{minted}{java}
-% public static void main(String[] args) {
-%     StatisticHandler.init();
 
-%     while (true) {
-%         StartFrame startFrame = new StartFrame("BINGO GAME", StatisticHandler.getStatisticList());
+\subsubsection{Source Code}
+\inputminted[fontsize=\scriptsize]{java}{../../src/main/java/ywrhee/project/BingoGame.java}
 
-%         ArrayList<Word> wordList = Word.getWordList(startFrame.getSelectedFile());
-%         int N = startFrame.getN();
-%         int difficulty = startFrame.getDifficulty();
-
-%         User user = new User(wordList, N);
-%         User computer = new User(wordList, N);
-
-%         Game game = new Game(N, difficulty);
-%         GameFrame gameFrame = new GameFrame("BINGO GAME", user, computer, N, difficulty);
-%         game.setWinLoseInfo(gameFrame.getWinLoseInfo());
-
-%         StatisticHandler.addToStatisticList(game);
-%         StatisticHandler.writeStatistic(game);
-
-%     }
-
-% }
-% \end{minted}
+\newpage
 \subsection{\texttt{Game.java}}
 승패 여부, $N$의 값, AI 수준 및 게임 플레이 시간 등 게임 데이터를 관리하는 Class이다.
 게임에 필요한 상수가 \mintinline{java}{static}으로 선언되어 있고, 통계 파일에서 데이터를 파싱해 \mintinline{java}{Game} 클래스로 바꿔주는 \mintinline{java}{static} 메소드가 포함되어 있다.
@@ -102,6 +83,9 @@ Swing을 이용하여 UI를 개선한다.
 \mintinline{java}{public static Game parseGameInfo(String gameInfoAsCsv)}:
 CSV 형태로 변환된 게임 데이터를 파싱하여 다시 \mintinline{java}{Game} 객체로 되돌려 반환한다.
 인스턴스를 생성하지 않아도 바로 쓸 수 있게 \mintinline{java}{static} 메소드로 만들었다.
+
+\subsubsection{Source Code}
+\inputminted[fontsize=\scriptsize]{java}{../../src/main/java/ywrhee/project/Game.java}
 
 \newpage
 \subsection{\texttt{User.java}}
@@ -121,14 +105,26 @@ Swing의 \mintinline{java}{GridLayout}을 사용하여 빙고판 레이아웃을
 플레이어의 빙고판에서 빙고의 갯수를 계산한다.
 
 \mintinline{java}{public Word selectWordToWin(int difficulty, ArrayList<Word> comparableList)}:
-컴퓨터가 사용하는 메소드로써, 이기기 위해 선택해야 할 단어를 반환한다.
-만약 AI 수준이 쉬움일 경우, 빙고판에서 선택되지 않은 단어 중 랜덤으로 하나를 뽑아 반환한다.
-AI 수준이 보통일 경우, 가로, 세로, 대각선 중 가장 빙고에 가까운 줄에서 선택되지 않은 단어를 골라 반환한다.
-AI 수준이 어려움일 경우, 만약 $N$이 홀수이고 가장 처음 선택되는 단어일 경우 빙고판 한가운데를 먼저 선택해 반환한다.
-$N$이 홀수가 아니거나 가장 처음 선택하는 단어가 아닐 경우, 가로, 세로, 대각선 중 가장 빙고에 가까운 줄에서 선택되지 않은 단어를 반환하되,
-$1/2$의 확률로 사용자의 빙고판에 없는 단어를 우선적으로 반환하도록 한다.
-사용자의 빙고판에 있더라도 그 단어만 선택하면 빙고가 완성되는 경우, 그 단어를 반환하도록 한다.
+컴퓨터가 사용하는 메소드로써, 이기기 위해 선택해야 할 단어를 반환한다. 컴퓨터가 단어를 선택하는 알고리즘은 다음과 같다.\\\\
+\begin{tabularx}{\textwidth}{l|X}
+    \hline
+    난이도 & 선택 알고리즘                                                \\
+    \hline
+    쉬움  & 컴퓨터의 빙고판에서 선택되지 않은 단어 중 하나를 랜덤으로 뽑아 반환한다.              \\
+    % \hline
+    중간  & 가로, 세로, 대각선 중 가장 빙고에 가까운 줄에서 선택되지 않은 단어를 골라 반환한다.      \\
+    % \hline
+    어려움 & 만약 $N$이 홀수이고, 가장 처음 선택되는 단어일 경우 빙고판 한가운데를 먼저 선택해 반환한다.
+    $N$이 홀수가 아니거나 가장 처음 선택되는 단어가 아니라면 가로, 세로, 대각선 중 가장 빙고에 가까운 줄에서 선택되지 않은 단어를 반환하되,
+    $1/2$의 확률로 사용자의 빙고판에 없는 단어를 우선적으로 골라 반환한다.
+    만약 사용자의 빙고판에 있는 단어더라도, 그 단어만 선택하면 빙고가 완성될 경우, 그 단어를 반환한다.    \\
+    \hline
+\end{tabularx}
 
+\subsubsection{Source Code}
+\inputminted[fontsize=\scriptsize]{java}{../../src/main/java/ywrhee/project/User.java}
+
+\newpage
 \subsection{\texttt{Word.java}}
 단어의 영어, 한국어 뜻, 빙고판에서 선택 여부, 이 단어를 선택했을 경우 빙고가 될 확률을 묶어 편하게 관리하기 위한 Class이다.
 단어장 파일에서 단어를 읽어오는 \mintinline{java}{static} 메소드가 포함되어 있다.
@@ -137,6 +133,10 @@ $1/2$의 확률로 사용자의 빙고판에 없는 단어를 우선적으로 �
 단어장 파일에서 영단어와 한국어 뜻을 읽어와 \mintinline{java}{Word} 클래스 형태로 바꾸어 리스트에 넣어 반환한다.
 인스턴스를 생성하지 않아도 바로 쓸 수 있게 \mintinline{java}{static} 메소드로 만들었다.
 
+\subsubsection{Source Code}
+\inputminted[fontsize=\scriptsize]{java}{../../src/main/java/ywrhee/project/Word.java}
+
+\newpage
 \subsection{\texttt{StatisticUtil.java}}
 통계를 편리하게 관리하기 위한 유틸리티 Class이다.
 인스턴스를 생성하지 않아도 바로 쓸 수 있게 모두 \mintinline{java}{static} 메소드로 만들었다.
@@ -154,6 +154,10 @@ CSV 형식으로 변환된 게임 데이터를 \mintinline{java}{FileWriter}로 
 \mintinline{java}{public static void closeStatisticWriterStream()}:
 \mintinline{java}{FileWriter}의 \mintinline{java}{InputStream}을 \mintinline{java}{close}한다.
 
+\subsubsection{Source Code}
+\inputminted[fontsize=\scriptsize]{java}{../../src/main/java/ywrhee/project/StatisticUtil.java}
+
+\newpage
 \subsection{\texttt{StartFrame.java}}
 게임을 시작하기 전 필요한 정보인 단어장 파일, AI 수준, $N$을 입력받고, 저장된 통계 정보를 출력하는 Frame이다.
 
@@ -174,12 +178,16 @@ CSV 형식으로 변환된 게임 데이터를 \mintinline{java}{FileWriter}로 
 \mintinline{java}{private int countLine(File file)}:
 파라미터로 전달받은 단어장 파일의 단어 갯수를 반환한다.
 
+\subsubsection{Source Code}
+\inputminted[fontsize=\scriptsize]{java}{../../src/main/java/ywrhee/project/StartFrame.java}
+
+\newpage
 \subsection{\texttt{GameFrame.java}}
 게임 화면을 출력하는 Frame이다.
 
 \mintinline{java}{public GameFrame(String title, User user, User computer, int N, int difficulty)}:
 \mintinline{java}{GameFrame}의 생성자로써, 윈도우 타이틀, 유저 및 컴퓨터의 플레이 데이터, $N$값과 AI 수준을 파라미터로 입력받아 Class 내에서 사용 가능하도록 한다.
-게임 데이터가 완성될 때까지 메인 스레드에서 입력받은 값을 접근할 수 없도록 \mintinline{java}{this.wait()}을 사용한다.
+게임 데이터가 완성될 때까지 메인 스레드에서 \mintinline{java}{GameFrame}의 데이터를 접근할 수 없도록 \mintinline{java}{this.wait()}을 사용한다.
 
 \mintinline{java}{private void initUI()}:
 게임 플레이 UI를 구성한다.
@@ -187,17 +195,175 @@ CSV 형식으로 변환된 게임 데이터를 \mintinline{java}{FileWriter}로 
 \mintinline{java}{public void actionPerformed(ActionEvent e)}:
 \mintinline{java}{ActionListener}의 \mintinline{java}{actionPerformed}를 Override한 메소드로,
 단어 입력 버튼이 눌렸거나 단어를 입력받는 텍스트 필드에서 Enter키가 눌렸을 때 호출된다.
+만약 입력받은 단어가 컴퓨터 또는 유저의 빙고판에 존재할 경우, 체크해주고 빙고판을 다시 그리도록 \mintinline{java}{updateBingoBoard()}를 호출하고, 선택된 단어의 뜻을 출력한다.
+이후 \mintinline{java}{computerTurn()}이 호출되어 컴퓨터의 턴으로 넘어간다.
 
+\mintinline{java}{private void computerTurn()}:
+컴퓨터의 빙고판에 선택 가능한 단어가 남아있을 경우,
+\mintinline{java}{User} 클래스의 \mintinline{java}{selectWordToWin()} 메소드를 이용하여 단어를 선택한다.
+바로 선택하여 유저 턴으로 넘어가는 모습이 어색하지 않도록 1000ms의 딜레이 이후에 컴퓨터가 선택한 단어가 출력되고, 빙고판을 다시 그리도록 \mintinline{java}{updateBingoBoard()}를 호출한다.
+이후 승패 여부를 가리도록 \mintinline{java}{checkWinner()} 메소드를 호출한다.
 
+\mintinline{java}{private void checkWinner()}:
+한 턴이 끝난 후 호출되는 메소드로써, 유저와 컴퓨터의 빙고판을 체크하여 빙고의 갯수가 한 개이상 많은 플레이어를 승리로 처리한다.
+빙고판이 모두 열렸지만 승패가 결정되지 않은 경우 무승부로 처리한다.
+이후 결정된 승패 정보를 Dialog로 출력하고, 게임 화면을 종료하도록 \mintinline{java}{closeGameFrame()}을 호출한다.
 
+\mintinline{java}{private void updateBingoBoard()}:
+유저와 컴퓨터의 빙고판에 선택된 단어를 표시하여 다시 그린다.
+
+\mintinline{java}{private void closeGameFrame()}:
+메인 스레드에서 \mintinline{java}{GameFrame}의 데이터를 접근할 수 있도록 \mintinline{java}{this.notify()}하고 윈도우를 \mintinline{java}{dispose()}한다.
+
+\subsubsection{Source Code}
+\inputminted[fontsize=\scriptsize]{java}{../../src/main/java/ywrhee/project/GameFrame.java}
+
+\newpage
 \subsection{\texttt{StatisticDialog.java}}
+통계 정보를 테이블로 출력하는 Dialog이다.
 
+\mintinline{java}{public StatisticDialog(StartFrame owner, String title, ArrayList<Game> statisticList, String statisticInfo)}:
+\mintinline{java}{StatisticDialog}의 생성자로써, 부모 Frame, 윈도우 타이틀, 통계 데이터를 파라미터로 입력받아 Class 내에서 사용 가능하도록 한다.
 
+\mintinline{java}{private void initUI()}:
+통계 화면 UI를 구성한다.
+통계 데이터를 \mintinline{java}{JTable}에 표시하고, 승패 여부에 따라 Row의 배경 색을 바꾼다.
+
+\subsubsection{Source Code}
+\inputminted[fontsize=\scriptsize]{java}{../../src/main/java/ywrhee/project/StatisticDialog.java}
+
+\newpage
 \section{실행 결과}
+\subsection{게임 전 화면}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{img/main.png}
+    \caption{메인 화면}
+\end{figure}
+이 화면에서는 게임 플레이 전 필요한 정보를 수집하는 역할을 한다.
+화면 상단의 승률 Label을 클릭해 전체 통계를 볼 수 있고, 단어장 파일은 `...'이 적힌 버튼을 눌러 선택할 수 있다.
+정보를 다 선택한 이후 엔터를 누르거나 `시작하기 →' 버튼을 눌러 게임 화면에 진입할 수 있다.
+만약 선택된 파일이 없는 파일이거나, 입력된 $N$의 값이 $3 \leq N \leq 10$이 아닌 경우 경고창을 띄워주고,
+단어장의 단어가 모자라 빙고판을 생성할 수 없는 경우,
+입력받은 $N$ 값으로 빙고판을 생성하기 위해 필요한 최소 단어 수와, 선택된 단어장으로 생성 가능한 최대 $N$을 알려준다.
+\newpage
+
+\begin{figure}[H]
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[scale=0.4]{img/main-file-not-found.png}
+        \caption{선택된 파일이 없는 경우}
+    \end{subfigure}
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[scale=0.4]{img/main-n-range-error.png}
+        \caption{$3 \leq N \leq 10$이 아닌 경우}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[scale=0.4]{img/main-word-list-size-error.png}
+        \caption{$N = 10$일 때, 단어장의 단어가 모자라 빙고판을 생성할 수 없는 경우}
+    \end{subfigure}
+    \caption{사용자 입력 예외 처리}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.35]{img/file-chooser.png}
+    \caption{단어장 파일 선택 Dialog}
+\end{figure}
+단어장 파일을 선택할 수 있다.
+\texttt{JFileChooser}를 사용하여 구현하였다.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.35]{img/statistic.png}
+    \caption{통계 Dialog}
+\end{figure}
+이 Dialog에서는 플레이한 모든 게임의 승패 여부, 빙고판 크기, AI 수준, 게임 시간을 볼 수 있다.
+Modal Dialog이기 때문에, 닫기 전까지 게임을 시작할 수 없다.
+
+\newpage
+\subsection{게임 중 화면}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{img/game-3x3.png}
+    \caption{$N = 3$일 때}
+\end{figure}
+$N$ 값을 3으로 입력했을 때 구성된 게임 화면이다.
+유저 차례일 경우 아래의 텍스트 필드 및 버튼이 Enable 되고, 원하는 단어를 입력 후 Enter키를 누르거나, `→' 버튼을 눌러 선택할 수 있다.
+컴퓨터 차례일 경우 아래의 텍스트 필드 및 버튼이 Disable 되고, 1초 후 컴퓨터가 선택한 단어가 화면에 표시된다.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{img/game-3x3-playing.png}
+    \caption{$N = 3$일 때 플레이 중 화면}
+\end{figure}
+유저가 선택한 단어가 유저 또는 컴퓨터의 빙고판에 존재할 경우, 해당 단어가 있는 빙고칸의 배경이 초록색으로 바뀌고(이하 체크), 선택한 단어와 단어의 뜻이 출력된다.
+컴퓨터가 단어를 선택한 경우, 유저의 빙고판에 있는 동일한 단어도 체크된다.
+만약 유저가 빙고판에 없는 단어를 입력했을 경우, 바로 컴퓨터의 턴으로 넘어간다.
+만약 유저가 입력한 단어가 유저의 빙고판에는 없지만 컴퓨터의 빙고판에는 존재할 경우, 컴퓨터의 빙고판에 있는 해당 단어가 체크된다.
+한 턴이 끝날 때마다 빙고 여부를 체크하고, 빙고 개수가 하나 이상 많은 플레이어를 승리 처리한다.
+
+\begin{figure}[H]
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[scale=0.3]{img/game-3x3-victory.png}
+        \caption{이겼을 때}
+    \end{subfigure}
+    \\\\\\
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[scale=0.3]{img/game-3x3-draw.png}
+        \caption{비겼을 때}
+    \end{subfigure}
+\end{figure}
+\setcounter{figure}{6}
+\begin{figure}[h]
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[scale=0.3]{img/game-3x3-defeat.png}\\
+        (c) 졌을 때
+    \end{subfigure}
+    \caption{승패 처리 화면}
+\end{figure}
+
+\newpage
+\begin{figure}[H]
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{img/game-5x5.png}
+        \caption{$N = 5$}
+    \end{subfigure}
+\end{figure}
+\newpage
+\setcounter{figure}{7}
+\begin{figure}[H]
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{img/game-7x7.png}\\
+        (b) $N = 7$
+    \end{subfigure}
+    \caption{여러 크기의 $N$에 대한 빙고판}
+\end{figure}
+$3 \leq N \leq 10$ 사이의 모든 빙고판을 생성할 수 있다.
+
+\newpage
 \section{느낀점 및 토의 사항}
+빙고 게임의 특성 상 유저와 컴퓨터 두 플레이어의 동일한 종류의 데이터를 다루어야 할 경우가 많기 때문에,
+소스코드의 중복되는 부분을 줄이고, 가독성을 높이고자 적지 않은 수의 Class와 그에 딸린 함수들로 쪼개어 코드를 작성했다.
+이로 인해 유지보수의 관점에서 봐도 추후 수정과 기능 추가에 유리할 것으로 판단된다.
+또한 통계 기능에서, 여러 기능을 하는 함수들을 묶어 유틸리티 Class로 만들어 보는 등 이번 프로젝트를 진행하며 다양한 시도를 해보았다.
+
+Swing으로 프로그램을 만들어 본 것이 처음이라 레이아웃을 짜는 데 어려움을 겪었지만,
+원하는대로 레이아웃을 짜기 위해 여러 Layout들을 사용해보고, Java Documentation에서 Swing이 제공하는 Component들의 메소드를 찾아보는 과정에서 큰 도움이 된 것 같다.
+
+팀 프로젝트로 진행하여 협업하며 코드를 작성하는 편이 더 재미있겠다고 생각해 개인적으로 이번 프로젝트가 개인 프로젝트로 진행된 점이 아쉬웠지만,
+그만큼 여러 다양한 시도들도 해볼 수 있어서 역량 항상에는 큰 도움이 된 것 같았다.
+
 \section{기타}
 \subsection{개발 환경}
-이 프로젝트를 개발하는 과정에서, 운영체제는 macOS 13.1 Ventura를 사용하였고, IDE는 Jetbrain사의 IntelliJ IDEA 2022.2.3 버전을 사용하였다.\\
+이 프로젝트를 개발하는 과정에서, 운영체제는 macOS 13.1 Ventura를 사용하였고, IDE는 Jetbrains사의 IntelliJ IDEA 2022.2.3 버전을 사용하였다.\\
 JDK는 Temurin의 OpenJDK를 사용하였고, 버전 정보는 다음과 같다.\\
 \texttt{
     openjdk 17.0.5 2022-10-18\\
@@ -205,6 +371,13 @@ JDK는 Temurin의 OpenJDK를 사용하였고, 버전 정보는 다음과 같다.
     OpenJDK 64-Bit Server VM Temurin-17.0.5+8 (build 17.0.5+8, mixed mode, sharing)
 }
 
+\subsection{참고 사항}
+Swing의 UI 개선을 위해 오픈소스 라이브러리 Flatlaf(\url{https://github.com/JFormDesigner/FlatLaf})를 LookAndFeel로 적용하였다.
+버튼 모양 등 수정하기 힘든 부분에서 UI의 개선을 이루고자 해당 라이브러리를 사용하였으며, 해당 라이브러리를 사용하지 않더라도 기능 면에서는 차이가 없기 때문에 최종 제출을 위한 소스코드에서는 주석 처리하였다. (BingoGame.jar의 12-22번 라인)
+
+해당 라이브러리를 포함한 원본을 실행해보고자 한다면 첨부된 jar 파일을 더블 클릭하여 실행시키거나, 더블 클릭으로 실행되지 않을 경우 \texttt{java -jar} 명령어로 실행시키면 된다.
+
 \subsection{수행 기간}
-2022.11.28(월) - 2022.11.30(수)
+2022.11.28(월) - 2022.12.1(목)
+
 \end{document}

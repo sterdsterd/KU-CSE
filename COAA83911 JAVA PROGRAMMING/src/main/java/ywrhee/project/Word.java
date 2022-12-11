@@ -52,7 +52,6 @@ public class Word {
                 String korean = wordInfo[1].trim();
                 wordList.add(new Word(english, korean));
             }
-            //System.out.println(startFrame.getSelectedFile().getAbsolutePath() + " 로딩 완료");
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

@@ -9,7 +9,7 @@ public class Game {
     static final int VICTORY = 0;
     static final int DEFEAT = 1;
     static final int DRAW = 2;
-    static final int KEEP_GOING = 3;
+    static final int CONTINUE = 3;
 
     static final String[] DIFFICULTY_TEXT = {"쉬움", "보통", "어려움"};
     static final int EASY = 0;
@@ -38,7 +38,10 @@ public class Game {
         this.playDateTime = playDateTime;
     }
 
-    // 승패 정보, 빙고판 크기, AI 수준, 플레이 시간 순으로 CSV 만들어 반환
+    /**
+     * 승패 정보, 빙고판 크기, AI 수준, 플레이 시간 순으로 CSV 만들어 반환
+     * @return CSV Formatted data
+     */
     public String getCsvInfo() {
         return winLoseInfo + ", "
                 + N + ", "
@@ -46,6 +49,9 @@ public class Game {
                 + playDateTime + "\n";
     }
 
+    /**
+     * @return Convert Game to Object[]
+     */
     public Object[] getTableRow() {
         return new Object[] {RESULT_TEXT[winLoseInfo], N, DIFFICULTY_TEXT[difficulty], playDateTime};
     }
@@ -59,6 +65,10 @@ public class Game {
         return winLoseInfo;
     }
 
+    /**
+     * @param gameInfoAsCsv Game Information written in CSV format
+     * @return Parsed CSV Data as Game
+     */
     public static Game parseGameInfo(String gameInfoAsCsv) {
         StringTokenizer stringTokenizer = new StringTokenizer(gameInfoAsCsv, ",");
         int winLoseInfo = Integer.parseInt(stringTokenizer.nextToken().trim());

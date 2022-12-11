@@ -1,7 +1,8 @@
-package jhchi0409.finaltest;
+package ywrhee.finaltest.year2021;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Volunteer {
@@ -18,20 +19,22 @@ public class Volunteer {
 	}	
 	
 	// 봉사활동 참여하기
-	public void join(Member m) {
+	public String join(Member m) {
 		for(Member p : this.member) {
 			if(p==null) break;
 			if(p.name.equals(m.name)){		
 				System.out.println(m.name+"님 "+this.volName+" 봉사활동에 이미 참여하셨습니다.");
-				return;
+				return m.name+"님 "+this.volName+" 봉사활동에 이미 참여하셨습니다.";
 			}
 		}
 		if(this.member.size() < this.Number) {	
 				m.addDonation(donationTime);
 				member.add(m);
 				System.out.println(m.name+"님 "+this.volName+" 봉사활동에 참여하셨습니다.");
+				return m.name+"님 "+this.volName+" 봉사활동에 참여하셨습니다.";
 		}else {
 			System.out.println(m.name+"님 "+this.volName+" 봉사활동은 마감되었습니다.");
+			return m.name+"님 "+this.volName+" 봉사활동은 마감되었습니다.";
 		}
 	}
 	
@@ -50,7 +53,11 @@ public class Volunteer {
 			return str;
 		}
 		
-		//구현해야 하는 부분 : 봉사활동 시간이 많은 순서로 정렬해서 문자열로 반환하기		
+		//구현해야 하는 부분 : 봉사활동 시간이 많은 순서로 정렬해서 문자열로 반환하기
+		List<Member> sortedList = member.stream().sorted(Comparator.comparingInt(Member::getTotalDonationTime).reversed()).toList();
+		for (Member member : sortedList) {
+			str += member + "\n";
+		}
 
 		return str;
 	}

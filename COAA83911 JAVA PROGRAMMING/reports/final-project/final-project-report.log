@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.3)  5 DEC 2022 20:31
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.3)  9 DEC 2022 04:10
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -879,7 +879,100 @@ Package: nicematrix 2022/06/26 v6.10a Enhanced arrays with the help of PGF/TikZ
 \l__nicematrix_end_int=\count412
 \l__nicematrix_multiplicity_int=\count413
 \l__nicematrix_brace_yshift_dim=\dimen364
-) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2022-06-20 v7.00s Hypertext links for LaTeX
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count414
+)
+\@linkdim=\dimen365
+\Hy@linkcounter=\count415
+\Hy@pagecounter=\count416
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2022-06-20 v7.00s Hyperref: PDFDocEncoding definition (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count417
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2022-06-20 v7.00s Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4162.
+Package hyperref Info: Link nesting OFF on input line 4167.
+Package hyperref Info: Hyper index ON on input line 4170.
+Package hyperref Info: Plain pages OFF on input line 4177.
+Package hyperref Info: Backreferencing OFF on input line 4182.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4408.
+\c@Hy@tempcnt=\count418
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4746.
+\XeTeXLinkMargin=\dimen366
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count419
+\Field@Width=\dimen367
+\Fld@charsize=\dimen368
+Package hyperref Info: Hyper figures OFF on input line 6024.
+Package hyperref Info: Link nesting OFF on input line 6029.
+Package hyperref Info: Hyper index ON on input line 6032.
+Package hyperref Info: backreferencing OFF on input line 6039.
+Package hyperref Info: Link coloring OFF on input line 6044.
+Package hyperref Info: Link coloring with OCG OFF on input line 6049.
+Package hyperref Info: PDF/A mode OFF on input line 6054.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count420
+\c@Item=\count421
+\c@Hfootnote=\count422
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2022-06-20 v7.00s Hyperref driver for XeTeX
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\pdfm@box=\box129
+\c@Hy@AnnotLevel=\count423
+\HyField@AnnotCount=\count424
+\Fld@listcount=\count425
+\c@bookmark@seq@number=\count426
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+)
+\Hy@SectionHShift=\skip65
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryangles.code.tex
 File: tikzlibraryangles.code.tex 2021/05/15 v3.1.9a (3.1.9a)
@@ -887,15 +980,15 @@ File: tikzlibraryangles.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: tikzlibraryquotes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.code.tex
 File: tikzlibrarygraphs.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\tikz@lib@auto@number=\count414
-\tikz@qnode@count=\count415
+\tikz@lib@auto@number=\count427
+\tikz@qnode@count=\count428
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\arrowsize=\dimen365
+\arrowsize=\dimen369
 )) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.standard.code.tex
 File: tikzlibrarygraphs.standard.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
@@ -987,6 +1080,7 @@ Package fontspec Info: Font family 'SFMonoNerdFont(0)' created for font
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
+Package hyperref Info: Option `colorlinks' set `true' on input line 92.
 )
 runsystem(which pygmentize && touch final-project-report.aex)...executed.
 
@@ -1014,6 +1108,10 @@ LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 
 *geometry* driver: auto-detecting
@@ -1080,49 +1178,71 @@ Package fontspec Info: Font family 'UnDotum.ttf(1)' created for font
 (fontspec)             <->"[UnDotumBold.ttf]/OT:language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
-\c@lstlisting=\count416
+\c@lstlisting=\count429
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@tabularnotesi=\count417
-\enitdp@tabularnotes=\count418
-\c@tabularnotes*i=\count419
-\enitdp@tabularnotes*=\count420
+\c@tabularnotesi=\count430
+\enitdp@tabularnotes=\count431
+\c@tabularnotes*i=\count432
+\enitdp@tabularnotes*=\count433
+Package hyperref Info: Link coloring ON on input line 4.
+(./final-project-report.out) (./final-project-report.out)
+\@outlinefile=\write6
+\openout6 = `final-project-report.out'.
 
-Package mathptmx Warning: There are no bold math fonts on input line 10.
 
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 10.
+
+Package mathptmx Warning: There are no bold math fonts on input line 12.
+
+
+Package hyperref Warning: bookmark level for unknown title defaults to 0.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 12.
+
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 12.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 10.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 12.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 10.
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 12.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 10.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 12.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 10.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 12.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
- [1
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
+
+
+Package hyperref Warning: bookmark level for unknown author defaults to 0.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@normalcr' on input line 12.
+
+[1
 
 ]
 \openout5 = `final-project-report.pyg'.
 
- (./_minted-final-project-report/default.pygstyle) (./_minted-final-project-report/39AF26AAEDDA4B85BEBA955071B3614691503A5BC84F5D72B41A6F04FA364127.pygtex)
+ (./_minted-final-project-report/friendly.pygstyle) (./_minted-final-project-report/39AF26AAEDDA4B85BEBA955071B3614691503A5BC84F5D72B41A6F04FA364127.pygtex)
 \openout5 = `final-project-report.pyg'.
 
  (./_minted-final-project-report/7727B197D0242636895DDE77F60F828E91503A5BC84F5D72B41A6F04FA364127.pygtex)
@@ -1131,7 +1251,10 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
  (./_minted-final-project-report/7727B197D0242636895DDE77F60F828E91503A5BC84F5D72B41A6F04FA364127.pygtex)
 \openout5 = `final-project-report.pyg'.
 
- (./_minted-final-project-report/ED927E4E17EA742D8D65B354F29EDB5791503A5BC84F5D72B41A6F04FA364127.pygtex)
+ (./_minted-final-project-report/ED927E4E17EA742D8D65B354F29EDB5791503A5BC84F5D72B41A6F04FA364127.pygtex) (./_minted-final-project-report/38160FCC6211429B91666B7D86FC562848C87CE18DE730A21DE334019C7B8492.pygtex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
+ [2]) [3]
 \openout5 = `final-project-report.pyg'.
 
  (./_minted-final-project-report/DA1C0644D71A64D1E1EF7D2CD152E31191503A5BC84F5D72B41A6F04FA364127.pygtex)
@@ -1158,7 +1281,12 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
  (./_minted-final-project-report/741DD0C329D4253481AADFA2C9469E4A91503A5BC84F5D72B41A6F04FA364127.pygtex)
 \openout5 = `final-project-report.pyg'.
 
- (./_minted-final-project-report/DA1C0644D71A64D1E1EF7D2CD152E31191503A5BC84F5D72B41A6F04FA364127.pygtex) [2]
+ (./_minted-final-project-report/DA1C0644D71A64D1E1EF7D2CD152E31191503A5BC84F5D72B41A6F04FA364127.pygtex) (./_minted-final-project-report/F12E5BA34D1FFC39FAA8F608EAD3CDC0783DA650EBE0DA7F8A2FB8D9E69059C8.pygtex
+
+LaTeX Font Warning: Font shape `TU/UnDotum.ttf(1)/m/it' undefined
+(Font)              using `TU/UnDotum.ttf(1)/m/n' instead on input line 42.
+
+[4]) [5]
 \openout5 = `final-project-report.pyg'.
 
  (./_minted-final-project-report/9C83D8DBCF227A7AB59712F5135A054E91503A5BC84F5D72B41A6F04FA364127.pygtex)
@@ -1189,13 +1317,39 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 \openout5 = `final-project-report.pyg'.
 
  (./_minted-final-project-report/F2B9EF5C779FECB1147034FDC7886CFB91503A5BC84F5D72B41A6F04FA364127.pygtex)
-Overfull \hbox (2.12706pt too wide) in paragraph at lines 2--131
+Overfull \hbox (2.12706pt too wide) in paragraph at lines 2--123
 [][]\TU/SFMonoNerdFont(0)/b/n/9 public[] \TU/SFMonoNerdFont(0)/m/n/9 Word []selectWordToWin[]([]\TU/SFMonoNerdFont(0)/b/n/9 int[] \TU/SFMonoNerdFont(0)/m/n/9 difficulty, ArrayList[]<[]Word[]>[] comparableList)\TU/KoPubWorldBatang_Pro(0)/m/n/10 :
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--123
+
+ []
+
+(./_minted-final-project-report/994C07B6DCBF3A36B68AF36BEBE91CCD739B89426A87E46E430EF4F87568CB7A.pygtex [6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+LaTeX Font Info:    Trying to load font information for TS1+SFMonoNerdFont(0) on input line 98.
+LaTeX Font Info:    No file TS1SFMonoNerdFont(0).fd. on input line 98.
+
+
+LaTeX Font Warning: Font shape `TS1/SFMonoNerdFont(0)/m/it' undefined
+(Font)              using `TS1/cmr/m/n' instead
+(Font)              for symbol `textquotesingle' on input line 98.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+Overfull \hbox (49.07835pt too wide) in paragraph at lines 140--140
+\TU/SFMonoNerdFont(0)/m/n/7 .[]sorted[](Comparator.[]comparingInt[](Word::getWeight).[]reversed[]())|  
+ []
+
+) [9]
 \openout5 = `final-project-report.pyg'.
 
-(./_minted-final-project-report/DA1C0644D71A64D1E1EF7D2CD152E31191503A5BC84F5D72B41A6F04FA364127.pygtex)
+ (./_minted-final-project-report/DA1C0644D71A64D1E1EF7D2CD152E31191503A5BC84F5D72B41A6F04FA364127.pygtex)
 \openout5 = `final-project-report.pyg'.
 
  (./_minted-final-project-report/820DE34D232A150BCA6B7FDE2E23B95091503A5BC84F5D72B41A6F04FA364127.pygtex)
@@ -1204,7 +1358,7 @@ Overfull \hbox (2.12706pt too wide) in paragraph at lines 2--131
  (./_minted-final-project-report/FC1CEB9BC84BB7B35340FD852928B4AD91503A5BC84F5D72B41A6F04FA364127.pygtex)
 \openout5 = `final-project-report.pyg'.
 
- (./_minted-final-project-report/DA1C0644D71A64D1E1EF7D2CD152E31191503A5BC84F5D72B41A6F04FA364127.pygtex)
+ (./_minted-final-project-report/DA1C0644D71A64D1E1EF7D2CD152E31191503A5BC84F5D72B41A6F04FA364127.pygtex) (./_minted-final-project-report/301C50185EF1FC9C3BCC4FEF59F018B59BD59EBFAC3A72523B2C758F3060C081.pygtex [10]) [11]
 \openout5 = `final-project-report.pyg'.
 
  (./_minted-final-project-report/DA1C0644D71A64D1E1EF7D2CD152E31191503A5BC84F5D72B41A6F04FA364127.pygtex)
@@ -1239,7 +1393,7 @@ Overfull \hbox (36.69266pt too wide) in paragraph at lines 2--153
 
 \openout5 = `final-project-report.pyg'.
 
-(./_minted-final-project-report/EA1528E0F425A4BCDF312098C18BDA0591503A5BC84F5D72B41A6F04FA364127.pygtex [3])
+(./_minted-final-project-report/EA1528E0F425A4BCDF312098C18BDA0591503A5BC84F5D72B41A6F04FA364127.pygtex)
 \openout5 = `final-project-report.pyg'.
 
  (./_minted-final-project-report/C450A2E8B6F606D548BB4CA88012C70891503A5BC84F5D72B41A6F04FA364127.pygtex)
@@ -1253,9 +1407,10 @@ Overfull \hbox (16.56009pt too wide) in paragraph at lines 2--156
 [][]\TU/SFMonoNerdFont(0)/b/n/9 public[] []static[] []void[] []\TU/SFMonoNerdFont(0)/m/n/9 closeStatisticWriterStream[]()\TU/KoPubWorldBatang_Pro(0)/m/n/10 : \TU/SFMonoNerdFont(0)/m/n/9 FileWriter \TU/KoPubWorldBatang_Pro(0)/m/n/10 의 \TU/SFMonoNerdFont(0)/m/n/9 InputStream \TU/KoPubWorldBatang_Pro(0)/m/n/10 을 \TU/SFMonoNerdFont(0)/m/n/9 close
  []
 
+(./_minted-final-project-report/EF89A7787FD03B553D0EB92DD3A4914905F3FD7E2264FD27D29B0E6FB8FF7F3F.pygtex [12]) [13]
 \openout5 = `final-project-report.pyg'.
 
-(./_minted-final-project-report/DE1C138BAE0D97FBEB4984EEDD363A8791503A5BC84F5D72B41A6F04FA364127.pygtex)
+ (./_minted-final-project-report/DE1C138BAE0D97FBEB4984EEDD363A8791503A5BC84F5D72B41A6F04FA364127.pygtex)
 \openout5 = `final-project-report.pyg'.
 
  (./_minted-final-project-report/7727B197D0242636895DDE77F60F828E91503A5BC84F5D72B41A6F04FA364127.pygtex)
@@ -1288,7 +1443,16 @@ Overfull \hbox (16.56009pt too wide) in paragraph at lines 2--156
  (./_minted-final-project-report/D621BA74C734112BF61F59291D19F7F491503A5BC84F5D72B41A6F04FA364127.pygtex)
 \openout5 = `final-project-report.pyg'.
 
- (./_minted-final-project-report/2086E6ED656E2173FEA71D01A4D7218491503A5BC84F5D72B41A6F04FA364127.pygtex)
+ (./_minted-final-project-report/2086E6ED656E2173FEA71D01A4D7218491503A5BC84F5D72B41A6F04FA364127.pygtex) (./_minted-final-project-report/CE034B3FB8F2F5881E5C6BEA2EEAC8AA04416ABA36D8D79DC99B40E2ED3B3780.pygtex [14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]) [18]
 \openout5 = `final-project-report.pyg'.
 
  (./_minted-final-project-report/D1BF1D106E90ED4F431C6EB594BAE8E091503A5BC84F5D72B41A6F04FA364127.pygtex)
@@ -1297,8 +1461,11 @@ Overfull \hbox (16.56009pt too wide) in paragraph at lines 2--156
  (./_minted-final-project-report/ED927E4E17EA742D8D65B354F29EDB5791503A5BC84F5D72B41A6F04FA364127.pygtex)
 \openout5 = `final-project-report.pyg'.
 
+ (./_minted-final-project-report/ED927E4E17EA742D8D65B354F29EDB5791503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
  (./_minted-final-project-report/1F4E946C0DDE2E89C94B792B414A303591503A5BC84F5D72B41A6F04FA364127.pygtex)
-Overfull \hbox (24.38097pt too wide) in paragraph at lines 2--183
+Overfull \hbox (24.38097pt too wide) in paragraph at lines 2--191
 [][]\TU/SFMonoNerdFont(0)/b/n/9 public[] []\TU/SFMonoNerdFont(0)/m/n/9 GameFrame[](String title, User user, User computer, []\TU/SFMonoNerdFont(0)/b/n/9 int[] \TU/SFMonoNerdFont(0)/m/n/9 N, []\TU/SFMonoNerdFont(0)/b/n/9 int[] \TU/SFMonoNerdFont(0)/m/n/9 difficulty)\TU/KoPubWorldBatang_Pro(0)/m/n/10 :
  []
 
@@ -1314,21 +1481,156 @@ Overfull \hbox (24.38097pt too wide) in paragraph at lines 2--183
 \openout5 = `final-project-report.pyg'.
 
  (./_minted-final-project-report/1FCA763436783421E2E9FDF3AF57682991503A5BC84F5D72B41A6F04FA364127.pygtex)
-Overfull \hbox (14.26112pt too wide) in paragraph at lines 200--207
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/B2A557445FF6058A16C2CA0D9A8E737791503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/7D6734380361057C189EC54A98E0A39491503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/1DF9501D4127200957E2CBFD026FD2EF91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/4425322B4D3B21484E2719C278C0A45991503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/72B589C1A9FFA3854C6FD3D4DA7E850891503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/B2A557445FF6058A16C2CA0D9A8E737791503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/878E30FA234C12DD0446E336E01FCB5691503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/5D234812D782CF342FB837D846B8E9D191503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/EFA91D324E32CE7E26276C7006F0D46C91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/4E089256F614B9752A4544F8DC3F493091503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/6B533F7C9ACD057ADA8B8BA6A309239291503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/ED927E4E17EA742D8D65B354F29EDB5791503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/538BA6C61EC75E8564347498404E38CE91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/D621BA74C734112BF61F59291D19F7F491503A5BC84F5D72B41A6F04FA364127.pygtex) (./_minted-final-project-report/3F1CA8E5A609F770DA96B1BAA33F7C75C15ECB2C4E9E3BDFF0CC7FCC2A4A6A33.pygtex [19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]) [23]
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/51F0E040051002688E83368CDF5B279691503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/FC903A038926DEF33229CFCCB993B96B91503A5BC84F5D72B41A6F04FA364127.pygtex)
+Overfull \hbox (54.64165pt too wide) in paragraph at lines 2--227
+[][]\TU/SFMonoNerdFont(0)/b/n/9 public[] []\TU/SFMonoNerdFont(0)/m/n/9 StatisticDialog[](StartFrame owner, String title, ArrayList[]<[]Game[]>[] statisticList,
+ []
+
+\openout5 = `final-project-report.pyg'.
+
+(./_minted-final-project-report/E8FF48C19D05780C846A6A736DA8FC0A91503A5BC84F5D72B41A6F04FA364127.pygtex)
+\openout5 = `final-project-report.pyg'.
+
+ (./_minted-final-project-report/59A2F013465A3B1DF109BE8203D3943A91503A5BC84F5D72B41A6F04FA364127.pygtex) (./_minted-final-project-report/8810A93F28B6C4897C2DA20ADF754C1182CBE0603BF6247D755274C25A10D147.pygtex [24]) [25]
+File: img/main.png Graphic file (type bmp)
+<img/main.png>
+ [26]
+File: img/main-file-not-found.png Graphic file (type bmp)
+<img/main-file-not-found.png>
+File: img/main-n-range-error.png Graphic file (type bmp)
+<img/main-n-range-error.png>
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 260.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 260.
+File: img/main-word-list-size-error.png Graphic file (type bmp)
+<img/main-word-list-size-error.png>
+
+Overfull \hbox (1.49998pt too wide) in paragraph at lines 252--267
+[][] []
+ []
+
+
+Overfull \vbox (12.67505pt too high) has occurred while \output is active []
+
+ [27]
+File: img/file-chooser.png Graphic file (type bmp)
+<img/file-chooser.png>
+File: img/statistic.png Graphic file (type bmp)
+<img/statistic.png>
+ [28]
+File: img/game-3x3.png Graphic file (type bmp)
+<img/game-3x3.png>
+File: img/game-3x3-playing.png Graphic file (type bmp)
+<img/game-3x3-playing.png>
+ [29]
+File: img/game-3x3-victory.png Graphic file (type bmp)
+<img/game-3x3-victory.png>
+File: img/game-3x3-draw.png Graphic file (type bmp)
+<img/game-3x3-draw.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--320
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--320
+
+ []
+
+File: img/game-3x3-defeat.png Graphic file (type bmp)
+<img/game-3x3-defeat.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[30]
+File: img/game-5x5.png Graphic file (type bmp)
+<img/game-5x5.png>
+ [31]
+File: img/game-7x7.png Graphic file (type bmp)
+<img/game-7x7.png>
+ [32]
+Overfull \hbox (14.26112pt too wide) in paragraph at lines 366--373
 \TU/SFMonoNerdFont(0)/m/n/10 OpenJDK 64- Bit Server VM Temurin-17.0.5+8 (build 17.0.5+8, mixed mode,
  []
 
-[4] [5] (./final-project-report.aux)
+
+Overfull \hbox (1.84268pt too wide) in paragraph at lines 375--377
+\TU/TimesNewRoman(0)/m/n/10 Swing \TU/KoPubWorldBatang_Pro(0)/m/n/10 의 \TU/TimesNewRoman(0)/m/n/10 UI \TU/KoPubWorldBatang_Pro(0)/m/n/10 개 선 을 위 해 오 픈 소 스 라 이 브 러 리 \TU/TimesNewRoman(0)/m/n/10 Flatlaf\TU/KoPubWorldBatang_Pro(0)/m/n/10 ([][]$[][][][][] [] [] [] [][][][][][] [] [][][] [] [][][][][][][][][][][][][] []
+ []
+
+[33] (./final-project-report.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package rerunfilecheck Info: File `final-project-report.out' has not changed.
+(rerunfilecheck)             Checksum: 11C641D54EF23A6CFF4196F4CE60DB12;3060.
 runsystem(rm final-project-report.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 31294 strings out of 475882
- 690307 string characters out of 5802500
- 1028734 words of memory out of 5000000
- 51622 multiletter control sequences out of 15000+600000
- 479077 words of font info for 110 fonts, out of 8000000 for 9000
+ 37892 strings out of 475882
+ 805010 string characters out of 5802500
+ 1141669 words of memory out of 5000000
+ 58036 multiletter control sequences out of 15000+600000
+ 489218 words of font info for 147 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 106i,8n,108p,639b,2709s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 106i,10n,108p,776b,2709s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on final-project-report.xdv (5 pages, 75552 bytes).
+Output written on final-project-report.xdv (33 pages, 554284 bytes).

@@ -27,6 +27,9 @@
 \usepackage{makecell}
 \usepackage{slashed}
 \usepackage{nicematrix}
+\usepackage{float}
+\usepackage{hyperref}
+
 \usetikzlibrary{calc, angles, quotes, graphs, positioning, arrows, graphs.standard}
 
 \setcounter{tocdepth}{2}
@@ -79,3 +82,11 @@
 {\endoldtabular}% \end{tabular}
 
 \setminted{linenos, fontsize=\small, breaklines}
+\usemintedstyle{friendly}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=blue
+}

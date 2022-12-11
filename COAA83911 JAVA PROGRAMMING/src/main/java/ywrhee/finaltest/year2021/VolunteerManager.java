@@ -1,4 +1,4 @@
-package jhchi0409.finaltest;
+package ywrhee.finaltest.year2021;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -23,7 +23,11 @@ public class VolunteerManager {
 	
 	// 구현할 기능 : 회원정보 저장하기 ==> 반환값 : "회원가입 완료" 또는 "중복가입 불가"
 	public String addMember(String name, int gender, int age) {
-		
+		if (member.containsKey(name))
+			return "중복 가입 불가";
+
+		member.put(name, new Member(name, gender, age));
+		return "회원가입 완료";
 	}
 	
 	
@@ -33,7 +37,11 @@ public class VolunteerManager {
 	
 	// 구현할 기능 : 봉사활동 저장하기 ==> 반환값 : "등록완료" 또는 "중복 등록 불가"
 	public String addVolunteer(Volunteer v) {
-			
+		if (volunteer.stream().anyMatch(it -> it.volName.equals(v.volName)))
+			return "중복 등록 불가";
+
+		volunteer.add(v);
+		return "등록 완료";
 	}
 	
 	// 봉사활동 검색해서 반환하기

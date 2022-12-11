@@ -27,15 +27,17 @@
 \usepackage{makecell}
 \usepackage{slashed}
 \usepackage{nicematrix}
-\usetikzlibrary{calc, angles, quotes, graphs, positioning, arrows, graphs.standard}
+\usepackage{karnaugh-map}
+\usepackage{circuitikz}
+\usetikzlibrary{calc, angles, quotes, graphs, positioning, arrows, graphs.standard, shapes.gates.logic.US, shapes.gates.logic.IEC}
 
 \setcounter{tocdepth}{2}
 
 \colorlet{shadecolor}{gray!30}
 
 \newcommand\enclosebox[2]{%
-  \BeforeBeginEnvironment{#1}{\begin{#2}}%
-  \AfterEndEnvironment{#1}{\end{#2}}%
+    \BeforeBeginEnvironment{#1}{\begin{#2}}%
+    \AfterEndEnvironment{#1}{\end{#2}}%
 }
 
 \enclosebox{theorem}{oframed}
@@ -43,10 +45,10 @@
 
 \newcommand{\divides}{\bigm|}
 \newcommand{\ndivides}{%
-  \mathrel{\mkern.5mu % small adjustment
-    % superimpose \nmid to \big|
-    \ooalign{\hidewidth$\big|$\hidewidth\cr$\nmid$\cr}%
-  }%
+    \mathrel{\mkern.5mu % small adjustment
+        % superimpose \nmid to \big|
+        \ooalign{\hidewidth$\big|$\hidewidth\cr$\nmid$\cr}%
+    }%
 }
 \newcommand{\ord}{\operatorname{\mathrm{ord}}}
 \newcommand{\ind}{\operatorname{\mathrm{ind}}}
@@ -60,20 +62,26 @@
 %\renewcommand{\arraystretch}{1.5}
 \setlength{\tabcolsep}{0.5em}%
 \newenvironment{Figure}
-  {\par\medskip\noindent\minipage{\linewidth}}
-  {\endminipage\par\medskip}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
 \newcommand{\translation}[1]{\textsuperscript{#1}}
 
 \makeatletter
 \renewcommand\NAT@citesuper[3]{\ifNAT@swa
-\if*#2*\else#2\NAT@spacechar\fi
-\unskip\kern\p@\textsuperscript{\NAT@@open#1\if*#3*\else,\NAT@spacechar#3\fi\NAT@@close}%
-   \else #1\fi\endgroup}
+    \if*#2*\else#2\NAT@spacechar\fi
+    \unskip\kern\p@\textsuperscript{\NAT@@open#1\if*#3*\else,\NAT@spacechar#3\fi\NAT@@close}%
+    \else #1\fi\endgroup}
 \makeatother
 
 \let\oldtabular\tabular% Store a copy of \tabular
 \let\endoldtabular\endtabular% Store a copy of \endtabular
 \renewenvironment{tabular}[2][\arraystretch]
-  {\edef\arraystretch{#1}% Update \arraystretch
-   \oldtabular{#2}}% \begin{tabular}[<stretch>]{<col spec>}
-  {\endoldtabular}% \end{tabular}
+{\edef\arraystretch{#1}% Update \arraystretch
+    \oldtabular{#2}}% \begin{tabular}[<stretch>]{<col spec>}
+{\endoldtabular}% \end{tabular}
+
+\ctikzset{
+    logic ports=ieee,
+    logic ports/scale=0.8
+    %logic ports/fill=lightgray
+}

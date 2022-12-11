@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.3)  4 DEC 2022 18:32
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.3)  10 DEC 2022 18:46
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -879,26 +879,83 @@ Package: nicematrix 2022/06/26 v6.10a Enhanced arrays with the help of PGF/TikZ
 \l__nicematrix_end_int=\count412
 \l__nicematrix_multiplicity_int=\count413
 \l__nicematrix_brace_yshift_dim=\dimen364
-) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/karnaugh-map/karnaugh-map.sty
+Package: karnaugh-map 2022/01/15 v2.0 Draw Karnaugh Maps
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryangles.code.tex
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+\@karnaughmap@var@colorindex@=\count414
+\@karnaughmap@var@colorindexnext@=\count415
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/circuitikz/circuitikz.sty
+Package: circuitikz 2022/05/08{} The CircuiTikz circuit drawing package version 1.5.2
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowinset=\dimen365
+\pgfarrowlength=\dimen366
+\pgfarrowwidth=\dimen367
+\pgfarrowlinewidth=\dimen368
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybending.code.tex
+File: tikzlibrarybending.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmodulebending.code.tex
+File: pgfmodulebending.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineartransformations.code.tex
+File: pgfmodulenonlineartransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgftransformnonlinearflatness=\dimen369
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.code.tex
+File: pgflibrarycurvilinear.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@curvilinear@time@a=\dimen370
+\pgf@curvilinear@length@a=\dimen371
+\pgf@curvilinear@length@b=\dimen372
+\pgf@curvilinear@length@c=\dimen373
+\pgf@curvilinear@length@d=\dimen374
+)
+\pgf@arrows@the@rigidity=\dimen375
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)) (/usr/local/texlive/2022/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
+\pgf@circ@count@a=\count416
+\pgf@circ@count@b=\count417
+\pgf@circ@count@c=\count418
+\pgf@circ@res@up=\dimen376
+\pgf@circ@res@down=\dimen377
+\pgf@circ@res@zero=\dimen378
+\pgf@circ@res@left=\dimen379
+\pgf@circ@res@right=\dimen380
+\pgf@circ@res@other=\dimen381
+\pgf@circ@res@step=\dimen382
+\pgf@circ@res@temp=\dimen383
+\pgf@circ@Rlen=\dimen384
+\pgf@circ@scaled@Rlen=\dimen385
+\pgfstartlinewidth=\dimen386
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex
+\ctikz@scratchbox=\box129
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
+\pgf@circ@res@count=\count419
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex
+\pgfcirc@labelshift=\dimen387
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryangles.code.tex
 File: tikzlibraryangles.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryquotes.code.tex
 File: tikzlibraryquotes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.code.tex
 File: tikzlibrarygraphs.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\tikz@lib@auto@number=\count414
-\tikz@qnode@count=\count415
+\tikz@lib@auto@number=\count420
+\tikz@qnode@count=\count421
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\arrowsize=\dimen365
+\arrowsize=\dimen388
 )) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.standard.code.tex
 File: tikzlibrarygraphs.standard.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.gates.logic.US.code.tex
+File: tikzlibraryshapes.gates.logic.US.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/shapes/circuits/pgflibraryshapes.gates.logic.US.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/shapes/circuits/pgflibraryshapes.gates.logic.code.tex))) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.gates.logic.IEC.code.tex
+File: tikzlibraryshapes.gates.logic.IEC.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/shapes/circuits/pgflibraryshapes.gates.logic.IEC.code.tex))
 
 Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
 (fontspec)             New Roman' with options [Ligatures=TeX].
@@ -1074,14 +1131,14 @@ Package fontspec Info: Font family 'UnDotum.ttf(1)' created for font
 (fontspec)             <->"[UnDotumBold.ttf]/OT:language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
-\c@lstlisting=\count416
+\c@lstlisting=\count422
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@tabularnotesi=\count417
-\enitdp@tabularnotes=\count418
-\c@tabularnotes*i=\count419
-\enitdp@tabularnotes*=\count420
+\c@tabularnotesi=\count423
+\enitdp@tabularnotes=\count424
+\c@tabularnotes*i=\count425
+\enitdp@tabularnotes*=\count426
 
 Package mathptmx Warning: There are no bold math fonts on input line 10.
 
@@ -1111,6 +1168,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
+LaTeX Font Info:    Calculating math sizes for size <7.4> on input line 28.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.47603> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <4.44003> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
 
 Underfull \hbox (badness 10000) in paragraph at lines 20--31
 
@@ -1129,29 +1191,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--31
 [1
 
 ]
-\g__nicematrix_max_cell_width_dim=\dimen366
-\c@iRow=\count421
-\c@jCol=\count422
-\l__nicematrix_cell_box=\box129
-\l__nicematrix_the_array_box=\box130
-\l__nicematrix_left_delim_dim=\dimen367
-\l__nicematrix_right_delim_dim=\dimen368
-\g__nicematrix_dp_row_zero_dim=\dimen369
-\g__nicematrix_ht_row_zero_dim=\dimen370
-\g__nicematrix_ht_row_one_dim=\dimen371
-\g__nicematrix_dp_ante_last_row_dim=\dimen372
-\g__nicematrix_ht_last_row_dim=\dimen373
-\g__nicematrix_dp_last_row_dim=\dimen374
-\g__nicematrix_ddots_int=\count423
-\g__nicematrix_iddots_int=\count424
-\g__nicematrix_delta_x_one_dim=\dimen375
-\g__nicematrix_delta_y_one_dim=\dimen376
-\g__nicematrix_delta_x_two_dim=\dimen377
-\g__nicematrix_delta_y_two_dim=\dimen378
-\l__nicematrix_initial_i_int=\count425
-\l__nicematrix_initial_j_int=\count426
-\l__nicematrix_final_i_int=\count427
-\l__nicematrix_final_j_int=\count428
+\g__nicematrix_max_cell_width_dim=\dimen389
+\c@iRow=\count427
+\c@jCol=\count428
+\l__nicematrix_cell_box=\box130
+\l__nicematrix_the_array_box=\box131
+\l__nicematrix_left_delim_dim=\dimen390
+\l__nicematrix_right_delim_dim=\dimen391
+\g__nicematrix_dp_row_zero_dim=\dimen392
+\g__nicematrix_ht_row_zero_dim=\dimen393
+\g__nicematrix_ht_row_one_dim=\dimen394
+\g__nicematrix_dp_ante_last_row_dim=\dimen395
+\g__nicematrix_ht_last_row_dim=\dimen396
+\g__nicematrix_dp_last_row_dim=\dimen397
+\g__nicematrix_ddots_int=\count429
+\g__nicematrix_iddots_int=\count430
+\g__nicematrix_delta_x_one_dim=\dimen398
+\g__nicematrix_delta_y_one_dim=\dimen399
+\g__nicematrix_delta_x_two_dim=\dimen400
+\g__nicematrix_delta_y_two_dim=\dimen401
+\l__nicematrix_initial_i_int=\count431
+\l__nicematrix_initial_j_int=\count432
+\l__nicematrix_final_i_int=\count433
+\l__nicematrix_final_j_int=\count434
 
 Underfull \hbox (badness 10000) in paragraph at lines 74--95
 
@@ -1192,259 +1254,327 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--189
 
  []
 
-[4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 225--235
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--278
+Underfull \hbox (badness 10000) in paragraph at lines 225--235
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--294
+Underfull \hbox (badness 10000) in paragraph at lines 225--235
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 262--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--302
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 297--302
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 305--313
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 305--313
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 305--313
+ [6]
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 321--325
+Underfull \hbox (badness 10000) in paragraph at lines 352--354
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--325
+Underfull \hbox (badness 10000) in paragraph at lines 354--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--337
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 357--359
+Underfull \hbox (badness 10000) in paragraph at lines 388--396
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
+Underfull \hbox (badness 10000) in paragraph at lines 388--396
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
+Underfull \hbox (badness 10000) in paragraph at lines 388--396
 
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 395--398
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 433--435
-
- []
-
-[10]
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 456.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 456.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 458.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 458.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 458.
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 471.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 471.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 471.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 471.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 486.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 486.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 486.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 486.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 486.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 486.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 500.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 500.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 500.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 500.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 500.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 500.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 500.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 500.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 515.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 515.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 515.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 515.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 515.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 515.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 515.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 515.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``e''? on input line 515.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``e''? on input line 515.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 530.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 530.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 530.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 530.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 530.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 530.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 530.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 530.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``e''? on input line 530.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``e''? on input line 530.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``f''? on input line 530.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``f''? on input line 530.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--538
+[8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 469--470
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 569--572
+Underfull \hbox (badness 10000) in paragraph at lines 518--519
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 527--530
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 543--546
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 549--554
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 549--554
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--565
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--565
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--565
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 595--598
+Underfull \hbox (badness 10000) in paragraph at lines 573--577
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 613--633
+Underfull \hbox (badness 10000) in paragraph at lines 573--577
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 613--633
+Underfull \hbox (badness 10000) in paragraph at lines 586--589
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 635--643
+Underfull \hbox (badness 10000) in paragraph at lines 609--611
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 641--642
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 641--642
 
  []
 
 [14]
+Underfull \hbox (badness 10000) in paragraph at lines 647--650
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 685--687
+
+ []
+
+[15]
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 708.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 708.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 710.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 710.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 710.
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 723.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 723.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 723.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 723.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 738.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 738.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 738.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 738.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 738.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 738.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 752.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 752.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 752.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 752.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 752.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 752.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 752.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 752.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 767.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 767.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 767.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 767.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 767.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 767.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 767.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 767.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``e''? on input line 767.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``e''? on input line 767.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 782.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``a''? on input line 782.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 782.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``b''? on input line 782.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 782.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``c''? on input line 782.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 782.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``d''? on input line 782.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``e''? on input line 782.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``e''? on input line 782.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``f''? on input line 782.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``f''? on input line 782.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 786--790
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 821--824
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 867--869
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 867--869
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 878--880
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 904--924
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 904--924
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 926--933
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 934--939
+
+ []
+
+[19]
 \openout3 = `lecturenote-final.pyg'.
 
  (./_minted-lecturenote-final/default.pygstyle) (./_minted-lecturenote-final/ACC5E407C79C4AD130AF989F12015C56ADF390C383BB869FF73EFFB0E402F911.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 667--1
+Underfull \hbox (badness 10000) in paragraph at lines 963--1
 
  []
 
@@ -1455,39 +1585,229 @@ Underfull \hbox (badness 10000) in paragraph at lines 667--1
 \openout3 = `lecturenote-final.pyg'.
 
  (./_minted-lecturenote-final/1CFD68CE32728EBFA6CB230AFC5817B9ADF390C383BB869FF73EFFB0E402F911.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 701--708
+Underfull \hbox (badness 10000) in paragraph at lines 997--1004
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 701--708
+Underfull \hbox (badness 10000) in paragraph at lines 997--1004
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
-Underfull \hbox (badness 10000) in paragraph at lines 716--721
+ [20]
+Underfull \hbox (badness 10000) in paragraph at lines 1012--1017
 
  []
 
 \openout3 = `lecturenote-final.pyg'.
 
-(./_minted-lecturenote-final/573A135A0733037BAE4D04E0BC84A5FA6F9E67026E266A3A415DCB07D007283B.pygtex) [16]
+(./_minted-lecturenote-final/573A135A0733037BAE4D04E0BC84A5FA6F9E67026E266A3A415DCB07D007283B.pygtex) [21]
 \openout3 = `lecturenote-final.pyg'.
 
- (./_minted-lecturenote-final/F74488522B28919198BC9942EE284DD96F9E67026E266A3A415DCB07D007283B.pygtex) [17] [18] (./lecturenote-final.aux)
+ (./_minted-lecturenote-final/F74488522B28919198BC9942EE284DD96F9E67026E266A3A415DCB07D007283B.pygtex) [22] [23]
+Underfull \hbox (badness 10000) in paragraph at lines 1099--1104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1134--1140
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 1158--1160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1162--1168
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1203
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1223
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1233--1236
+
+ []
+
+\@karnaughmap@local@cellcount@=\count435
+[27]
+\@karnaughmap@local@northwest@=\count436
+\@karnaughmap@local@southeast@=\count437
+\@karnaughmap@local@northwest@=\count438
+\@karnaughmap@local@southeast@=\count439
+\@karnaughmap@local@northwest@=\count440
+\@karnaughmap@local@southeast@=\count441
+\@karnaughmap@local@northwest@=\count442
+\@karnaughmap@local@southeast@=\count443
+
+Underfull \hbox (badness 10000) in paragraph at lines 1297--1300
+
+ []
+
+\@karnaughmap@local@cellcount@=\count444
+\@karnaughmap@local@testcaseone@=\count445
+\@karnaughmap@local@testcasetwo@=\count446
+\@karnaughmap@local@coordinateonecounter@=\count447
+\@karnaughmap@local@coordinatetwocounter@=\count448
+\@karnaughmap@local@coordinateonecounter@=\count449
+\@karnaughmap@local@coordinatetwocounter@=\count450
+
+Underfull \hbox (badness 10000) in paragraph at lines 1321--1324
+
+ []
+
+[28]
+\@karnaughmap@local@cellcount@=\count451
+\@karnaughmap@local@coordinate@=\count452
+\@karnaughmap@local@coordinate@=\count453
+\@karnaughmap@local@coordinate@=\count454
+\@karnaughmap@local@coordinate@=\count455
+\@karnaughmap@local@northwest@=\count456
+\@karnaughmap@local@southeast@=\count457
+
+Underfull \hbox (badness 10000) in paragraph at lines 1349--1349
+[]\TU/KoPubWorldBatang_Pro(0)/m/n/9 (\TU/TimesNewRoman(0)/m/n/9 b\TU/KoPubWorldBatang_Pro(0)/m/n/9 ) |$\OML/ztmcm/m/it/9 f\OT1/ztmcm/m/n/9 (\OML/ztmcm/m/it/9 x; y; z; w\OT1/ztmcm/m/n/9 ) = \OML/ztmcm/m/it/9 x[]y[]z[]w[] \OT1/ztmcm/m/n/9 + \OML/ztmcm/m/it/9 x[]y[]zw[] \OT1/ztmcm/m/n/9 + \OML/ztmcm/m/it/9 x[]yz[]w \OT1/ztmcm/m/n/9 +
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 1359--1397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1359--1397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1397--1399
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1397--1399
+
+ []
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 1433--1437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1476--1477
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1476--1477
+
+ []
+
+\@karnaughmap@local@northwest@=\count458
+\@karnaughmap@local@southeast@=\count459
+\@karnaughmap@local@northwest@=\count460
+\@karnaughmap@local@southeast@=\count461
+\@karnaughmap@local@northwest@=\count462
+\@karnaughmap@local@southeast@=\count463
+\@karnaughmap@local@northwest@=\count464
+\@karnaughmap@local@southeast@=\count465
+\@karnaughmap@local@northwest@=\count466
+\@karnaughmap@local@southeast@=\count467
+\@karnaughmap@local@northwest@=\count468
+\@karnaughmap@local@southeast@=\count469
+\@karnaughmap@local@northwest@=\count470
+\@karnaughmap@local@southeast@=\count471
+
+Underfull \hbox (badness 10000) in paragraph at lines 1494--1564
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1494--1564
+
+ []
+
+[31] [32]
+Underfull \hbox (badness 10000) in paragraph at lines 1602--1603
+
+ []
+
+\@karnaughmap@local@northwest@=\count472
+\@karnaughmap@local@southeast@=\count473
+\@karnaughmap@local@northwest@=\count474
+\@karnaughmap@local@southeast@=\count475
+
+Underfull \hbox (badness 10000) in paragraph at lines 1610--1613
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1610--1613
+
+ []
+
+\@karnaughmap@local@northwest@=\count476
+\@karnaughmap@local@southeast@=\count477
+\@karnaughmap@local@northwest@=\count478
+\@karnaughmap@local@southeast@=\count479
+
+Underfull \hbox (badness 10000) in paragraph at lines 1620--1623
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1620--1623
+
+ []
+
+[33]
+\@karnaughmap@local@testcaseone@=\count480
+\@karnaughmap@local@testcasetwo@=\count481
+\@karnaughmap@local@coordinateonecounter@=\count482
+\@karnaughmap@local@coordinatetwocounter@=\count483
+\@karnaughmap@local@coordinateonecounter@=\count484
+\@karnaughmap@local@coordinatetwocounter@=\count485
+\@karnaughmap@local@testcaseone@=\count486
+\@karnaughmap@local@testcasetwo@=\count487
+\@karnaughmap@local@coordinateonecounter@=\count488
+\@karnaughmap@local@coordinatetwocounter@=\count489
+\@karnaughmap@local@coordinateonecounter@=\count490
+\@karnaughmap@local@coordinatetwocounter@=\count491
+\@karnaughmap@local@northwest@=\count492
+\@karnaughmap@local@southeast@=\count493
+ [34] (./lecturenote-final.aux)
 runsystem(rm lecturenote-final.pyg)...executed.
 
- ) 
+ )
+(\end occurred when \iftrue on line 1337 was incomplete)
+(\end occurred when \iftrue on line 1337 was incomplete)
+(\end occurred when \iftrue on line 1337 was incomplete)
+(\end occurred when \iftrue on line 1337 was incomplete)
+(\end occurred when \iftrue on line 1337 was incomplete)
+(\end occurred when \iftrue on line 1337 was incomplete)
+(\end occurred when \iftrue on line 1337 was incomplete)
+(\end occurred when \iftrue on line 1337 was incomplete) 
 Here is how much of TeX's memory you used:
- 32567 strings out of 475882
- 697272 string characters out of 5802500
- 1074396 words of memory out of 5000000
- 53031 multiletter control sequences out of 15000+600000
- 488463 words of font info for 138 fonts, out of 8000000 for 9000
+ 50833 strings out of 475882
+ 1233232 string characters out of 5802500
+ 1854526 words of memory out of 5000000
+ 71202 multiletter control sequences out of 15000+600000
+ 494747 words of font info for 160 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 106i,13n,108p,684b,2709s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 106i,17n,108p,768b,2709s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on lecturenote-final.xdv (18 pages, 285556 bytes).
+Output written on lecturenote-final.xdv (34 pages, 698504 bytes).

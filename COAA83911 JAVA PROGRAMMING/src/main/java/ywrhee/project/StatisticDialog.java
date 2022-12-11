@@ -16,7 +16,7 @@ public class StatisticDialog extends JDialog {
     private ArrayList<Game> statisticList;
     private String statisticInfo;
 
-    StatisticDialog(StartFrame owner, String title, ArrayList<Game> statisticList, String statisticInfo) {
+    public StatisticDialog(StartFrame owner, String title, ArrayList<Game> statisticList, String statisticInfo) {
         super(owner, title, true);
         parent = owner;
         this.statisticList = statisticList;
@@ -26,12 +26,12 @@ public class StatisticDialog extends JDialog {
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setLocation(parent.getLocation().x + parent.getWidth(), parent.getLocation().y);
 
-        init();
+        initUI();
 
         this.setVisible(true);
     }
 
-    private void init() {
+    private void initUI() {
         JPanel upperPanel = new JPanel();
         upperPanel.setLayout(new BorderLayout());
         upperPanel.setBorder(BorderFactory.createEmptyBorder(60, 0, 0, 0));
@@ -81,7 +81,6 @@ public class StatisticDialog extends JDialog {
         statisticList.forEach(it -> tableModel.addRow(it.getTableRow()));
 
         JScrollPane scrollPane = new JScrollPane(statisticTable);
-        //scrollPane.setBorder(BorderFactory.createEmptyBorder(65, 65, 65, 65));
         dialog.add(scrollPane, BorderLayout.CENTER);
     }
 

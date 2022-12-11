@@ -18,3 +18,15 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'ywrhee.project.BingoGame'
+    }
+    from {
+        compileJava.classpath.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}

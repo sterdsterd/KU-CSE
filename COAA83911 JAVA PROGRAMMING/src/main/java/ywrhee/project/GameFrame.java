@@ -89,7 +89,7 @@ public class GameFrame extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == inputButton || e.getSource() == userInput) {
-            ArrayList<Word> filteredList = new ArrayList<>(wordsInBingoBoard.stream().filter(it -> it.getEnglish().equals(userInput.getText())).toList());
+            ArrayList<Word> filteredList = new ArrayList<>(wordsInBingoBoard.stream().filter(it -> it.getEnglish().equals(userInput.getText().trim())).toList());
 
             if (!filteredList.isEmpty()) {
                 filteredList.get(0).setChecked(true);
@@ -124,25 +124,8 @@ public class GameFrame extends JFrame implements ActionListener {
                     logArea.setText(logArea.getText() + "\n컴퓨터가 " + finalSelectedWord + "를 선택하였습니다.");
                 updateBingoBoard();
 
-                switch (winLoseInfo = checkWinner()) {
-                    case Game.VICTORY:
-                        JOptionPane.showMessageDialog(GameFrame.this, "당신이 이겼습니다.", "게임 종료", JOptionPane.INFORMATION_MESSAGE);
-                        closeGameFrame();
-                        break;
+                checkWinner();
 
-                    case Game.DEFEAT:
-                        JOptionPane.showMessageDialog(GameFrame.this, "컴퓨터가 이겼습니다.", "게임 종료", JOptionPane.ERROR_MESSAGE);
-                        closeGameFrame();
-                        break;
-
-                    case Game.DRAW:
-                        JOptionPane.showMessageDialog(GameFrame.this, "무승부입니다.", "게임 종료", JOptionPane.WARNING_MESSAGE);
-                        closeGameFrame();
-                        break;
-
-                    default:
-                        break;
-                }
                 turnLabel.setText("<html><b>유저 차례</b> | 유저 빙고: " + user.getBingoCount() + "개, 컴퓨터 빙고: " + computer.getBingoCount() + "개</html>");
 
                 inputButton.setEnabled(true);
@@ -154,20 +137,29 @@ public class GameFrame extends JFrame implements ActionListener {
         timer.start();
     }
 
-    private int checkWinner() {
+    private void checkWinner() {
         user.updateBingoCount();
         computer.updateBingoCount();
         turnLabel.setText("<html><b>컴퓨터 차례</b> | 유저 빙고: " + user.getBingoCount() + "개, 컴퓨터 빙고: " + computer.getBingoCount() + "개</html>");
 
         if (user.getBingoCount() > computer.getBingoCount()) {
-            return Game.VICTORY;
+            winLoseInfo = Game.VICTORY;
+            JOptionPane.showMessageDialog(GameFrame.this, "당신이 이겼습니다.", "게임 종료", JOptionPane.INFORMATION_MESSAGE);
+            closeGameFrame();
         } else if (user.getBingoCount() < computer.getBingoCount()) {
-            return Game.DEFEAT;
-        } else if (user.isSelectable() && computer.isSelectable()) {
-            return Game.KEEP_GOING;
-        } else return Game.DRAW;
+            winLoseInfo = Game.DEFEAT;
+            JOptionPane.showMessageDialog(GameFrame.this, "컴퓨터가 이겼습니다.", "게임 종료", JOptionPane.ERROR_MESSAGE);
+            closeGameFrame();
+        } else if (!user.isSelectable() || !computer.isSelectable()) {
+            winLoseInfo = Game.DRAW;
+            JOptionPane.showMessageDialog(GameFrame.this, "무승부입니다.", "게임 종료", JOptionPane.WARNING_MESSAGE);
+            closeGameFrame();
+        }
     }
 
+    /**
+     * Redraw bingo board
+     */
     private void updateBingoBoard() {
         containerPanel.remove(user.getBingoPanel());
         user.constructBingoPanel();
@@ -181,6 +173,9 @@ public class GameFrame extends JFrame implements ActionListener {
         GameFrame.this.repaint();
     }
 
+    /**
+     * Called when the window closes
+     */
     private void closeGameFrame() {
         synchronized(this){
             this.notify();

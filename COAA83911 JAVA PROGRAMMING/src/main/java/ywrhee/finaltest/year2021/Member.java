@@ -1,4 +1,4 @@
-package jhchi0409.finaltest;
+package ywrhee.finaltest.year2021;
 
 public class Member {
 	String name; // 회원이름
@@ -27,4 +27,7 @@ public class Member {
 		return str;
 	}
 
+	public int getTotalDonationTime() {
+		return totalDonationTime;
+	}
 }

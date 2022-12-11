@@ -29,6 +29,10 @@ public class User {
 
     }
 
+
+    /**
+     * Make a bingo board with Word bingoBoard[][]
+     */
     public void constructBingoPanel() {
         bingoPanel = new JPanel();
         bingoPanel.setLayout(new GridLayout(N, N, -1, -1));
@@ -61,6 +65,9 @@ public class User {
         return getWordList().stream().filter(it -> !it.isChecked()).findAny().orElse(null) != null;
     }
 
+    /**
+     * Calculate the bingo count of bingo board and update to the bingoCount
+     */
     public void updateBingoCount() {
         bingoCount = 0;
 
@@ -85,7 +92,13 @@ public class User {
         return bingoCount;
     }
 
-    public Word selectWordToWin(int difficulty, ArrayList<Word> comparableList) {
+    /**
+     * Choose the Word to win according to difficulty of AI
+     * @param difficulty AI's difficulty
+     * @param comparisonList Words in the comparisonList has a 50% chance of not being selected on hard difficulty
+     * @return Word chosen by AI
+     */
+    public Word selectWordToWin(int difficulty, ArrayList<Word> comparisonList) {
         // Returns Random Word in wordList which is not checked when Difficulty == Easy
         if (difficulty == Game.EASY) {
             Collections.shuffle(wordList);
@@ -130,16 +143,13 @@ public class User {
         if (difficulty == Game.NORMAL)
             return bestSelections.get(0);
 
-        System.out.println("====================");
-        bestSelections.forEach(System.out::println);
-
-        // Returns first item in bestSelection which is not in comparableList when Difficulty == Hard
+        // Returns first item in bestSelection which is not in comparisonList when Difficulty == Hard
         if (bestSelections.stream().anyMatch(it -> it.getWeight() == N - 1))
             return bestSelections.stream().filter(it -> it.getWeight() == N - 1).toList().get(0);
 
         if (Math.random() < 0.5)
             return bestSelections.get(0);
-        return bestSelections.stream().filter(it -> !comparableList.contains(it)).findFirst().orElse(bestSelections.get(0));
+        return bestSelections.stream().filter(it -> !comparisonList.contains(it)).findFirst().orElse(bestSelections.get(0));
     }
 
 }

@@ -11,11 +11,14 @@ public class StatisticUtil {
     private static ArrayList<Game> statisticList;
     private static FileWriter statisticWriter;
 
+    /**
+     * Get saved statistic information from statistics.txt and save it to statisticList
+     */
     public static void init() {
         statisticList = new ArrayList<>();
         File statisticFile;
         try {
-            statisticFile = new File("statistics.txt");
+            statisticFile = new File(System.getProperty("user.dir") + "/statistics.txt");
 
             if (!statisticFile.exists()) statisticFile.createNewFile();
 
@@ -40,11 +43,14 @@ public class StatisticUtil {
         statisticList.add(game);
     }
 
+    /**
+     * Save Game information into the file as CSV formatted string
+     * @param game Game object to save in the file
+     */
     public static void writeStatistic(Game game) {
         try {
             statisticWriter.write(game.getCsvInfo());
             statisticWriter.flush();
-            //System.out.println(game.getCsvInfo());
         } catch (IOException e) {
             e.printStackTrace();
         }

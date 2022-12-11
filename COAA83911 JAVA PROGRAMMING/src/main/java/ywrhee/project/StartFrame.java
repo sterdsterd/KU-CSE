@@ -119,6 +119,7 @@ public class StartFrame extends JFrame implements ActionListener {
             jFileChooser.setFileFilter(filter);
             if (jFileChooser.showOpenDialog(null) == 0) {
                 filePathTextField.setText(jFileChooser.getSelectedFile().getName());
+                selectedFile = jFileChooser.getSelectedFile();
             }
         });
         gridBagConstraints.gridx++;
