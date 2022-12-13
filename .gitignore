@@ -5,4 +5,11 @@ COAA83911 JAVA PROGRAMMING/.idea
 COAA83911 JAVA PROGRAMMING/.gradle
 COAA83911 JAVA PROGRAMMING/bin/
 COAA83911 JAVA PROGRAMMING/build/
-
+*.xdv
+*.synctex.gz
+*.log
+*.fls
+*.fdb_latexmk
+*.aux
+*.pygstyle
+*.pygtex

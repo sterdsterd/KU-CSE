@@ -1,4 +1,4 @@
-package ywrhee.finaltest;
+package ywrhee.finaltest.year2022;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -25,17 +25,17 @@ import javax.swing.table.DefaultTableModel;
 @SuppressWarnings("serial")
 public class YwrheeFinalFrame extends JFrame implements ActionListener {
 	Container frame = this.getContentPane();
-	SubjectManager manager;	
+	SubjectManager manager;
 	DefaultTableModel tableModel;
 	JRadioButton ascRadioButton, descRadioButton;
 	JComboBox comboBox;
-	
-	String[] tableCol = {"ÇÐ¹ø", "ÀÌ¸§"};
-	String[] tableColSearch = {"°ú¸ñ¹øÈ£", "°ú¸ñ¸í", "½ÅÃ»ÀÎ¿ø"};
-	
+
+	String[] tableCol = {"í•™ë²ˆ", "ì´ë¦„"};
+	String[] tableColSearch = {"ê³¼ëª©ë²ˆí˜¸", "ê³¼ëª©ëª…", "ì‹ ì²­ì¸ì›"};
+
 	public YwrheeFinalFrame(String title, SubjectManager manager){
 		super(title);
-		this.manager = manager;		
+		this.manager = manager;
 		this.setSize(500,500);
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -46,30 +46,30 @@ public class YwrheeFinalFrame extends JFrame implements ActionListener {
 	public void init() {
 		JPanel topPanel = new JPanel();
 		topPanel.setLayout(new FlowLayout());
-		
+
 		comboBox = new JComboBox(manager.sublist.stream().map(it->it.subID).toArray());
 		comboBox.addActionListener(this);
 		topPanel.add(comboBox);
-		
+
 		ButtonGroup sortGroup = new  ButtonGroup();
 		ascRadioButton = new JRadioButton("ASC");
 		ascRadioButton.addActionListener(this);
 		ascRadioButton.setSelected(true);
 		descRadioButton = new JRadioButton("DESC");
 		descRadioButton.addActionListener(this);
-		
+
 		sortGroup.add(ascRadioButton);
 		sortGroup.add(descRadioButton);
 		topPanel.add(ascRadioButton);
 		topPanel.add(descRadioButton);
-		
-		topPanel.add(new JLabel("°Ë»öÇÒ ÇÐ¹ø"));
-		
+
+		topPanel.add(new JLabel("ê²€ìƒ‰í•  í•™ë²ˆ"));
+
 		JTextField searchField = new JTextField(10);
 		searchField.addActionListener(e -> {
 			List<Subject> result = manager.findStudent(searchField.getText());
 			if (result.size() == 0) {
-				JOptionPane.showMessageDialog(this, "ÇÐ¹øÀ» È®ÀÎÇØÁÖ¼¼¿ä", "ÇÐ¹ø È®ÀÎ", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(this, "í•™ë²ˆì„ í™•ì¸í•´ì£¼ì„¸ìš”", "í•™ë²ˆ í™•ì¸", JOptionPane.ERROR_MESSAGE);
 			} else {
 				tableModel.setRowCount(0);
 				tableModel.setColumnIdentifiers(tableColSearch);
@@ -79,17 +79,17 @@ public class YwrheeFinalFrame extends JFrame implements ActionListener {
 			}
 		});
 		topPanel.add(searchField);
-		
+
 		frame.add(topPanel, BorderLayout.NORTH);
-		
+
 		tableModel = new DefaultTableModel(tableCol, 0);
 		JTable table = new JTable(tableModel);
 		comboBox.setSelectedItem(comboBox.getSelectedItem());
-		
+
 		frame.add(new JScrollPane(table), BorderLayout.SOUTH);
 
-		
-		
+
+
 	}
 
 	@Override
@@ -97,22 +97,22 @@ public class YwrheeFinalFrame extends JFrame implements ActionListener {
 		Subject selected = manager.findSubject((String) comboBox.getSelectedItem());
 		tableModel.setRowCount(0);
 		tableModel.setColumnIdentifiers(tableCol);
-		
+
 		if (ascRadioButton.isSelected()) {
 			selected.stdmap.entrySet().stream()
-			.map(it->it.getValue())
-			.sorted(Comparator.comparing(Student::getStdID))
-			.forEach(it -> {
-				tableModel.addRow(new Object[] {it.stdID, it.stdName});
-			});
+					.map(it->it.getValue())
+					.sorted(Comparator.comparing(Student::getStdID))
+					.forEach(it -> {
+						tableModel.addRow(new Object[] {it.stdID, it.stdName});
+					});
 		} else {
 			selected.stdmap.entrySet().stream()
-			.map(it->it.getValue())
-			.sorted(Comparator.comparing(Student::getStdID).reversed())
-			.forEach(it -> {
-				tableModel.addRow(new Object[] {it.stdID, it.stdName});
-			});
+					.map(it->it.getValue())
+					.sorted(Comparator.comparing(Student::getStdID).reversed())
+					.forEach(it -> {
+						tableModel.addRow(new Object[] {it.stdID, it.stdName});
+					});
 		}
-		
-	}		
+
+	}
 }

@@ -1,4 +1,4 @@
-package ywrhee.finaltest;
+package ywrhee.finaltest.year2022;
 
 import java.util.List;
 
@@ -6,64 +6,64 @@ public class YwrheeTestMain {
 
 	public static void main(String[] args) {
 
-		System.out.println("1)ÇĞ¹øÀÌ¸§ Ãâ·ÂÇÏ±â (ÄÜ¼ÖÃ¢)");		
-		
-		System.out.println("202211342 ÀÌÀ²¿ø");
-		
-		System.out.println("2)Subject Å¬·¡½ºÀÇ ¼ö°­½ÅÃ» ¹× Ãâ·ÂÇÏ±â");
-		Subject subject1 = new Subject("ES0406", "ÆÄÀÌ½ã");		
-		subject1.register(new Student("20011", "È«±æµ¿"));
-		subject1.register(new Student("20011", "È«±æµ¿"));
-		subject1.register(new Student("20022", "±è±æµ¿"));
+		System.out.println("1)í•™ë²ˆì´ë¦„ ì¶œë ¥í•˜ê¸° (ì½˜ì†”ì°½)");
+
+		System.out.println("202211342 ì´ìœ¨ì›");
+
+		System.out.println("2)Subject í´ë˜ìŠ¤ì˜ ìˆ˜ê°•ì‹ ì²­ ë° ì¶œë ¥í•˜ê¸°");
+		Subject subject1 = new Subject("ES0406", "íŒŒì´ì¬");
+		subject1.register(new Student("20011", "í™ê¸¸ë™"));
+		subject1.register(new Student("20011", "í™ê¸¸ë™"));
+		subject1.register(new Student("20022", "ê¹€ê¸¸ë™"));
 		System.out.println(subject1);
-		
-		System.out.println("3) SubjectManager Å¬·¡½ºÀÇ °ú¸ñµî·Ï ¹× Ãâ·ÂÇÏ±â");
-		SubjectManager csManager = new SubjectManager("ÄÄÇ»ÅÍ°øÇĞ°ú");
-		csManager.addSubject(new Subject("ES0406", "ÆÄÀÌ½ã"));
-		csManager.addSubject(new Subject("CA0407", "C¾ğ¾î"));
-		csManager.addSubject(new Subject("DC0408", "±×·¡ÇÈ"));
-		csManager.addSubject(new Subject("ES0406", "ÆÄÀÌ½ã"));		
-		System.out.println(csManager);
-		
-		System.out.println("4) °ú¸ñ¹øÈ£·Î Subject Ã£±â ¹× ¼ö°­ µî·ÏÇÏ±â");
-		Subject sub1 =csManager.findSubject("CA0407");
-		if(sub1!=null) {
-			sub1.register(new Student("20011", "È«±æµ¿"));
-			sub1.register(new Student("20011", "È«±æµ¿"));
-			sub1.register(new Student("20022", "±è±æµ¿"));
-			sub1.register(new Student("20017", "ÀÌ±æµ¿"));
-			sub1.register(new Student("20006", "¹Ú±æµ¿"));
-		}else {
-			System.out.println("°ú¸ñ¹øÈ£¸¦ È®ÀÎÇØ ÁÖ¼¼¿ä.");
-		}
-		
-		Subject sub2 =csManager.findSubject("ES0406");		
-		sub2.register(new Student("20011", "È«±æµ¿"));		
-		sub2.register(new Student("20006", "¹Ú±æµ¿"));
-		
-		Subject sub3 =csManager.findSubject("DC0408");		
-		sub3.register(new Student("20011", "È«±æµ¿"));
-		sub3.register(new Student("20022", "±è±æµ¿"));
-		sub3.register(new Student("20017", "ÀÌ±æµ¿"));		
-		
+
+		System.out.println("3) SubjectManager í´ë˜ìŠ¤ì˜ ê³¼ëª©ë“±ë¡ ë° ì¶œë ¥í•˜ê¸°");
+		SubjectManager csManager = new SubjectManager("ì»´í“¨í„°ê³µí•™ê³¼");
+		csManager.addSubject(new Subject("ES0406", "íŒŒì´ì¬"));
+		csManager.addSubject(new Subject("CA0407", "Cì–¸ì–´"));
+		csManager.addSubject(new Subject("DC0408", "ê·¸ë˜í”½"));
+		csManager.addSubject(new Subject("ES0406", "íŒŒì´ì¬"));
 		System.out.println(csManager);
 
-		System.out.println("5) ÇĞ¹øÀ¸·Î ÇĞ»ıÀÌ ¼ö°­ÇÏ°í ÀÖ´Â Subject ¸®½ºÆ® Ã£±â");		
+		System.out.println("4) ê³¼ëª©ë²ˆí˜¸ë¡œ Subject ì°¾ê¸° ë° ìˆ˜ê°• ë“±ë¡í•˜ê¸°");
+		Subject sub1 =csManager.findSubject("CA0407");
+		if(sub1!=null) {
+			sub1.register(new Student("20011", "í™ê¸¸ë™"));
+			sub1.register(new Student("20011", "í™ê¸¸ë™"));
+			sub1.register(new Student("20022", "ê¹€ê¸¸ë™"));
+			sub1.register(new Student("20017", "ì´ê¸¸ë™"));
+			sub1.register(new Student("20006", "ë°•ê¸¸ë™"));
+		}else {
+			System.out.println("ê³¼ëª©ë²ˆí˜¸ë¥¼ í™•ì¸í•´ ì£¼ì„¸ìš”.");
+		}
+
+		Subject sub2 =csManager.findSubject("ES0406");
+		sub2.register(new Student("20011", "í™ê¸¸ë™"));
+		sub2.register(new Student("20006", "ë°•ê¸¸ë™"));
+
+		Subject sub3 =csManager.findSubject("DC0408");
+		sub3.register(new Student("20011", "í™ê¸¸ë™"));
+		sub3.register(new Student("20022", "ê¹€ê¸¸ë™"));
+		sub3.register(new Student("20017", "ì´ê¸¸ë™"));
+
+		System.out.println(csManager);
+
+		System.out.println("5) í•™ë²ˆìœ¼ë¡œ í•™ìƒì´ ìˆ˜ê°•í•˜ê³  ìˆëŠ” Subject ë¦¬ìŠ¤íŠ¸ ì°¾ê¸°");
 		List<Subject> list = csManager.findStudent("20022");
 		if(list!=null) {
 			for(Subject sub : list) {
 				System.out.println(sub);
 			}
 		}
-		
-		System.out.println("6) ¼ö°­»ıÀÌ °¡Àå ¸¹Àº °ú¸ñ Ãâ·ÂÇÏ±â");
+
+		System.out.println("6) ìˆ˜ê°•ìƒì´ ê°€ì¥ ë§ì€ ê³¼ëª© ì¶œë ¥í•˜ê¸°");
 		Subject maxSub = csManager.getSubjectMaxStd();
 		System.out.println(maxSub);
-				
-		// º»ÀÎÀÌ¸§ÀÌ´Ï¼È·Î ¹Ù²Ù±â		
-		System.out.println("7) ÇÁ·¹ÀÓ È­¸é µğÀÚÀÎ ¹× ±â´É ±¸Çö");
-		YwrheeFinalFrame frame = new YwrheeFinalFrame("202211342 ÀÌÀ²¿ø", csManager);
-		
+
+		// ë³¸ì¸ì´ë¦„ì´ë‹ˆì…œë¡œ ë°”ê¾¸ê¸°
+		System.out.println("7) í”„ë ˆì„ í™”ë©´ ë””ìì¸ ë° ê¸°ëŠ¥ êµ¬í˜„");
+		YwrheeFinalFrame frame = new YwrheeFinalFrame("202211342 ì´ìœ¨ì›", csManager);
+
 	}
 
 }

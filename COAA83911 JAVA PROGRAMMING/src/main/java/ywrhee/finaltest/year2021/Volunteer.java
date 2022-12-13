@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Volunteer {
+public class Volunteer implements Comparator<Volunteer> {
 	String volName; // 봉사활동 이름
 	int donationTime; // 봉사활동 인정 시간
 	final int Number; // 모집인원	
@@ -61,5 +61,9 @@ public class Volunteer {
 
 		return str;
 	}
-		
+
+	@Override
+	public int compare(Volunteer o1, Volunteer o2) {
+		return o1.volName.compareTo(o2.volName);
+	}
 }

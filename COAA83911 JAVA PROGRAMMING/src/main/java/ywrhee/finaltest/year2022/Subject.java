@@ -1,15 +1,15 @@
-package ywrhee.finaltest;
+package ywrhee.finaltest.year2022;
 
 import java.util.HashMap;
 import java.util.stream.Collectors;
 
 public class Subject {
-	String subID; //°ú¸ñ ¹øÈ£
-	String subName; //°ú¸ñ ÀÌ¸§
-	HashMap<String, Student> stdmap = new HashMap<>(); // ¼ö°­»ı ÀúÀå±¸Á¶ (ÇĞ¹ø, Student)
-	
+	String subID; //ê³¼ëª© ë²ˆí˜¸
+	String subName; //ê³¼ëª© ì´ë¦„
+	HashMap<String, Student> stdmap = new HashMap<>(); // ìˆ˜ê°•ìƒ ì €ì¥êµ¬ì¡° (í•™ë²ˆ, Student)
+
 	public Subject(String subID) {
-		this(subID, null);		
+		this(subID, null);
 	}
 
 	public Subject(String subID, String subName) {
@@ -17,41 +17,41 @@ public class Subject {
 		this.subID = subID;
 		this.subName = subName;
 	}
-	
+
 	public void register(Student std) {
 		if (stdmap.containsKey(std.stdID)) {
-			System.out.println("ÀÌ¹Ì ¼ö°­ µî·ÏµÇ¾î ÀÖ½À´Ï´Ù.");
+			System.out.println("ì´ë¯¸ ìˆ˜ê°• ë“±ë¡ë˜ì–´ ìˆìŠµë‹ˆë‹¤.");
 		} else {
 			stdmap.put(std.stdID, std);
-			System.out.println("¼ö°­ µî·ÏÀÌ Àß µÇ¾ú½À´Ï´Ù.");
+			System.out.println("ìˆ˜ê°• ë“±ë¡ì´ ì˜ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		}
-	}	
+	}
 
 	@Override
-	public String toString() {		
-		String str = "°ú¸ñ¹øÈ£ : "+this.subID+"\n";
-		str += "°ú¸ñÀÌ¸§ : "+this.subName+"\n";
-		str += "µî·Ï ÇĞ»ı ¸í´Ü\n";
+	public String toString() {
+		String str = "ê³¼ëª©ë²ˆí˜¸ : "+this.subID+"\n";
+		str += "ê³¼ëª©ì´ë¦„ : "+this.subName+"\n";
+		str += "ë“±ë¡ í•™ìƒ ëª…ë‹¨\n";
 		str += "------------------------\n";
-		
+
 		if (stdmap.size() == 0) {
-			str += "µî·ÏµÈ ÇĞ»ıÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.\n\n";
+			str += "ë“±ë¡ëœ í•™ìƒì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.\n\n";
 		} else {
 			str += stdmap.entrySet().stream()
-				.map(it->it.getValue())
-				.map(it -> it.toString())
-				.collect(Collectors.joining());
+					.map(it->it.getValue())
+					.map(it -> it.toString())
+					.collect(Collectors.joining());
 		}
-		
+
 		return str;
 	}
-	
+
 	public String getSubID() {
 		return subID;
 	}
-	
+
 	public int getStdMapSize() {
 		return stdmap.size();
 	}
-	
+
 }

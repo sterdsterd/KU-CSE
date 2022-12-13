@@ -1,9 +1,9 @@
-package ywrhee.finaltest;
+package ywrhee.finaltest.year2022;
 
 public class Student {
-	String stdID; //ÇĞ¹ø
-	String stdName; //ÀÌ¸§	
-	
+	String stdID; //í•™ë²ˆ
+	String stdName; //ì´ë¦„
+
 	public Student(String stdID, String stdName) {
 		super();
 		this.stdID = stdID;
@@ -12,14 +12,14 @@ public class Student {
 
 	@Override
 	public String toString() {
-		String str = "ÇĞ¹ø : "+this.stdID+" / ";
-		str += "ÀÌ¸§ : "+this.stdName+"\n";		
+		String str = "í•™ë²ˆ : "+this.stdID+" / ";
+		str += "ì´ë¦„ : "+this.stdName+"\n";
 		str += "------------------------\n";
 		return str;
 	}
-	
+
 	public String getStdID() {
 		return stdID;
 	}
-	
+
 }

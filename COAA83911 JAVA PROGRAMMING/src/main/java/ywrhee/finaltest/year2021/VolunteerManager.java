@@ -1,9 +1,6 @@
 package ywrhee.finaltest.year2021;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class VolunteerManager {
 	String vName; //단체 이름		
@@ -37,8 +34,10 @@ public class VolunteerManager {
 	
 	// 구현할 기능 : 봉사활동 저장하기 ==> 반환값 : "등록완료" 또는 "중복 등록 불가"
 	public String addVolunteer(Volunteer v) {
-		if (volunteer.stream().anyMatch(it -> it.volName.equals(v.volName)))
-			return "중복 등록 불가";
+		for (Volunteer vol : volunteer) {
+			if (vol.volName.equals(v.volName))
+				return "중복 등록 불가";
+		}
 
 		volunteer.add(v);
 		return "등록 완료";
