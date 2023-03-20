@@ -1,9 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{ImageIcon} \PYG{n}{normalIcon} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ImageIcon}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}images/normalIcon.gif\PYGZdq{}}\PYG{p}{);}
-\PYG{n}{ImageIcon} \PYG{n}{rolloverIcon} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ImageIcon}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}images/rolloverIcon.gif\PYGZdq{}}\PYG{p}{);}
-\PYG{n}{ImageIcon} \PYG{n}{pressedIcon} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ImageIcon}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}images/pressedIcon.gif\PYGZdq{}}\PYG{p}{);}
-
-\PYG{n}{JButton} \PYG{n}{button} \PYG{o}{=} \PYG{k}{new} \PYG{n}{JButton}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}테스트버튼\PYGZdq{}}\PYG{p}{,} \PYG{n}{normalIcon}\PYG{p}{);}
-\PYG{n}{button}\PYG{p}{.}\PYG{n+na}{setRolloverIcon}\PYG{p}{(}\PYG{n}{rolloverIcon}\PYG{p}{);}
-\PYG{n}{button}\PYG{p}{.}\PYG{n+na}{setPressedIcon}\PYG{p}{(}\PYG{n}{pressedIcon}\PYG{p}{);}
-\end{Verbatim}

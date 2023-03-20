@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/ywrhee/midtest/year2022/YwrheeClient.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ywrhee/midtest/year2022/YwrheeContents.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ywrhee/midtest/year2022/YwrheeDrama.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ywrhee/midtest/year2022/YwrheeMovie.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ywrhee/midtest/year2022/YwrheeTV.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ywrhee/midtest/year2022/YwrheeTestMain.java" charset="UTF-8" />
+  </component>
+</project>

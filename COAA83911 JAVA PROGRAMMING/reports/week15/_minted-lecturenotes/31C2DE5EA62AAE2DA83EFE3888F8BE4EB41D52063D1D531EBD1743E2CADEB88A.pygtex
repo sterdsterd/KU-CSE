@@ -1,6 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-    \PYG{n}{JOptionPane}\PYG{p}{.}\PYG{n+na}{showMessageDialog}\PYG{p}{(}\PYG{k+kc}{null}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}조심하세요\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Message\PYGZdq{}}\PYG{p}{,} \PYG{n}{JOptionPane}\PYG{p}{.}\PYG{n+na}{ERROR\PYGZus{}MESSAGE}\PYG{p}{);}
-    \PYG{n}{JOptionPane}\PYG{p}{.}\PYG{n+na}{showMessageDialog}\PYG{p}{(}\PYG{k+kc}{null}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}조심하세요\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Message\PYGZdq{}}\PYG{p}{,} \PYG{n}{JOptionPane}\PYG{p}{.}\PYG{n+na}{INFORMATION\PYGZus{}MESSAGE}\PYG{p}{);}
-    \PYG{n}{JOptionPane}\PYG{p}{.}\PYG{n+na}{showMessageDialog}\PYG{p}{(}\PYG{k+kc}{null}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}조심하세요\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Message\PYGZdq{}}\PYG{p}{,} \PYG{n}{JOptionPane}\PYG{p}{.}\PYG{n+na}{WARNING\PYGZus{}MESSAGE}\PYG{p}{);}
-    \PYG{n}{JOptionPane}\PYG{p}{.}\PYG{n+na}{showMessageDialog}\PYG{p}{(}\PYG{k+kc}{null}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}조심하세요\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}Message\PYGZdq{}}\PYG{p}{,} \PYG{n}{JOptionPane}\PYG{p}{.}\PYG{n+na}{PLAIN\PYGZus{}MESSAGE}\PYG{p}{);}
-\end{Verbatim}

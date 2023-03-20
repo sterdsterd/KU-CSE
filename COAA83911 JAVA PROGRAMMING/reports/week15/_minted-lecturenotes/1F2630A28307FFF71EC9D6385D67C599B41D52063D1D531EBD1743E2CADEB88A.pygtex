@@ -1,9 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-    \PYG{k+kt}{int} \PYG{n+nf}{getWidth}\PYG{p}{()}
-    \PYG{k+kt}{int} \PYG{n+nf}{getHeight}\PYG{p}{()}
-    \PYG{k+kt}{int} \PYG{n+nf}{getX}\PYG{p}{()}
-    \PYG{k+kt}{int} \PYG{n+nf}{getY}\PYG{p}{()}
-    \PYG{n}{Point} \PYG{n+nf}{getLocationOnScreen}\PYG{p}{()}
-    \PYG{k+kt}{void} \PYG{n+nf}{setLocation}\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{,} \PYG{k+kt}{int}\PYG{p}{)}
-    \PYG{k+kt}{void} \PYG{n+nf}{setSize}\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{,} \PYG{k+kt}{int}\PYG{p}{)}
-\end{Verbatim}

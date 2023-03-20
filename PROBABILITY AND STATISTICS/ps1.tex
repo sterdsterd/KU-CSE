@@ -1,0 +1,355 @@
+% !TeX program = xelatex
+\input{header}
+
+\begin{document}
+
+\title{Probability and Statictics (0432)\newline\space Problem Set 1 Solutions}
+\author{Yulwon Rhee (202211342)}
+\institute{Department of Computer Science and Engineering, Konkuk University}
+
+\maketitle
+
+\setcounter{section}{1}
+\subsection{Set}
+\subsubsection{Problem 1}
+Consider rolling a six-sided die. Let $A$ be the set of outcomes where the roll is an even number.
+Let $B$ be the set of outcomes where the roll is greater than 3.
+Calculate and compare the sets on both sides of De Morgan's laws $(A\cup B)^c = A^c \cap B^c$ and $(A\cap B)^c = A^c \cup B^c$
+\paragraph{Solution.}
+First, let's find the sets $A^c$ and $B^c$:
+
+$A^c$ is the set of outcomes where the roll is an odd number.
+$$\therefore A^c = \{1, 3, 5\}$$
+
+$B^c$ is the set of outcomes where the roll is less than or equal to 3.
+$$\therefore B^c = \{1, 2, 3\}$$
+
+Now, let's calculate the left-hand side of the first De Morgan's laws:
+
+$(A\cup B)^c$ is the set of outcomes where the roll is neither an even number nor greater than 3.
+$$\therefore (A\cup B)^c = \{1, 3\}$$
+
+Next, let's calculate the right-hand side of the first De Morgan's laws:
+
+$A^c \cap B^c$ is the set of outcomes where the roll is both odd and less than or equal to 3.
+$$\therefore A^c \cap B^c = \{1, 3\}$$
+$$\therefore (A\cup B)^c = {3} = A^c \cap B^c$$
+
+Finally, let's calculate the left-hand side of the second De Morgan's law:
+
+$(A\cap B)^c$ is the set of outcomes where the roll is either not an even number or not greater than 3.
+$$\therefore (A\cap B)^c = \{1, 2, 3, 5\}$$
+
+And now let's calculate the right-hand side of the second De Morgan's law:
+
+$A^c \cup B^c$ is the set of outcomes where the roll is either odd or less than or equal to 3.
+$$\therefore A^c \cup B^c = \{1, 2, 3, 5\}$$
+$$\therefore (A\cap B)^c = {3} = A^c \cup B^c$$
+
+Therefore, we have verified both De Morgan's laws.
+
+\subsubsection{Problem 2}
+Let $A$ and $B$ be two sets.
+
+\subsubsection{(a)} Show that
+$A^c = (A^c \cap B) \cup (A^c \cap B^c);\ B^c = (A \cap B^c) \cup (A^c \cap B^c)$
+\paragraph{Solution.}
+To show that $A^c = (A^c \cap B) \cup (A^c \cap B^c)$, we need to show that every element that is not in $A$ belongs to either the intersection of $A^c$ and $B$ or the intersection of $A^c$ and $B^c$, and every element that belongs to either the intersection of $A^c$ and $B$ or the intersection of $A^c$ and $B^c$ does not belong to $A$.
+
+Let $x$ be an arbitrary element that does not belong to $A$. Then, $x$ must belong to $A^c$. We can break this down into two cases:
+
+\paragraph{Case 1:} $x \in B$
+
+In this case, $x \in A^c \cap B$, since $x \in A^c$ and $x \in B$.
+
+\paragraph{Case 2:} $x \in B^c$
+
+In this case, $x \in A^c \cap B^c$, since $x \in A^c$ and $x \in B^c$.
+
+Therefore, every element that is not in $A$ belongs to either $A^c \cap B$ or $A^c \cap B^c$.
+Now, let $x$ be an arbitrary element that belongs to either $A^c \cap B$ or $A^c \cap B^c$.
+We can break this down into two cases:
+
+\paragraph{Case 1:} $x \in A^c \cup B$
+
+In this case, $x \in A^c$ and $x \in B$. Since $x \not\in A$, it must be $x \in A^c$.
+
+\paragraph{Case 2:} $x \in A^c \cap B^c$
+
+In this case, $x\in A^c$ and $x\in B^c$. Since $x \not\in A$, it must be $x \in A^c$.
+
+Therefore, every element that belongs to either $A^c \cap B$ or $A^c \cap B^c$ does not belong to $A$.
+
+Therefore, we have shown that $A^c = (A^c \cap B) \cup (A^c \cap B^c)$.\\\\
+
+To show that $B^c = (A \cap B^c) \cup (A^c \cap B^c)$,
+we need to show that every element that is not in $B$ belongs to either $A \cap B^c$
+or $A^c \cap B^c$, and every element that belongs to either $A \cap B^c$
+or $A^c \cap B^c$ does not belong to $B$.
+
+Let $x$ be an arbitrary element that does not belong to $B$. Then, $x$ must belong to $B^c$.
+We can break this down into two cases:
+
+\paragraph{Case 1:} $x \in A$.
+
+In this case, $x\in A \cap B^c$, since $x \in A$ and $x \not\in B$.
+
+\paragraph{Case 2:} $x \in A^c$.
+
+In this case, $x \in A^c \cap B^c$, since $x \in B^c$ and $x \not \in B$.
+
+Therefore, every element that is not in $B$ belongs to either $A \cap B^c$ or $A^c \cap B^c$.
+Now, let $x$ be an arbitrary element that belongs to either $A \cap B^c$ or $A^c \cap B^c$.
+We can break this down into two cases:
+
+\paragraph{Case 1:} $x \in A \cap B^c$.
+
+In this case, $x \in A$ and $x \in B^c$. Since $x \not\in B$, $x$ must belong to $B^c$.
+
+\paragraph{Case 2:} $x \in A^c \cap B^c$.
+
+In this case, $x \in A^c$ and $x \in B^c$. Since $x \not \in B$, $x$ must belong to $B^c$.
+
+Therefore, every element that belongs to either $A \cap B^c$ or $A^c \cap B^c$ does not belong to $B$.
+
+Therefore, we have shown that $B^c = (A \cap B^c) \cup (A^c \cap B^c)$.
+
+\subsubsection{(b)} Show that
+$(A \cap B)^c =(A^c \cap B)\cup(A^c \cap B^c)\cup(A\cap B^c)$
+\paragraph{Solution.}
+To show that $(A\cap B)^c =(A^c \cap B)\cup(A^c \cap B^c)\cup( A \cap B^c)$,
+we need to show that every element that is not in the $A\cap B$ belongs to either $A^c \cap B$,
+or $A^c \cap B^c$, or $A \cap B^c$, and every element that belongs to either $A^c \cap B$,
+or $A^c \cap B^c$, or $A \cap B^c$ does not belong to $A \cap B$.
+
+Let $x$ be an arbitrary element that does not belong to $A \cap B$.
+Then, $x$ must belong to either $A^c$ or $B^c$ or both. We can break this down into three cases:
+
+\paragraph{Case 1:} $x \in A^c \cap B$.
+
+In this case, $x \in B$ and $x \not \in A$. Since $x \not \in A \cap B$,
+$x$ must belong to $A^c \cap B$.
+
+\paragraph{Case 2:} $x \in A^c \cap B^c$.
+
+In this case, $x \not \in A$ or $x \not \in B$. Since $x \not \in A\cap B$, $x$ must belong to $A^c \cap B^c$.
+
+\paragraph{Case 3:} $x \in A \cap B^c$.
+
+In this case, $x \in A$ and $x \not \in B$. Since $x \not \in A \cap B$, $x$ must belong to $A \cap B^c$.
+
+Therefore, every element that is not in $A \cap B$ belongs to either $A^c \cap B$, or $A^c \cap B^c$, or $A \cap B^c$.
+
+Now, let $x$ be an arbitrary element that belongs to $A^c \cap B$, or $A^c \cap B^c$, or $A \cap B^c$.
+We can break this down into three cases:
+
+\paragraph{Case 1:} $x \in A^c \cap B$.
+
+In this case, $x \in B$ and $x \not \in A$.
+Since $x \not \in A \cap B$, $x \in (A \cap B)^c$.
+
+\paragraph{Case 2:} $x \in A^c \cap B^c$.
+
+In this case, $x \not \in A$ or $x \not \in B$. Since $x \not \in A \cap B$, $x \in (A \cap B)^c$.
+
+\paragraph{Case 3:} $x \in A \cap B^c$.
+
+In this case, $x \in A$ and $x \not \in B$. Since $x \not \in A \cap B$, $x in (A \cap B)^c$.
+
+Therefore, every element that belongs to either $A^c \cap B$, or $A^c \cap B^c$,
+or $A \cap B^c$ does not belong to $A \cap B$.\\
+
+Since every element that is not in $A \cap B$ belongs to either $A^c \cap B$, or $A^c \cap B^c$,
+or $A \cap B^c$, and every element that belongs to either $A^c \cap B$,
+or $A^c \cap B^c$, or $A \cap B^c$ does not belong to $A \cap B$,
+we can conclude that $(A\cap B)^c =(A^c \cap B)\cup(A^c \cap B^c)\cup(A\cap B^c)$.
+
+\newpage
+\subsection{Probability Model}
+\subsubsection{Problem 1} Out of the students in a class, 60\% are geniuses, 70\% love chocolate, and 40\% fall into both categories. Determine the probability that a randomly selected student is neither a genius nor a chocolate lover.
+\paragraph{Solution.} Let $G$ be the event that a student is a genius, and $C$ be the event that a student loves chocolate.
+Then, we know that:
+\begin{align*}
+    P(G)        & = 0.6 \\
+    P(C)        & = 0.7 \\
+    P(G \cap C) & = 0.4
+\end{align*}
+
+To find the probability that a randomly selected student is neither a genius nor a chocolate lover, we need to find the probability of the complement of the union of events $G$ and $C$, which is:
+
+$$P(G^c \cap C^c) = 1 - P(G \cup C)$$
+
+Using the formula for the probability of the union of two events, we have:
+
+\begin{align*}
+    P(G \cup C) & = P(G) + P(C) - P(G \cap C) \\
+                & = 0.6 + 0.7 - 0.4           \\
+                & = 0.9
+\end{align*}
+
+Therefore, the probability that a randomly selected student is neither a genius nor a chocolate lover is:
+
+\begin{align*}
+    P(G^c \cap C^c) & = 1 - P(G \cup C) \\
+                    & = 1 - 0.9         \\
+                    & = 0.1
+\end{align*}
+
+So the probability that a randomly selected student is neither a genius nor a chocolate lover is 10\%.
+
+\newpage
+\subsubsection{Problem 2} A six-sided die is loaded in a way that each even face is twice as likely as each odd face. All even faces are equally likely, as are all odd faces. Construct a probabilistic model for a single roll of this die and find the probability that the outcome is less than 4.
+\paragraph{Solution.} Let $E$ be the event that the roll is an even number, and let $O$ be the event that the roll is an odd number.
+
+Since each even face is twice as likely as each odd face, the probability of each even face is $\dfrac{2}{3}\cdot \dfrac{1}{3} = \dfrac{2}{9}$ and the probability of each odd face is $\dfrac{1}{3}\cdot \dfrac{1}{3} = \dfrac{1}{9}$.\\
+
+Therefore, the probabilities of each outcome are:
+\begin{align*}
+    P(1) = \frac{1}{9} &  & P(2) = \frac{2}{9} \\
+    P(3) = \frac{1}{9} &  & P(4) = \frac{4}{9} \\
+    P(5) = \frac{1}{9} &  & P(6) = \frac{2}{9}
+\end{align*}
+
+To find the probability that the outcome is less than $4$, we sum the probabilities of the outcomes $1$, $2$, and $3$:
+$$P(\text{outcome is less than 4}) = P(\text{1}) + P(\text{2}) + P(\text{3}) = \frac{1}{9} + \frac{2}{9} + \frac{1}{9} = \frac{4}{9}$$
+
+Therefore, the probability that the outcome is less than $4$ is $\dfrac{4}{9}$.
+
+\newpage
+\subsection{Conditional Probability}
+\subsubsection{Problem 1} We roll two fair 6-sided dice. Each one of the 36 possible outcomes is assumed to be equally likely.
+
+\subsubsection{(a)} Find the probability that doubles are rolled.
+\paragraph{Solution.} There are six ways that doubles can be rolled: (1,1), (2,2), (3,3), (4,4), (5,5), and (6,6). Since each die has 6 equally likely outcomes, the probability of rolling doubles is:
+
+$$P(\text{doubles}) = \frac{\text{number of ways to roll doubles}}{\text{total number of possible outcomes}} = \frac{6}{36} = \frac{1}{6}$$
+
+So the probability of rolling doubles is $\frac{1}{6}$.
+
+\subsubsection{(b)} Given that the roll results in a sum of 4 or less, find the conditional probability that doubles are rolled.
+\paragraph{Solution.} To find the conditional probability that doubles are rolled given that the sum is 4 or less, we need to use Bayes' theorem:
+
+$$P(\text{doubles }|\text{ sum of 4 or less}) = \frac{P(\text{sum of 4 or less }|\text{ doubles})\cdot P(\text{doubles})}{P(\text{sum of 4 or less})}$$
+
+We already know that the probability of rolling doubles is $P(\text{doubles})=\frac{1}{6}$. To find $P(\text{sum of 4 or less }|\text{ doubles})$, we need to count the number of outcomes where doubles are rolled and the sum is 4 or less. The only way this can happen is if both dice show 1 or 2, which gives us two possible outcomes: (1,1) and (2,2). So $P(\text{sum of 4 or less }|\text{ doubles})=\frac{2}{6}=\frac{1}{3}$.
+
+To find $P(\text{sum of 4 or less})$, we count the number of outcomes where the sum is 4 or less. There are 3 possible outcomes: (1,1), (1,2), and (2,1). So $P(\text{sum of 4 or less})=\frac{3}{36}=\frac{1}{12}$.
+
+Substituting these values into Bayes' theorem, we get:
+
+$$P(\text{doubles }|\text{ sum of 4 or less}) = \frac{\frac{1}{3}\cdot\frac{1}{6}}{\frac{1}{12}} = \frac{2}{3}$$
+
+Therefore, given that the roll results in a sum of 4 or less, the conditional probability that doubles are rolled is $\frac{2}{3}$.
+
+\subsubsection{(c)} Find the probability that at least one die roll is a 6.
+\paragraph{Solution.} To find the probability that at least one die roll is a 6, we can use the complementary probability: the probability that no die roll is a 6. Since each die roll is independent and has a probability of $\frac{1}{6}$ of resulting in a 6, the probability that no die roll is a 6 is:
+
+$$\left(\frac{5}{6}\right)^2=\frac{25}{36}$$
+
+Therefore, the probability that at least one die roll is a 6 is:
+
+$$1 - \frac{25}{36} = \frac{11}{36}$$
+
+So the probability that at least one die roll is a 6 is $\frac{11}{36}$.
+
+\subsubsection{(d)} Given that the two dice land on different numbers, find the conditional probability that at least one die roll is a 6.
+
+\paragraph{Solution.} There are 30 outcomes where the two dice land on different numbers, out of a total of 36 possible outcomes. Let $A$ be the event that at least one die roll is a 6, and let $B$ be the event that the two dice land on different numbers. We want to find the conditional probability $P(A|B)$, the probability that at least one die roll is a 6 given that the two dice land on different numbers.
+
+Out of the 30 outcomes where the two dice land on different numbers, there are 5 outcomes where at least one die roll is a 6:
+
+$$\{(1,6), (2,6), (3,6), (4,6), (5,6)\}$$
+
+Therefore, the conditional probability $P(A|B)$ is:
+\begin{align*}
+    P(A|B) & = \frac{\text{number of outcomes where at least one die roll is a 6 and the two dice land on different numbers}}{\text{number of outcomes where the two dice land on different numbers}} \\
+           & = \frac{5}{30}                                                                                                                                                                           \\
+           & = \frac{1}{6}
+\end{align*}
+
+So the conditional probability that at least one die roll is a 6 given that the two dice land on different numbers is $\frac{1}{6}$.
+
+\newpage
+\subsubsection{Problem 2} A coin is tossed twice. Alice claims that the event of two heads is at least as likely if we know that the first toss is a head than if we know that at least one of the tosses is a head. Is she right? Does it make a difference if the coin is fair or unfair?
+
+\paragraph{Solution.} Let $A$ be the event that the first toss is a head, and let $B$ be the event that at least one of the tosses is a head. We want to compare $P(HH | A)$ and $P(HH | B)$, where $HH$ denotes the event of two heads in a row.
+
+Using Bayes' theorem, we have:
+
+\begin{align*}
+    P(HH | A) & = \frac{P(A | HH) \cdot P(HH)}{P(A)}                        \\
+              & = \frac{1 \cdot \frac{1}{4}}{\frac{1}{2} \cdot \frac{1}{2}} \\
+              & = 1
+\end{align*}
+
+where we used the fact that $P(HH) = \dfrac{1}{4}$ and $P(A) = \dfrac{1}{2}$.
+
+Similarly, we have:
+
+\begin{align*}
+    P(HH | B) & = \frac{P(B | HH) \cdot P(HH)}{P(B)}                              \\
+              & = \frac{1 \cdot \frac{1}{4}}{1 - P(\text{both tosses are tails})} \\
+              & = \frac{1 \cdot \frac{1}{4}}{1 - \frac{1}{2} \cdot \frac{1}{2}}   \\
+              & = \frac{2}{3}
+\end{align*}
+
+where we used the fact that $P(B) = 1 - P(\text{both tosses are tails}) = 1 - \dfrac{1}{2} \cdot \dfrac{1}{2} = \dfrac{3}{4}$.\\
+
+Therefore, we have $P(HH | B) > P(HH | A)$. Hence, Alice's claim is false: knowing that at least one of the tosses is a head is more informative than knowing that the first toss is a head when it comes to predicting the event of two heads.
+
+As for whether the fairness of the coin matters, the answer is no: the above calculations only depend on the probabilities of the outcomes, and not on whether those probabilities are equal or not. Therefore, the conclusion holds regardless of whether the coin is fair or unfair.
+
+\newpage
+\subsubsection{Problem 3} We are given three coins: one has heads in both faces, the second has tails in both faces, and the third has a head in one face and a tail in the other. We choose a coin at random, toss it, and the result is heads. What is the probability that the opposite face is tails?
+
+\paragraph{Solution.} We can use Bayes' theorem to solve this problem. Let $H$ be the event that the result of the toss is heads and let $T$ be the event that the opposite face is tails. Let $C_1$, $C_2$, and $C_3$ be the events that we choose the first, second, and third coin, respectively. Then we have:
+
+$$P(T|H) = \dfrac{P(H|T)P(T)}{P(H)}$$
+
+To compute the probabilities on the right-hand side, we need to make some assumptions.
+Since we choose a coin at random, each coin is equally likely to be chosen,
+so we have $P(C_1) = P(C_2) = P(C_3) = \dfrac{1}{3}$.
+We also have $P(H|C_1) = 1$, $P(H|C_2) = 0$, and $P(H|C_3) = \dfrac{1}{2}$,
+since the first coin always gives heads, the second coin always gives tails, and the third coin gives heads with probability $\dfrac{1}{2}$.
+
+We can compute $P(H)$ using the law of total probability:
+\begin{align*}
+    P(H) & = P(H|C_1)P(C_1) + P(H|C_2)P(C_2) + P(H|C_3)P(C_3)                                             \\
+         & = 1 \cdot \dfrac{1}{3} + 0 \cdot \dfrac{1}{3} + \dfrac{1}{2} \cdot \dfrac{1}{3} = \dfrac{1}{2}
+\end{align*}
+
+
+We can also compute $P(T)$ using the law of total probability:
+\begin{align*}
+    P(T) & = P(T|C_1)P(C_1) + P(T|C_2)P(C_2) + P(T|C_3)P(C_3)                                             \\
+         & = 0 \cdot \dfrac{1}{3} + 1 \cdot \dfrac{1}{3} + \dfrac{1}{2} \cdot \dfrac{1}{3} = \dfrac{1}{2}
+\end{align*}
+
+Now we can substitute these values into Bayes' theorem:
+
+$$P(T|H) = \dfrac{P(H|T)P(T)}{P(H)} = \dfrac{P(H \cap T)}{P(H)}$$
+
+We can compute $P(H \cap T)$ as follows:
+\begin{align*}
+    P(H \cap T) & = P(H|C_3)P(C_3)P(T|C_3)                                             \\
+                & = \dfrac{1}{2} \cdot \dfrac{1}{3} \cdot \dfrac{1}{2} = \dfrac{1}{12}
+\end{align*}
+
+So we have:
+
+$$P(T|H) = \dfrac{P(H \cap T)}{P(H)} = \dfrac{\frac{1}{12}}{\frac{1}{2}} = \dfrac{1}{6}$$
+
+\newpage
+\subsubsection{Problem 4} Let $A$ and $B$ be events. Show that $P(A\cap B | B) = P(A | B)$, assuming that $P(B) > 0$.
+
+\paragraph{Solution.} We have:
+
+\begin{align*}
+    P(A\cap B | B) & = \frac{P(A \cap B \cap B)}{P(B)} &  & \text{(definition of conditional probability)} \\
+                   & = \frac{P(A\cap B)}{P(B)}         &  & \text{(since } B \subseteq A \cap B\text{)}    \\
+                   & = \frac{P(B) \cdot P(A|B)}{P(B)}  &  & \text{(multiplication rule)}                   \\
+                   & = P(A|B)                          &  & \text{(since } P(B) > 0\text{)}                \\
+\end{align*}
+
+$$\therefore P(A\cap B | B) = P(A | B)$$
+\end{document}

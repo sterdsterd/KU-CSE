@@ -1,4 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{ImageIcon} \PYG{n}{image} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ImageIcon}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}images/apple.jpg\PYGZdq{}}\PYG{p}{);} \PYG{n}{JLabel} \PYG{n}{label} \PYG{o}{=} \PYG{k}{new} \PYG{n}{JLabel}\PYG{p}{(}\PYG{n}{image}\PYG{p}{);}
-\PYG{n}{panel}\PYG{p}{.}\PYG{n+na}{add}\PYG{p}{(}\PYG{n}{label}\PYG{p}{);}
-\end{Verbatim}

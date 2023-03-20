@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-    \PYG{k+kt}{void} \PYG{n+nf}{setEnabled}\PYG{p}{(}\PYG{k+kt}{boolean}\PYG{p}{)}
-    \PYG{k+kt}{void} \PYG{n+nf}{setVisible}\PYG{p}{(}\PYG{k+kt}{boolean}\PYG{p}{)}
-    \PYG{k+kt}{boolean} \PYG{n+nf}{isVisible}\PYG{p}{()}
-\end{Verbatim}
